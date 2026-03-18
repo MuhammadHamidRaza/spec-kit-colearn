@@ -251,16 +251,25 @@ SCRIPT_TYPE_CHOICES = {"sh": "POSIX Shell (bash/zsh)", "ps": "PowerShell"}
 
 CLAUDE_LOCAL_PATH = Path.home() / ".claude" / "local" / "claude"
 
-BANNER = """
-███████╗██████╗ ███████╗ ██████╗██╗███████╗██╗   ██╗██████╗ ██╗     ██╗   ██╗███████╗
-██╔════╝██╔══██╗██╔════╝██╔════╝██║██╔════╝╚██╗ ██╔╝██╔══██╗██║     ██║   ██║██╔════╝
-███████╗██████╔╝█████╗  ██║     ██║█████╗   ╚████╔╝ ██████╔╝██║     ██║   ██║███████╗
-╚════██║██╔═══╝ ██╔══╝  ██║     ██║██╔══╝    ╚██╔╝  ██╔═══╝ ██║     ██║   ██║╚════██║
-███████║██║     ███████╗╚██████╗██║██║        ██║   ██║     ███████╗╚██████╔╝███████║
-╚══════╝╚═╝     ╚══════╝ ╚═════╝╚═╝╚═╝        ╚═╝   ╚═╝     ╚══════╝ ╚═════╝ ╚══════╝
+BANNER = r"""
+ ███████╗██████╗ ███████╗ ██████╗       ██╗  ██╗██╗████████╗
+ ██╔════╝██╔══██╗██╔════╝██╔════╝       ██║ ██╔╝██║╚══██╔══╝
+ ███████╗██████╔╝█████╗  ██║            █████╔╝ ██║   ██║   
+ ╚════██║██╔═══╝ ██╔══╝  ██║            ██╔═██╗ ██║   ██║   
+ ███████║██║     ███████╗╚██████╗       ██║  ██╗██║   ██║   
+ ╚══════╝╚═╝     ╚══════╝ ╚═════╝       ╚═╝  ╚═╝╚═╝   ╚═╝   
+
+         ██████╗ ██████╗ ██╗     ███████╗ █████╗ ██████╗ ███╗   ██╗
+        ██╔════╝██╔═══██╗██║     ██╔════╝██╔══██╗██╔══██╗████╗  ██║
+        ██║     ██║   ██║██║     █████╗  ███████║██████╔╝██╔██╗ ██║
+        ██║     ██║   ██║██║     ██╔══╝  ██╔══██║██╔══██╗██║╚██╗██║
+        ╚██████╗╚██████╔╝███████╗███████╗██║  ██║██║  ██║██║ ╚████║
+         ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+
+    Spec-Kit-CoLearn - AI Co-Learning Spec Framework by Muhammad Hamid Raza
 """
 
-TAGLINE = "Spec-Kit-CoLearn - AI Co-Learning Spec Framework by Muhammad Hamid Raza"
+TAGLINE = "Build with AI as your senior architect co-partner. Learn while you build."
 
 
 class StepTracker:
@@ -481,8 +490,8 @@ class BannerGroup(TyperGroup):
 
 
 app = typer.Typer(
-    name="specify",
-    help="Setup tool for Specify spec-driven development projects",
+    name="spec-kit-colearn",
+    help="AI Co-Learning Spec Framework - Build with AI as your senior architect co-partner",
     add_completion=False,
     invoke_without_command=True,
     cls=BannerGroup,
@@ -491,16 +500,8 @@ app = typer.Typer(
 
 def show_banner():
     """Display the ASCII art banner."""
-    banner_lines = BANNER.strip().split("\n")
-    colors = ["bright_blue", "blue", "cyan", "bright_cyan", "white", "bright_white"]
-
-    styled_banner = Text()
-    for i, line in enumerate(banner_lines):
-        color = colors[i % len(colors)]
-        styled_banner.append(line + "\n", style=color)
-
-    console.print(Align.center(styled_banner))
-    console.print(Align.center(Text(TAGLINE, style="italic bright_yellow")))
+    console.print(BANNER)
+    console.print(f"[yellow italic]{TAGLINE}[/yellow italic]")
     console.print()
 
 
@@ -513,8 +514,8 @@ def get_version() -> str:
         return importlib.metadata.version("spec-kit-colearn")
     except importlib.metadata.PackageNotFoundError:
         try:
-            # Fallback to specifyplus for local development
-            return importlib.metadata.version("specifyplus")
+            # Fallback to spec-kit-colearn for local development
+            return importlib.metadata.version("spec-kit-colearn")
         except importlib.metadata.PackageNotFoundError:
             return "unknown (not installed as package)"
 
@@ -1198,17 +1199,17 @@ def init(
     6. Optionally set up AI assistant commands
 
     Examples:
-        specifyplus init my-project
-        specifyplus init my-project --ai claude
-        specifyplus init my-project --ai copilot --no-git
-        specifyplus init --ignore-agent-tools my-project
-        specifyplus init . --ai claude         # Initialize in current directory
-        specifyplus init .                     # Initialize in current directory (interactive AI selection)
-        specifyplus init --here --ai claude    # Alternative syntax for current directory
-        specifyplus init --here --ai codex
-        specifyplus init --here --ai codebuddy
-        specifyplus init --here
-        specifyplus init --here --force  # Skip confirmation when current directory not empty
+        spec-kit-colearn init my-project
+        spec-kit-colearn init my-project --ai claude
+        spec-kit-colearn init my-project --ai copilot --no-git
+        spec-kit-colearn init --ignore-agent-tools my-project
+        spec-kit-colearn init . --ai claude         # Initialize in current directory
+        spec-kit-colearn init .                     # Initialize in current directory (interactive AI selection)
+        spec-kit-colearn init --here --ai claude    # Alternative syntax for current directory
+        spec-kit-colearn init --here --ai codex
+        spec-kit-colearn init --here --ai codebuddy
+        spec-kit-colearn init --here
+        spec-kit-colearn init --here --force  # Skip confirmation when current directory not empty
     """
 
     show_banner()
@@ -1267,7 +1268,7 @@ def init(
     current_dir = Path.cwd()
 
     setup_lines = [
-        "[cyan]Specify Project Setup[/cyan]",
+        "[cyan]Spec-Kit-CoLearn Project Setup[/cyan]",
         "",
         f"{'Project':<15} [green]{project_path.name}[/green]",
         f"{'Working Path':<15} [dim]{current_dir}[/dim]",
@@ -1582,7 +1583,7 @@ def version():
     # Get CLI version from package metadata
     cli_version = "unknown"
     try:
-        cli_version = importlib.metadata.version("specifyplus")
+        cli_version = importlib.metadata.version("spec-kit-colearn")
     except Exception:
         try:
             cli_version = importlib.metadata.version("specify-cli")
