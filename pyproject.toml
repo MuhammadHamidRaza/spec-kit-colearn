@@ -1,0 +1,44 @@
+[project]
+name = "spec-kit-colearn"
+version = "1.0.0"
+description = "Spec-Kit-CoLearn - AI Co-Learning Spec Framework. Build with AI as your senior architect co-partner. Learn while you build."
+requires-python = ">=3.11"
+authors = [
+    { name = "Muhammad Hamid Raza", email = "hamidraza@example.com", url = "https://github.com/muhammadhamidraza" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["spec-driven-development", "sdd", "ai-agents", "prompt-engineering", "co-learning", "claude-code", "agentic-ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Application Tools",
+]
+
+dependencies = [
+    "typer",
+    "rich",
+    "httpx[socks]",
+    "platformdirs",
+    "readchar",
+    "truststore>=0.10.4",
+]
+
+[project.scripts]
+spec-kit-colearn = "specifyplus_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/specifyplus_cli"]
+
+[project.urls]
+Homepage = "https://github.com/muhammadhamidraza/spec-kit-colearn"
+Repository = "https://github.com/muhammadhamidraza/spec-kit-colearn"
+Issues = "https://github.com/muhammadhamidraza/spec-kit-colearn/issues"

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/muhammadhamidraza/spec-kit-colearn/discussions
+    about: Ask questions, share ideas, or discuss Spec-Driven Development
+  - name: 📖 Documentation
+    url: https://github.com/muhammadhamidraza/spec-kit-colearn#readme
+    about: Read the full documentation and guides
+  - name: 🚀 Quickstart Guide
+    url: https://github.com/muhammadhamidraza/spec-kit-colearn/blob/main/docs/quickstart.md
+    about: Get started with Spec-Kit-CoLearn in under 5 minutes
