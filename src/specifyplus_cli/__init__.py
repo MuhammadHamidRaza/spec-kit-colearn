@@ -1499,18 +1499,39 @@ def init(
     steps_lines.append(f"{step_num}. Start using slash commands with your AI agent:")
 
     steps_lines.append(
-        "   2.1 [cyan]/sp.constitution[/] - Establish project principles"
+        "   2.1 [cyan]/sp.discover[/] - Start discovery mode (ask questions before any spec)"
     )
-    steps_lines.append("   2.2 [cyan]/sp.specify[/] - Create baseline specification")
-    steps_lines.append("   2.3 [cyan]/sp.plan[/] - Create implementation plan")
-    steps_lines.append("   2.4 [cyan]/sp.tasks[/] - Generate actionable tasks")
-    steps_lines.append("   2.5 [cyan]/sp.implement[/] - Execute implementation")
+    steps_lines.append(
+        "   2.2 [cyan]/sp.constitution[/] - Establish project principles"
+    )
+    steps_lines.append("   2.3 [cyan]/sp.specify[/] - Create baseline specification")
+    steps_lines.append("   2.4 [cyan]/sp.plan[/] - Create implementation plan")
+    steps_lines.append("   2.5 [cyan]/sp.tasks[/] - Generate actionable tasks")
+    steps_lines.append("   2.6 [cyan]/sp.implement[/] - Execute implementation")
+    steps_lines.append("   2.7 [cyan]/sp.learn[/] - Record learning after feature")
+    steps_lines.append("   2.8 [cyan]/sp.glossary[/] - Review all learned terms")
 
     steps_panel = Panel(
         "\n".join(steps_lines), title="Next Steps", border_style="cyan", padding=(1, 2)
     )
     console.print()
     console.print(steps_panel)
+
+    learning_lines = [
+        "AI Co-Learning Commands [bright_black](Learn while you build)[/bright_black]",
+        "",
+        f"○ [cyan]/sp.discover[/] - Discovery mode: AI asks questions before any spec",
+        f"○ [cyan]/sp.learn[/] - Record what you learned after each feature",
+        f"○ [cyan]/sp.glossary[/] - Review all technical terms learned",
+    ]
+    learning_panel = Panel(
+        "\n".join(learning_lines),
+        title="Learning Commands",
+        border_style="cyan",
+        padding=(1, 2),
+    )
+    console.print()
+    console.print(learning_panel)
 
     enhancement_lines = [
         "Optional commands that you can use for your specs [bright_black](improve quality & confidence)[/bright_black]",
