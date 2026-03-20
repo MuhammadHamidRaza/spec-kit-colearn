@@ -390,8 +390,8 @@ This file is generated during init for the selected agent.
       generate_commands bob md "\$ARGUMENTS" "$base_dir/.bob/commands" "$script"
       generate_agent_rules bob "$base_dir" ;;
   esac
-  ( cd "$base_dir" && zip -r "../spec-kit-colearn-template-${agent}-${script}-${NEW_VERSION}.zip" . )
-  echo "Created $GENRELEASES_DIR/spec-kit-colearn-template-${agent}-${script}-${NEW_VERSION}.zip"
+  ( cd "$base_dir" && zip -r "../spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip" . )
+  echo "Created $GENRELEASES_DIR/spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip"
 }
 
 # Determine agent list
@@ -441,5 +441,5 @@ for agent in "${AGENT_LIST[@]}"; do
 done
 
 echo "Archives in $GENRELEASES_DIR:"
-ls -1 "$GENRELEASES_DIR"/spec-kit-colearn-template-*-"${NEW_VERSION}".zip
+ls -1 "$GENRELEASES_DIR"/spec-kit-template-*-"${NEW_VERSION}".zip
 
