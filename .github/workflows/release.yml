@@ -27,6 +27,8 @@ jobs:
           .github/workflows/scripts/check-release-exists.sh ${{ steps.get_tag.outputs.new_version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install zip
+        run: apt-get update && apt-get install -y zip
       - name: Create release package variants
         if: steps.check_release.outputs.exists == 'false'
         run: |
