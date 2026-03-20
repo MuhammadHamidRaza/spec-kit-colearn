@@ -1,6 +1,6 @@
 [project]
 name = "spec-kit-colearn"
-version = "1.0.11"
+version = "1.0.12"
 description = "Spec-Kit-CoLearn - AI Co-Learning Spec Framework. Build with AI as your senior architect co-partner. Learn while you build."
 requires-python = ">=3.11"
 authors = [
