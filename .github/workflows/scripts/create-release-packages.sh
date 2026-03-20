@@ -229,8 +229,6 @@ build_variant() {
     
     local preface="# $agent_name Rules
 
-This file is generated during init for the selected agent.
-
 "
     
     # Generate the complete content
