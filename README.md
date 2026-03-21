@@ -1225,6 +1225,9 @@ Final Verification Checklist:
 # From PyPI
 pip install spec-kit-colearn
 
+# From npm
+npm install -g @muhammad-hamid-raza/spec-kit-colearn
+
 # Or with uv
 uv tool install spec-kit-colearn
 ```
@@ -1294,6 +1297,9 @@ spec-kit-colearn init .
 ```bash
 # From PyPI
 pip install spec-kit-colearn
+
+# From npm
+npm install -g @muhammad-hamid-raza/spec-kit-colearn
 
 # Or with uv
 uv tool install spec-kit-colearn
