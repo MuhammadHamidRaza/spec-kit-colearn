@@ -1,0 +1,27 @@
+{
+  "name": "@muhammad-hamid-raza/spec-kit-colearn",
+  "version": "1.0.13",
+  "description": "Spec-Kit-CoLearn - AI Co-Learning Spec Framework. Build with AI as your senior architect co-partner.",
+  "author": "Muhammad Hamid Raza",
+  "license": "MIT",
+  "homepage": "https://github.com/MuhammadHamidRaza/spec-kit-colearn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuhammadHamidRaza/spec-kit-colearn"
+  },
+  "keywords": ["spec-driven-development", "ai-agents", "prompt-engineering", "co-learning", "claude-code"],
+  "bin": {
+    "spec-kit-colearn": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "postinstall": "node bin/install-deps.js"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ]
+}
