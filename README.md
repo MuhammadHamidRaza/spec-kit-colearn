@@ -24,9 +24,10 @@
 14. [Best Practices](#14-best-practices)
 15. [Quick Start Guide](#15-quick-start-guide)
 16. [Command Flow Timeline](#16-command-flow-timeline)
-17. [Example Projects](#17-example-projects)
-18. [Frequently Asked Questions](#18-frequently-asked-questions)
-19. [Quick Command Reference Card](#19-quick-command-reference-card)
+17. [Complete /sp Command Quick Reference](#12b-complete-sp-command-quick-reference)
+18. [Example Projects](#17-example-projects)
+19. [Frequently Asked Questions](#18-frequently-asked-questions)
+20. [Quick Command Reference Card](#19-quick-command-reference-card)
 
 ---
 
@@ -1011,6 +1012,48 @@ All technical terms learned across ALL projects, organized by category:
 **Trigger:** After feature is closed  
 **Creates:** `history/prompts/<feature>/phr.md`  
 **Contains:** Full prompt history, what worked, what to improve
+
+---
+
+## 12b. Complete /sp Command Quick Reference
+
+Use these commands with your AI tool in this exact order for every feature:
+
+### Foundation Commands (Run First)
+| Command | Example | Creates |
+|---------|---------|---------|
+| `/sp.constitution` | `/sp.constitution Create principles focused on code quality and security` | `memory/constitution.md` |
+| `/sp.specify` | `/sp.specify Build a user login system with email and password` | `specs/<feature>/spec.md` |
+| `/sp.clarify` | `/sp.clarify Web users only, Email/password, JWT tokens` | Updates spec |
+
+### Planning Commands (Run After Clarify)
+| Command | Example | Creates |
+|---------|---------|---------|
+| `/sp.plan` | `/sp.plan Use Node.js, Express, MongoDB, JWT for auth` | `specs/<feature>/plan.md` |
+| `/sp.analyze` | `/sp.analyze` | Consistency report |
+| `/sp.tasks` | `/sp.tasks` | `specs/<feature>/tasks.md` |
+
+### Quality Commands (Run Before Implement)
+| Command | Example | Creates |
+|---------|---------|---------|
+| `/sp.checklist` | `/sp.checklist Generate security checklist` | Quality checklist |
+
+### Build Commands (Run to Create)
+| Command | Example | Creates |
+|---------|---------|---------|
+| `/sp.implement` | `/sp.implement` | Code files |
+
+### Learning Commands (Run After Build)
+| Command | Example | Creates |
+|---------|---------|---------|
+| `/sp.learn` | `/sp.learn` | `learning-log.md` |
+| `/sp.glossary` | `/sp.glossary` | Term review |
+| `/sp.phr` | `/sp.phr` | `phr.md` |
+
+### Documentation Commands (Run When Needed)
+| Command | Example | Creates |
+|---------|---------|---------|
+| `/sp.adr` | `/sp.adr JWT vs Sessions` | `history/adr/<title>.md` |
 
 ---
 
