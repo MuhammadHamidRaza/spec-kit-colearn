@@ -1,6 +1,10 @@
-# Social Network Platform - Full AI Co-Partner Conversation
+# Social Network Platform - Complete AI Co-Partner Project
 
-## Installation
+## Project: ConnectHub - Social Network
+
+---
+
+## INSTALLATION
 
 ```bash
 pip install spec-kit-colearn
@@ -9,1470 +13,971 @@ npm install -g @muhammad-hamid-raza/spec-kit-colearn
 
 ---
 
-## USER SAYS TO AI:
-```
-I want to build a social network like Twitter or Instagram.
-```
+## INITIALIZE PROJECT
 
----
-
-## AI RESPONDS AS CO-PARTNER:
-
-### AI SAYS:
-```
-🤖 **SENIOR ARCHITECT MODE ACTIVATED**
-
-A social network is an exciting project! Let me understand your vision before we start.
-
----
-
-**Question 1: What TYPE of social network?**
-
-- A: Microblogging (short posts, like Twitter/X)
-- B: Photo sharing (visual-first, like Instagram)
-- C: Video sharing (TikTok-style)
-- D: Professional network (LinkedIn-style)
-- E: Community/focused (Reddit-style)
-
-What type?
-
----
-
-**Question 2: Who is your AUDIENCE?**
-
-- A: General public (all ages)
-- B: Young adults (18-35)
-- C: Professionals (25-50)
-- D: Niche community (specific interest)
-- E: Enterprise/business
-
-Who will use it?
-
----
-
-**Question 3: What CONTENT will users share?**
-
-- A: Text posts only
-- B: Text + Images
-- C: Text + Images + Videos
-- D: Text + Images + Videos + Links
-- E: All content types
-
-What types of content?
-
----
-
-**Question 4: What SOCIAL features?**
-
-- A: Follow only (one-way)
-- B: Follow + Friends (mutual follows)
-- C: Followers + Following + Groups
-- D: Full social graph (friends, groups, pages, events)
-
-What social connections?
-
----
-
-**Question 5: Should there be MESSAGING?**
-
-- A: No direct messaging
-- B: Basic DMs (one-on-one)
-- C: DMs + Group chats
-- D: DMs + Group chats + Voice/video calls
-
-What messaging features?
-
----
-
-**Question 6: What about MONETIZATION?**
-
-- A: No monetization (free platform)
-- B: Premium subscriptions
-- C: Creator tipping/donations
-- D: Ads platform
-- E: All of the above
-
-How to make money?
-
----
-
-Please answer: A, B, C, D, or E for each question.
+```bash
+spec-kit-colearn init connecthub
+cd connecthub
 ```
 
 ---
 
-## USER RESPONDS:
+## ALL /sp COMMANDS FOR EACH FEATURE
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    CONNECTHUB PROJECT FLOW                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  PHASE 1: PROJECT SETUP (Run Once)                              │
+│  ════════════════════                                            │
+│  /sp.constitution    → Set social network principles             │
+│                                                                  │
+│  PHASE 2: FEATURE 1 (Authentication)                            │
+│  ═══════════════════════════                                      │
+│  /sp.discover         → Partner discussion                       │
+│  /sp.specify          → Define requirements                     │
+│  /sp.clarify          → Answer questions                        │
+│  /sp.plan             → Technical plan                          │
+│  /sp.analyze          → Consistency check                        │
+│  /sp.tasks            → Generate tasks                           │
+│  /sp.checklist        → Quality checklist                        │
+│  /sp.implement         → Build feature                          │
+│  /sp.learn            → Record learning                         │
+│  /sp.glossary          → Review terms                           │
+│  /sp.phr               → Prompt history                         │
+│                                                                  │
+│  PHASE 3: FEATURE 2 (User Profiles)                            │
+│  (Same /sp cycle)                                              │
+│                                                                  │
+│  PHASE 4: FEATURE 3 (Posts & Feed)                            │
+│  (Same /sp cycle)                                              │
+│                                                                  │
+│  PHASE 5: FEATURE 4 (Follow System)                            │
+│  (Same /sp cycle)                                              │
+│                                                                  │
+│  ... continue for each feature ...                              │
+│                                                                  │
+│  TOTAL FEATURES: 10                                           │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# CONNECTHUB - 10 FEATURES
+
+| # | Feature | Status |
+|---|---------|--------|
+| 1 | Authentication | ✅ Complete |
+| 2 | User Profiles | ✅ Complete |
+| 3 | Posts & Feed | ✅ Complete |
+| 4 | Follow System | ✅ Complete |
+| 5 | Comments & Reactions | ✅ Complete |
+| 6 | Direct Messages | ✅ Complete |
+| 7 | Notifications | ✅ Complete |
+| 8 | Groups | ✅ Complete |
+| 9 | Search & Discovery | ✅ Complete |
+| 10 | Content Moderation | ✅ Complete |
+
+---
+
+# PHASE 1: PROJECT SETUP
+
+---
+
+## COMMAND: /sp.constitution
+
+### USER SAYS:
+```
+/sp.constitution Create principles for a social network focused on user privacy, content moderation, real-time performance, and community building.
+```
+
+### AI CREATES:
+
+```
+# ConnectHub Constitution
+
+## Core Principles
+
+### 1. User Privacy
+- Data minimization (only collect what's needed)
+- User control over privacy settings
+- Clear privacy policies
+- No data sold to third parties
+
+### 2. Content Moderation
+- Safe environment for all ages
+- Report mechanism for violations
+- Swift action on reported content
+- Appeal process for removals
+
+### 3. Real-time Performance
+- Instant updates (Socket.io)
+- Optimistic UI updates
+- Efficient database queries
+- CDN for media delivery
+
+### 4. Community Building
+- Groups for common interests
+- Positive engagement features
+- Anti-bullying measures
+- Inclusive by design
+
+### 5. Accessibility
+- WCAG 2.1 AA compliance
+- Screen reader friendly
+- Keyboard navigation
+- Alt text for images
+
+## Technical Guidelines
+
+### Stack
+- Mobile: React Native (Expo)
+- Web: React (Next.js)
+- Backend: Node.js + Express + TypeScript
+- Database: PostgreSQL + Redis
+- Real-time: Socket.io
+- Storage: AWS S3 + CloudFront
+
+### Performance Targets
+- Feed load: < 1 second
+- Real-time updates: < 500ms
+- Image upload: < 5 seconds
+- API response: < 200ms
+```
+
+---
+
+# FEATURE 1: AUTHENTICATION
+
+---
+
+## COMMAND 1: /sp.discover
+
+### USER SAYS:
+```
+/sp.discover For authentication - what login methods? What security?
+```
+
+### AI ASKS:
+
+```
+**Question 1: LOGIN METHODS?**
+- A: Email/password only
+- B: Email/password + Google
+- C: Email/password + Google + Apple
+
+**Question 2: SESSION MANAGEMENT?**
+- A: JWT tokens only
+- B: JWT + refresh tokens
+- C: Socket.io authentication
+
+**Question 3: SECURITY FEATURES?**
+- A: Basic (password hashing)
+- B: Standard (hash + rate limiting)
+- C: Enhanced (hash + rate limiting + 2FA admin)
+
+**Question 4: USER VERIFICATION?**
+- A: No verification
+- B: Email verification
+- C: Phone verification
+
+**Question 5: ACCOUNT TYPES?**
+- A: Regular users only
+- B: Regular + Business accounts
+- C: Regular + Business + Verified/Celebrity
+
+**Question 6: SOCIAL LOGIN?**
+- A: None
+- B: Google only
+- C: Google + Apple + Facebook
+```
+
+### USER RESPONDS:
+```
+C
+B
+C
+A
+C
+B
+```
+
+### AI CONTINUES:
+
+```
+Based on your answers:
+- Login: Email/password + Google + Apple
+- Sessions: JWT + refresh tokens
+- Security: Enhanced (hash + rate limiting + 2FA admin)
+- Verification: Email verification
+- Account Types: Regular + Business + Verified
+- Social Login: Google + Apple
+
+## 3 OPTIONS:
+
+### Option A: Custom Auth (MY RECOMMENDED)
+Full control, JWT + Socket.io auth
+Best for: Learning, full customization
+
+### Option B: Firebase Auth
+Firebase SDK handles everything
+Best for: Faster development
+
+### Option C: Auth0
+Managed auth service
+Best for: Enterprise features, SSO
+
+Which option? (A, B, or C)
+```
+
+### USER SAYS:
 ```
 A
-B
-B
-C
-C
-A
 ```
 
 ---
 
-## AI CONTINUES:
+## COMMAND 2: /sp.specify
 
-### AI SAYS:
-```
-Great choices! Here's what I understand:
-
-**Type:** Microblogging (text + images)
-**Audience:** Young adults (18-35)
-**Content:** Text + Images
-**Social:** Followers + Following + Groups
-**Messaging:** DMs + Group chats
-**Monetization:** Free (focus on growth first)
-
----
-
-Now let me understand your scope better...
-
----
-
-**Question 7: What should the FEED show?**
-
-- A: Chronological (newest first)
-- B: Algorithmic (based on engagement)
-- C: Hybrid (algorithmic with chronological option)
-
-How should content be ordered?
-
----
-
-**Question 8: Should there be VERIFICATION?**
-
-- A: No verification (keep it simple)
-- B: Blue checkmark for notable accounts
-- C: Multiple verification levels
-
-Account verification?
-
----
-
-**Question 9: How should NOTIFICATIONS work?**
-
-- A: In-app only
-- B: In-app + Email digest
-- C: In-app + Email + Push
-
-What notification channels?
-
----
-
-**Question 10: What about PRIVACY?**
-
-- A: Public posts only
-- B: Public + Private posts
-- C: Public + Private + Close Friends
-
-Privacy options?
-
----
-
-**Question 11: Any DISCOVERY features?**
-
-- A: Search only
-- B: Search + Trending topics
-- C: Search + Trending + Explore page
-- D: All + Recommended users
-
-How do users discover content?
-
----
-
-**Question 12: How should BLOCKING work?**
-
-- A: Simple block (can't see each other)
-- B: Block + Mute
-- C: Block + Mute + Restrict
-
-Moderation tools?
-
----
-
-Please answer: A, B, C, or D for each!
-```
-
----
-
-## USER RESPONDS:
-```
-C
-B
-B
-B
-C
-C
-```
-
----
-
-## AI SAYS:
-```
-Perfect! Now I have your complete vision:
-
-### Your Social Network: ConnectHub
-
-**Core:**
-- Microblogging platform
-- Target: Young adults
-- Text + image posts
-- Followers/following + groups
-
-**Feed:**
-- Hybrid: Algorithmic main feed + chronological option
-- Trending topics
-- Explore page
-
-**Social:**
-- Follow users
-- Join groups
-- Private posts option
-
-**Messaging:**
-- Direct messages (one-on-one)
-- Group chats
-
-**Privacy:**
-- Public posts
-- Private posts
-- Block + mute + restrict
-
-**Notifications:**
-- In-app
-- Email digest
-
-**Verification:**
-- Blue checkmark for notable accounts
-
----
-
-Let me present your implementation options:
-
-## Option A: Full Custom Build (MY RECOMMENDATION)
-**What:** Build from scratch with React Native + Node.js
-**Timeline:** 6-9 months
-**Pros:**
-- Full control
-- Learn everything
-- Scale unlimited
-- No dependencies
-**Cons:**
-- Longest to build
-- High complexity
-- Maintain everything yourself
-**Best for:** Serious entrepreneurs who want complete control
-
----
-
-## Option B: Existing Platform Customization
-**What:** Customize open-source (Mastodon, Diaspora)
-**Timeline:** 2-3 months
-**Pros:**
-- Faster to launch
-- Built-in features
-- Active community
-**Cons:**
-- Limited customization
-- Dependent on platform updates
-**Best for:** Quick launch, community support
-
----
-
-## Option C: Hybrid Approach
-**What:** Open-source backend + custom frontend
-**Timeline:** 4-5 months
-**Pros:**
-- Faster than full custom
-- Unique UX
-- Own data
-**Cons:**
-- Still complex
-- Some dependencies
-**Best for:** Balance of control and speed
-
----
-
-**Which approach feels right? (A, B, or C)**
-
-Also tell me:
-- Is this for learning, a startup, or existing business?
-- Do you have a team or solo developer?
-```
-
----
-
-## USER SAYS:
-```
-A
-This is for a startup I'm building. I'm the solo developer but plan to hire later.
-```
-
----
-
-## AI SAYS:
-```
-Excellent! **Option A: Full Custom Build**
-
-This is the right choice for a startup. You'll own everything, can scale infinitely, and will learn the architecture that powers social networks.
-
-Let me create your comprehensive specification...
-
-# SPEC.md - ConnectHub Social Network
-
-## 1. Overview
-
-A modern microblogging social network for young adults (18-35) featuring text and image posts, follower/following relationships, groups, direct messaging, and a hybrid algorithmic/chronological feed.
-
-## 2. Tech Stack
-
-- **Mobile:** React Native (iOS + Android)
-- **Web:** React (Next.js for landing page)
-- **Backend:** Node.js + Express
-- **Database:** PostgreSQL + Redis
-- **Storage:** AWS S3 for images
-- **Real-time:** Socket.io
-- **Search:** Elasticsearch
-- **Hosting:** AWS (EC2, RDS, ElastiCache, S3)
-
-## 3. Core Features
-
-### 3.1 Authentication & Users
-
-#### Registration & Login
-- Email + password registration
-- Social login (Google, Apple)
-- Email verification required
-- Password reset via email
-
-#### User Profiles
-- Display name (@handle)
-- Bio (500 characters max)
-- Profile picture
-- Cover image
-- Location (optional)
-- Website link
-- Birthday (optional)
-- Join date
-- Stats: Posts, Followers, Following
-
-#### Profile Settings
-- Edit profile information
-- Change profile picture
-- Change cover image
-- Privacy settings
-- Notification preferences
-- Account security (change password)
-- Deactivate account
-
-#### Verification
-- Blue checkmark for notable accounts
-- Admin-initiated verification
-- Verification badge display
-
----
-
-### 3.2 Posts & Content
-
-#### Creating Posts
-- Text posts (280 characters - Twitter style)
-- Image posts (up to 4 images)
-- Image captions
-- Hashtag extraction and linking
-- @mention users (autocomplete)
-- Location tag (optional)
-
-#### Post Display
-- Author info (avatar, name, handle, time)
-- Post content
-- Media display (images in grid)
-- Engagement actions
-- Share/retweet option
-
-#### Post Engagement
-- Like (heart icon)
-- Comment (count displayed)
-- Share/Retweet
-- Bookmark
-- Copy link
-- Report post
-
----
-
-### 3.3 Feed System
-
-#### Main Feed (Algorithmic)
-- Algorithm considers:
-  - Engagement (likes, comments, shares)
-  - Recency
-  - Relationship (close friends weighted higher)
-  - User interests
-- "Show more" / "Show less" controls
-- Chronological toggle option
-
-#### Following Feed (Chronological)
-- Newest posts from followed users first
-- No algorithmic sorting
-
-#### Trending Feed
-- Trending hashtags
-- Trending posts
-- Trending users
-- Based on 24-hour activity
-
-#### Explore Page
-- Discover new content
-- Suggested users to follow
-- Trending in categories
-- Recent popular posts
-
----
-
-### 3.4 Social Connections
-
-#### Follow System
-- Follow other users
-- Unfollow
-- Follower/following lists
-- Follower/following counts
-- Mutual followers highlighted
-
-#### Close Friends
-- Create close friends list
-- Share close friends posts
-- See close friends in separate section
-
-#### Groups
-- Create groups (public/private)
-- Join public groups
-- Request to join private groups
-- Group roles (admin, moderator, member)
-- Group posts
-- Group feed
-- Group settings
-
-#### User Discovery
-- Suggested users to follow
-- "People you may know"
-- Search by name/handle
-- Filter by category/interests
-
----
-
-### 3.5 Messaging
-
-#### Direct Messages
-- One-on-one conversations
-- Message history
-- Typing indicators
-- Read receipts (optional toggle)
-- Online/offline status
-- Block users in DMs
-
-#### Group Chats
-- Create group conversations
-- Add/remove members
-- Group name and image
-- Admin controls
-- Leave group
-
-#### Message Features
-- Text messages
-- Image sharing
-- Message reactions
-- Delete message
-- Report message
-
----
-
-### 3.6 Notifications
-
-#### In-App Notifications
-- New followers
-- Post likes
-- Post comments
-- Comment replies
-- Mentions
-- Direct messages
-- Group invitations
-- System notifications
-
-#### Notification Center
-- All notifications list
-- Mark as read
-- Mark all as read
-- Notification settings
-
-#### Email Notifications (Digest)
-- Daily digest option
-- Weekly digest option
-- Instant for important (DMs, mentions)
-
----
-
-### 3.7 Privacy & Moderation
-
-#### Privacy Settings
-- Account privacy (public/private)
-- Post visibility (public/followers/close friends)
-- Location sharing toggle
-- Discoverability settings
-
-#### Blocking & Muting
-- Block users
-- Mute users (hide without unfollowing)
-- Restrict users (limited interactions)
-- Blocked users list
-
-#### Content Moderation
-- Report posts
-- Report reasons:
-  - Spam
-  - Harassment
-  - Misinformation
-  - Violence
-  - Other
-- Admin review queue
-- Content removal
-- Warning system
-
----
-
-### 3.8 Search
-
-#### User Search
-- Search by name
-- Search by @handle
-- Filter by:
-  - Location
-  - Verified accounts
-  - Recent join
-
-#### Post Search
-- Full-text search
-- Search by hashtag
-- Search by @mention
-- Date range filter
-
-#### Trending
-- Trending hashtags
-- Trending topics
-- Trending posts
-
----
-
-## 4. Database Schema
+### AI CREATES:
 
 ```
-Users: id, email, password_hash, handle, display_name, bio, avatar_url, cover_url, location, website, birthday, is_verified, is_private, is_active, email_verified, created_at, updated_at
+# SPEC.md - Feature 1: Authentication
 
-Posts: id, user_id, content, created_at, updated_at, like_count, comment_count, share_count, is_deleted
+## User Stories
 
-PostImages: id, post_id, image_url, order, created_at
+### US1: Registration
+- Email/password registration
+- OAuth (Google + Apple)
+- Email verification
+- Profile creation (handle, display name)
 
-PostLikes: id, post_id, user_id, created_at
+### US2: Login
+- Email/password login
+- OAuth login (Google + Apple)
+- Remember me option
+- Session persistence
 
-PostShares: id, post_id, user_id, created_at
+### US3: Account Types
+- Regular user (default)
+- Business account (for brands/businesses)
+- Verified account (manual approval)
 
-Comments: id, post_id, user_id, parent_id, content, created_at, updated_at, like_count
+### US4: Security
+- Password hashing (bcrypt 12 rounds)
+- Rate limiting (10 attempts per minute)
+- Admin 2FA required
+- Session management
 
-Follows: id, follower_id, following_id, created_at
+## Data Model
 
-CloseFriends: id, user_id, friend_id, created_at
+```
+User {
+  id: UUID
+  email: String (unique)
+  passwordHash: String
+  handle: String (unique, @username)
+  displayName: String
+  avatarUrl: String?
+  bio: String?
+  accountType: Enum (regular, business, verified)
+  emailVerified: Boolean
+  twoFactorEnabled: Boolean
+  twoFactorSecret: String?
+  createdAt: DateTime
+}
 
-Groups: id, name, slug, description, image_url, is_private, created_by, created_at
-
-GroupMembers: id, group_id, user_id, role, joined_at
-
-GroupPosts: id, group_id, user_id, post_id, created_at
-
-Messages: id, conversation_id, sender_id, content, image_url, created_at, read_at
-
-Conversations: id, type (direct/group), created_at
-
-ConversationMembers: id, conversation_id, user_id, joined_at, last_read_at
-
-Notifications: id, user_id, type, actor_id, post_id, comment_id, is_read, created_at
-
-Reports: id, reporter_id, reported_user_id, post_id, reason, status, admin_notes, created_at, resolved_at
-
-Hashtags: id, tag, post_count, created_at
-
-PostHashtags: id, post_id, hashtag_id
-
-UserSearchIndex: (Elasticsearch)
-
-PostSearchIndex: (Elasticsearch)
+OAuthAccount {
+  id: UUID
+  userId: UUID
+  provider: Enum (google, apple)
+  providerId: String
+  accessToken: String
+  refreshToken: String
+}
 ```
 
-## 5. API Endpoints
-
-### Auth
-- POST /api/auth/register
-- POST /api/auth/login
-- POST /api/auth/logout
-- POST /api/auth/forgot-password
-- POST /api/auth/reset-password
-- POST /api/auth/verify-email
-
-### Users
-- GET /api/users/:id
-- PUT /api/users/:id
-- GET /api/users/:id/posts
-- GET /api/users/:id/followers
-- GET /api/users/:id/following
-- POST /api/users/:id/follow
-- DELETE /api/users/:id/follow
-- POST /api/users/:id/block
-- DELETE /api/users/:id/block
-
-### Posts
-- GET /api/posts (feed)
-- POST /api/posts
-- GET /api/posts/:id
-- DELETE /api/posts/:id
-- POST /api/posts/:id/like
-- DELETE /api/posts/:id/like
-- POST /api/posts/:id/share
-- POST /api/posts/:id/report
-
-### Comments
-- GET /api/posts/:id/comments
-- POST /api/posts/:id/comments
-- PUT /api/comments/:id
-- DELETE /api/comments/:id
-- POST /api/comments/:id/like
-
-### Messages
-- GET /api/conversations
-- GET /api/conversations/:id/messages
-- POST /api/conversations
-- POST /api/conversations/:id/messages
-- PUT /api/conversations/:id/leave
-
-### Notifications
-- GET /api/notifications
-- PUT /api/notifications/:id/read
-- PUT /api/notifications/read-all
-
-### Search
-- GET /api/search/users
-- GET /api/search/posts
-- GET /api/search/trending
-
-## 6. Real-time Events (Socket.io)
-
-### Client Events
-- join_room (conversation)
-- leave_room
-- send_message
-- typing_start
-- typing_stop
-
-### Server Events
-- new_message
-- message_read
-- user_online
-- user_offline
-- new_notification
-- post_liked
-- post_commented
-
-## 7. Success Criteria
-
-### Phase 1 MVP
-- [ ] User registration and login
-- [ ] Create text posts
-- [ ] Follow/unfollow users
-- [ ] Main feed (algorithmic)
-- [ ] User profiles
-- [ ] Like posts
-- [ ] Comments
-- [ ] Basic notifications
-
-### Phase 2
-- [ ] Image posts
-- [ ] Direct messages
-- [ ] Group chats
-- [ ] Explore page
-- [ ] Trending topics
-- [ ] Search
-
-### Phase 3
-- [ ] Groups
-- [ ] Close friends
-- [ ] Advanced privacy
-- [ ] Email notifications
-- [ ] Verification
-- [ ] Blocking/muting
-
----
-
-**Say "spec approved" to proceed to planning!**
+## API Endpoints
+```
+POST /api/auth/register
+POST /api/auth/login
+POST /api/auth/oauth/:provider
+POST /api/auth/verify-email
+POST /api/auth/forgot-password
+POST /api/auth/reset-password
+GET  /api/auth/me
+WebSocket: /socket.io/auth
 ```
 
----
+## Success Criteria
+- [ ] Email + OAuth registration works
+- [ ] Email verification sent
+- [ ] All account types supported
+- [ ] 2FA required for admin
+- [ ] Rate limiting prevents brute force
+```
 
-## USER SAYS:
+### USER SAYS:
 ```
 spec approved
 ```
 
 ---
 
-## AI SAYS:
+## COMMAND 3: /sp.clarify
+
+### USER SAYS:
 ```
-Creating comprehensive implementation plan...
+/sp.clarify Backend: Node.js + Express + TypeScript | Database: PostgreSQL + Prisma + Redis | OAuth: Google + Apple | JWT: Access 15min, Refresh 30 days | Password: bcrypt 12 rounds | Rate limit: 10/min | 2FA: Email code for admin
+```
 
-# PLAN.md - ConnectHub Social Network
+---
 
-## Phase 1: Foundation & Core (8 weeks)
+## COMMAND 4: /sp.plan
 
-### 1.1 Project Setup
-- [ ] GitHub repository
-- [ ] React Native project (Expo)
-- [ ] Backend (Node.js + Express)
-- [ ] PostgreSQL database
-- [ ] Redis cache
-- [ ] AWS S3 bucket
-- [ ] Project structure
+### AI CREATES:
 
-### 1.2 Authentication
-- [ ] User registration API
+```
+# PLAN.md - Feature 1: Authentication
+
+## Phase 1: Database Schema (Day 1)
+- [ ] User model
+- [ ] OAuthAccount model
+- [ ] Session/Token models
+- [ ] Migrations
+
+## Phase 2: Registration (Day 1-2)
+- [ ] Email registration endpoint
+- [ ] Password validation
+- [ ] OAuth endpoints (Google, Apple)
 - [ ] Email verification
-- [ ] Login with JWT
-- [ ] Password reset
-- [ ] Secure password hashing (bcrypt)
 
-### 1.3 User Profiles
-- [ ] Profile model
-- [ ] Profile API endpoints
-- [ ] Profile screen (mobile)
-- [ ] Edit profile screen
-- [ ] Profile picture upload
-- [ ] Cover image upload
+## Phase 3: Login (Day 2-3)
+- [ ] Email login
+- [ ] OAuth login flow
+- [ ] JWT generation
+- [ ] Refresh token rotation
 
-### 1.4 Posts & Feed
-- [ ] Post model
-- [ ] Create post API
-- [ ] Feed API (chronological first)
-- [ ] Home feed screen
-- [ ] Create post screen
-- [ ] Post detail screen
+## Phase 4: Security (Day 3)
+- [ ] Rate limiting middleware
+- [ ] Password hashing
+- [ ] Admin 2FA setup
+- [ ] Security logging
 
-### 1.5 Social (Follow System)
-- [ ] Follow model
-- [ ] Follow/unfollow API
-- [ ] Follower/following lists
-- [ ] User profile connections
-- [ ] Suggestion algorithm (basic)
+## Phase 5: WebSocket Auth (Day 3-4)
+- [ ] Socket.io connection
+- [ ] JWT verification
+- [ ] Real-time auth events
 
-### 1.6 Engagement
-- [ ] Like model
-- [ ] Like/unlike API
-- [ ] Like animation
-- [ ] Comment model
-- [ ] Comment API
-- [ ] Comments thread display
+## Phase 6: Testing (Day 4)
+- [ ] Unit tests
+- [ ] Integration tests
+- [ ] OAuth flow tests
 
-### 1.7 Notifications
-- [ ] Notification model
-- [ ] Notification API
-- [ ] Notification screen
-- [ ] Real-time notifications
-
----
-
-## Phase 2: Media & Messaging (6 weeks)
-
-### 2.1 Image Posts
-- [ ] Image upload to S3
-- [ ] Image compression
-- [ ] Image post creation
-- [ ] Image gallery display
-- [ ] Multiple images (up to 4)
-
-### 2.2 Direct Messages
-- [ ] Conversation model
-- [ ] Message model
-- [ ] DMs API
-- [ ] Messages list screen
-- [ ] Chat screen
-- [ ] Real-time messaging (Socket.io)
-- [ ] Typing indicators
-- [ ] Read receipts
-
-### 2.3 Group Chats
-- [ ] Group conversation model
-- [ ] Group chat API
-- [ ] Create group chat
-- [ ] Add/remove members
-- [ ] Group chat screen
-
-### 2.4 Explore & Discovery
-- [ ] Search API
-- [ ] User search screen
-- [ ] Explore screen
-- [ ] Suggested users
-- [ ] Trending hashtags
-
-### 2.5 Hashtags
-- [ ] Hashtag model
-- [ ] Hashtag extraction
-- [ ] Hashtag pages
-- [ ] Trending hashtags
-
----
-
-## Phase 3: Groups & Privacy (4 weeks)
-
-### 3.1 Groups
-- [ ] Group model
-- [ ] Group API
-- [ ] Create group screen
-- [ ] Group profile
-- [ ] Join/leave group
-- [ ] Group posts
-- [ ] Group feed
-- [ ] Group members
-- [ ] Admin controls
-
-### 3.2 Privacy
-- [ ] Privacy settings
-- [ ] Post visibility options
-- [ ] Close friends list
-- [ ] Close friends posts
-- [ ] Account privacy toggle
-
-### 3.3 Blocking & Moderation
-- [ ] Block/unblock API
-- [ ] Mute API
-- [ ] Restrict API
-- [ ] Blocked users list
-- [ ] Muted users list
-
----
-
-## Phase 4: Polish & Launch (4 weeks)
-
-### 4.1 Notifications
-- [ ] Email digest setup
-- [ ] Email templates
-- [ ] Push notification setup
-- [ ] Notification preferences
-
-### 4.2 Verification
-- [ ] Verification model
-- [ ] Admin verification UI
-- [ ] Verification badge display
-
-### 4.3 Search Enhancement
-- [ ] Elasticsearch setup
-- [ ] Full-text search
-- [ ] Advanced filters
-
-### 4.4 Performance
-- [ ] Feed caching (Redis)
-- [ ] Image optimization
-- [ ] Pagination optimization
-- [ ] Load testing
-
-### 4.5 Testing & Launch
-- [ ] E2E testing
-- [ ] Bug fixes
-- [ ] App store submission
-- [ ] Launch marketing
-
----
-
-## Estimated Timeline: 22-24 weeks
-
-**Each phase will be built using /sp commands: discover → specify → plan → tasks → implement → learn**
-
----
-
-**Say "plan approved" to generate Phase 1 tasks!**
+## Estimated: 4-5 days
 ```
 
----
-
-## USER SAYS:
+### USER SAYS:
 ```
 plan approved
 ```
 
 ---
 
-## AI SAYS:
+## COMMAND 5: /sp.analyze
+
 ```
-Generating Phase 1 detailed tasks...
-
-# TASKS.md - Phase 1: Foundation & Core
-
-## Task 1.1.1: Project Setup
-```bash
-# Create Expo project
-npx create-expo-app@latest ConnectHub --template blank-typescript
-
-# Install dependencies
-npx expo install @react-navigation/native @react-navigation/bottom-tabs
-npx expo install @react-navigation/stack
-npx expo install react-native-screens react-native-safe-area-context
-npx expo install @react-native-async-storage/async-storage
-npx expo install axios date-fns
-npx expo install react-native-vector-icons
-npx expo install expo-image-picker expo-image
-
-# Backend setup
-mkdir backend && cd backend
-npm init -y
-npm install express cors helmet dotenv pg bcryptjs jsonwebtoken socket.io
-npm install -D typescript @types/node @types/express @types/cors @types/bcryptjs @types/jsonwebtoken ts-node nodemon
+ANALYSIS: APPROVED
+- All user stories covered
+- Technical stack consistent
+- Security requirements met
 ```
 
-## Task 1.1.2: Database Setup
-```sql
--- PostgreSQL schema
-CREATE TABLE users (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email VARCHAR(255) UNIQUE NOT NULL,
-  password_hash VARCHAR(255) NOT NULL,
-  handle VARCHAR(50) UNIQUE NOT NULL,
-  display_name VARCHAR(100),
-  bio TEXT,
-  avatar_url VARCHAR(500),
-  cover_url VARCHAR(500),
-  location VARCHAR(100),
-  website VARCHAR(500),
-  is_verified BOOLEAN DEFAULT FALSE,
-  is_private BOOLEAN DEFAULT FALSE,
-  is_active BOOLEAN DEFAULT TRUE,
-  email_verified BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
+---
 
-CREATE TABLE posts (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  content TEXT NOT NULL,
-  like_count INTEGER DEFAULT 0,
-  comment_count INTEGER DEFAULT 0,
-  share_count INTEGER DEFAULT 0,
-  is_deleted BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
+## COMMAND 6: /sp.tasks
 
-CREATE TABLE follows (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  follower_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  following_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  UNIQUE(follower_id, following_id)
-);
+### AI CREATES:
 
-CREATE TABLE post_likes (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  post_id UUID REFERENCES posts(id) ON DELETE CASCADE,
-  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  UNIQUE(post_id, user_id)
-);
-
-CREATE TABLE comments (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  post_id UUID REFERENCES posts(id) ON DELETE CASCADE,
-  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  parent_id UUID REFERENCES comments(id) ON DELETE CASCADE,
-  content TEXT NOT NULL,
-  like_count INTEGER DEFAULT 0,
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW()
-);
-
-CREATE TABLE notifications (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-  type VARCHAR(50) NOT NULL,
-  actor_id UUID REFERENCES users(id) ON DELETE SET NULL,
-  post_id UUID REFERENCES posts(id) ON DELETE CASCADE,
-  comment_id UUID REFERENCES comments(id) ON DELETE CASCADE,
-  is_read BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT NOW()
-);
-
--- Indexes
-CREATE INDEX idx_posts_user_id ON posts(user_id);
-CREATE INDEX idx_posts_created_at ON posts(created_at DESC);
-CREATE INDEX idx_follows_follower ON follows(follower_id);
-CREATE INDEX idx_follows_following ON follows(following_id);
-CREATE INDEX idx_notifications_user ON notifications(user_id, created_at DESC);
 ```
+# TASKS.md - Feature 1: Authentication
 
-## Task 1.2.1: User Registration API
-```typescript
-// POST /api/auth/register
-// src/routes/auth.ts
-
-router.post('/register', async (req, res) => {
-  try {
-    const { email, password, handle, displayName } = req.body;
-    
-    // Validate email format
-    if (!email || !email.includes('@')) {
-      return res.status(400).json({ error: 'Invalid email' });
-    }
-    
-    // Validate password strength
-    if (password.length < 8) {
-      return res.status(400).json({ error: 'Password must be at least 8 characters' });
-    }
-    
-    // Check email not taken
-    const emailExists = await db.query(
-      'SELECT id FROM users WHERE email = $1',
-      [email]
-    );
-    if (emailExists.rows.length > 0) {
-      return res.status(400).json({ error: 'Email already registered' });
-    }
-    
-    // Check handle not taken
-    const handleExists = await db.query(
-      'SELECT id FROM users WHERE handle = $1',
-      [handle]
-    );
-    if (handleExists.rows.length > 0) {
-      return res.status(400).json({ error: 'Handle already taken' });
-    }
-    
-    // Hash password
-    const passwordHash = await bcrypt.hash(password, 12);
-    
-    // Create user
-    const result = await db.query(
-      `INSERT INTO users (email, password_hash, handle, display_name)
-       VALUES ($1, $2, $3, $4)
-       RETURNING id, email, handle, display_name, created_at`,
-      [email, passwordHash, handle, displayName || handle]
-    );
-    
-    const user = result.rows[0];
-    
-    // Generate verification token
-    const verificationToken = jwt.sign(
-      { userId: user.id, type: 'email_verification' },
-      process.env.JWT_SECRET,
-      { expiresIn: '24h' }
-    );
-    
-    // Send verification email (mock for now)
-    console.log(`Verification link: ${process.env.APP_URL}/verify/${verificationToken}`);
-    
-    res.status(201).json({
-      message: 'User created successfully',
-      user: {
-        id: user.id,
-        email: user.email,
-        handle: user.handle,
-        displayName: user.displayName
-      }
-    });
-  } catch (error) {
-    console.error('Registration error:', error);
-    res.status(500).json({ error: 'Registration failed' });
-  }
-});
-```
-
-## Task 1.4.1: Create Post Screen (Mobile)
-```tsx
-// src/screens/CreatePostScreen.tsx
-import { useState } from 'react';
-import { View, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-
-export function CreatePostScreen() {
-  const [content, setContent] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const navigation = useNavigation();
-  const maxLength = 280;
-  
-  const handlePost = async () => {
-    if (!content.trim()) {
-      Alert.alert('Error', 'Post cannot be empty');
-      return;
-    }
-    
-    if (content.length > maxLength) {
-      Alert.alert('Error', `Post must be under ${maxLength} characters`);
-      return;
-    }
-    
-    setIsLoading(true);
-    try {
-      await api.post('/posts', { content });
-      navigation.goBack();
-    } catch (error) {
-      Alert.alert('Error', 'Failed to create post');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-  
-  return (
-    <View style={styles.container}>
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="What's happening?"
-          placeholderTextColor="#657786"
-          multiline
-          maxLength={maxLength}
-          value={content}
-          onChangeText={setContent}
-        />
-      </View>
-      
-      <View style={styles.footer}>
-        <Text style={styles.charCount}>
-          {content.length}/{maxLength}
-        </Text>
-        
-        <TouchableOpacity
-          style={[styles.postButton, !content.trim() && styles.postButtonDisabled]}
-          onPress={handlePost}
-          disabled={isLoading || !content.trim()}
-        >
-          <Text style={styles.postButtonText}>
-            {isLoading ? 'Posting...' : 'Post'}
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
+## Task 1.1: Database Schema
+```prisma
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String?
+  handle       String   @unique
+  displayName String
+  avatarUrl   String?
+  bio         String?
+  accountType String   @default("regular")
+  emailVerified Boolean @default(false)
+  twoFactorEnabled Boolean @default(false)
+  twoFactorSecret String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  oauthAccounts OAuthAccount[]
+  posts       Post[]
+  comments    Comment[]
+  messages    Message[]
+  followers   Follow[] @relation("following")
+  following   Follow[] @relation("follower")
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    padding: 16
-  },
-  inputContainer: {
-    flex: 1
-  },
-  input: {
-    fontSize: 18,
-    color: '#14171A',
-    textAlignVertical: 'top',
-    minHeight: 100
-  },
-  footer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopColor: '#E1E8ED'
-  },
-  charCount: {
-    fontSize: 14,
-    color: '#657786'
-  },
-  postButton: {
-    backgroundColor: '#1DA1F2',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 20
-  },
-  postButtonDisabled: {
-    backgroundColor: '#AAB8C2'
-  },
-  postButtonText: {
-    color: '#FFFFFF',
-    fontWeight: 'bold',
-    fontSize: 16
-  }
-});
+model OAuthAccount {
+  id           String @id @default(uuid())
+  userId       String
+  user         User   @relation(fields: [userId], references: [id])
+  provider     String
+  providerId   String
+  accessToken  String
+  refreshToken String
+  expiresAt    DateTime
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+}
 ```
 
-## Task 1.5.1: Follow System API
-```typescript
-// POST /api/users/:id/follow
-router.post('/:userId/follow', authMiddleware, async (req, res) => {
-  try {
-    const currentUserId = req.user.id;
-    const targetUserId = req.params.userId;
-    
-    if (currentUserId === targetUserId) {
-      return res.status(400).json({ error: 'Cannot follow yourself' });
-    }
-    
-    // Check if target user exists
-    const userExists = await db.query(
-      'SELECT id, is_private FROM users WHERE id = $1',
-      [targetUserId]
-    );
-    if (userExists.rows.length === 0) {
-      return res.status(404).json({ error: 'User not found' });
-    }
-    
-    const isPrivate = userExists.rows[0].is_private;
-    
-    // Check if already following
-    const alreadyFollowing = await db.query(
-      'SELECT id FROM follows WHERE follower_id = $1 AND following_id = $2',
-      [currentUserId, targetUserId]
-    );
-    if (alreadyFollowing.rows.length > 0) {
-      return res.status(400).json({ error: 'Already following this user' });
-    }
-    
-    // Create follow
-    await db.query(
-      'INSERT INTO follows (follower_id, following_id) VALUES ($1, $2)',
-      [currentUserId, targetUserId]
-    );
-    
-    // Update follower count
-    await db.query(
-      'UPDATE users SET followers_count = followers_count + 1 WHERE id = $1',
-      [targetUserId]
-    );
-    
-    // Create notification
-    await db.query(
-      `INSERT INTO notifications (user_id, type, actor_id)
-       VALUES ($1, 'follow', $2)`,
-      [targetUserId, currentUserId]
-    );
-    
-    res.json({ message: 'Followed successfully' });
-  } catch (error) {
-    console.error('Follow error:', error);
-    res.status(500).json({ error: 'Failed to follow user' });
-  }
-});
+## Task 1.2: Registration
+- [ ] Email registration
+- [ ] Password validation
+- [ ] Handle validation (@username format)
+- [ ] Duplicate check
+
+## Task 1.3: OAuth
+- [ ] Google OAuth flow
+- [ ] Apple OAuth flow
+- [ ] Link OAuth to existing account
+
+## Task 1.4: Login
+- [ ] Email login
+- [ ] JWT generation
+- [ ] Refresh token rotation
+
+## Task 1.5: Security
+- [ ] Rate limiting
+- [ ] Password hashing
+- [ ] Admin 2FA
+
+## Task 1.6: Socket.io Auth
+- [ ] Connection handler
+- [ ] JWT verification
+- [ ] User online status
 ```
 
----
-
-**Say "tasks approved" to start building Phase 1!**
-```
-
----
-
-## USER SAYS:
+### USER SAYS:
 ```
 tasks approved
 ```
 
 ---
 
-## AI SAYS:
+## COMMAND 7: /sp.checklist
+
+```
+# QUALITY CHECKLIST - Feature 1: Authentication
+
+## SECURITY
+☐ Passwords hashed bcrypt 12 rounds
+☐ Rate limiting enforced
+☐ Admin 2FA required
+☐ OAuth tokens secure
+☐ JWT tokens validated
+
+## FUNCTIONAL
+☐ Email registration works
+☐ OAuth login (Google, Apple) works
+☐ Email verification sent
+☐ Login persists session
+☐ Logout clears session
+☐ Protected routes require auth
+☐ Socket.io connection authenticated
+
+## USER EXPERIENCE
+☐ Clear error messages
+☐ Login feels instant
+☐ Remember me works
+☐ Account types differentiate users
+```
+
+---
+
+## COMMAND 8: /sp.implement
+
 ```
 🔨 **MODE 2: CODING WORKER ACTIVATED**
 
-Building Phase 1: Foundation & Core...
+Building Feature 1: Authentication...
 
-## Task 1.1.1: Project Setup
+## Task 1.1: Database Schema
 
-Creating Expo project...
+```prisma
+model User {
+  id               String   @id @default(uuid())
+  email            String   @unique
+  passwordHash     String?
+  handle           String   @unique
+  displayName      String
+  avatarUrl        String?
+  bio              String?
+  accountType       String   @default("regular")
+  emailVerified    Boolean  @default(false)
+  twoFactorEnabled Boolean @default(false)
+  twoFactorSecret  String?
+  failedAttempts   Int      @default(0)
+  lockedUntil      DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  
+  oauthAccounts OAuthAccount[]
+  posts       Post[]
+  comments   Comment[]
+  followers  Follow[] @relation("following")
+  following  Follow[] @relation("follower")
+  sentMessages     Message[] @relation("sender")
+  receivedMessages Message[] @relation("recipient")
+}
 
-```bash
-npx create-expo-app@latest ConnectHub --template blank-typescript
-cd ConnectHub
+model OAuthAccount {
+  id           String @id @default(uuid())
+  userId       String
+  user         User   @relation(fields: [userId], references: [id])
+  provider     String
+  providerId   String
+  accessToken  String
+  refreshToken String
+  expiresAt    DateTime
+  
+  @@unique([provider, providerId])
+}
 
-# Install all dependencies
-npx expo install @react-navigation/native @react-navigation/bottom-tabs
-npx expo install @react-navigation/stack
-npx expo install react-native-screens react-native-safe-area-context
-npx expo install @react-native-async-storage/async-storage
-npx expo install axios date-fns
-npx expo install expo-image-picker expo-image
-npx expo install @react-native-community/netinfo
-
-# Install backend dependencies
-mkdir backend && cd backend
-npm init -y
-npm install express cors helmet dotenv pg bcryptjs jsonwebtoken socket.io uuid
-npm install -D typescript @types/node @types/express ts-node nodemon
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
 ```
 
-✅ **Task 1.1.1 Complete!**
-
----
-
-## Task 1.2.1: User Registration
-
-Creating auth routes...
+## Task 1.2: Registration
 
 ```typescript
-// backend/src/routes/auth.ts
-import { Router } from 'express';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import { db } from '../config/database';
-
-const router = Router();
-
+// POST /api/auth/register
 router.post('/register', async (req, res) => {
-  try {
-    const { email, password, handle, displayName } = req.body;
-    
-    // Validation
-    if (!email || !email.includes('@')) {
-      return res.status(400).json({ error: 'Invalid email' });
-    }
-    
-    if (password.length < 8) {
-      return res.status(400).json({ error: 'Password must be at least 8 characters' });
-    }
-    
-    if (!handle || handle.length < 3) {
-      return res.status(400).json({ error: 'Handle must be at least 3 characters' });
-    }
-    
-    // Hash password
-    const passwordHash = await bcrypt.hash(password, 12);
-    
-    // Create user
-    const result = await db.query(
-      `INSERT INTO users (email, password_hash, handle, display_name)
-       VALUES ($1, $2, $3, $4)
-       RETURNING id, email, handle, display_name, created_at`,
-      [email, passwordHash, handle, displayName || handle]
-    );
-    
-    const user = result.rows[0];
-    
-    res.status(201).json({
-      message: 'Welcome to ConnectHub!',
-      user: {
-        id: user.id,
-        email: user.email,
-        handle: user.handle,
-        displayName: user.displayName
-      }
-    });
-  } catch (error) {
-    console.error('Registration error:', error);
-    res.status(500).json({ error: 'Registration failed' });
+  const { email, password, handle, displayName } = req.body;
+
+  // Validate email
+  if (!email.includes('@')) {
+    return res.status(400).json({ error: 'Invalid email' });
   }
+
+  // Validate handle (@username format)
+  const handleRegex = /^@[a-zA-Z0-9_]{3,20}$/;
+  if (!handleRegex.test(handle)) {
+    return res.status(400).json({ 
+      error: 'Handle must be 3-20 chars, start with @' 
+    });
+  }
+
+  // Validate password strength
+  if (password.length < 8) {
+    return res.status(400).json({ 
+      error: 'Password must be at least 8 characters' 
+    });
+  }
+
+  // Check duplicates
+  const existingEmail = await prisma.user.findUnique({ where: { email } });
+  if (existingEmail) {
+    return res.status(400).json({ error: 'Email already registered' });
+  }
+
+  const existingHandle = await prisma.user.findUnique({ where: { handle } });
+  if (existingHandle) {
+    return res.status(400).json({ error: 'Handle already taken' });
+  }
+
+  // Hash password
+  const passwordHash = await bcrypt.hash(password, 12);
+
+  // Create user
+  const user = await prisma.user.create({
+    data: { email, passwordHash, handle, displayName }
+  });
+
+  // Generate verification token
+  const token = crypto.randomBytes(32).toString('hex');
+  await prisma.verificationToken.create({
+    data: {
+      token,
+      email,
+      type: 'verification',
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
+    }
+  });
+
+  // Send verification email
+  console.log(`Verify: /api/auth/verify/${token}`);
+
+  // Generate JWT
+  const accessToken = jwt.sign({ userId: user.id }, SECRET, { expiresIn: '15m' });
+  const refreshToken = crypto.randomBytes(64).toString('hex');
+  
+  await prisma.refreshToken.create({
+    data: { token: refreshToken, userId: user.id, expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) }
+  });
+
+  res.status(201).json({
+    accessToken,
+    refreshToken,
+    user: { id: user.id, email, handle, displayName, accountType: 'regular' }
+  });
+});
+```
+
+## Task 1.3: Login
+
+```typescript
+// POST /api/auth/login
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await prisma.user.findUnique({ where: { email } });
+  if (!user) {
+    return res.status(401).json({ error: 'Invalid credentials' });
+  }
+
+  // Check lockout
+  if (user.lockedUntil && user.lockedUntil > new Date()) {
+    return res.status(423).json({ 
+      error: 'Account locked. Try again later.' 
+    });
+  }
+
+  // Verify password
+  const valid = await bcrypt.compare(password, user.passwordHash);
+  if (!valid) {
+    const attempts = user.failedAttempts + 1;
+    const updates: any = { failedAttempts: attempts };
+    
+    if (attempts >= 10) {
+      updates.lockedUntil = new Date(Date.now() + 15 * 60 * 1000);
+    }
+    
+    await prisma.user.update({ where: { id: user.id }, data: updates });
+    return res.status(401).json({ error: 'Invalid credentials' });
+  }
+
+  // Reset attempts
+  await prisma.user.update({
+    where: { id: user.id },
+    data: { failedAttempts: 0 }
+  });
+
+  // Generate tokens
+  const accessToken = jwt.sign({ userId: user.id }, SECRET, { expiresIn: '15m' });
+  const refreshToken = crypto.randomBytes(64).toString('hex');
+  
+  await prisma.refreshToken.create({
+    data: { token: refreshToken, userId: user.id, expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) }
+  });
+
+  res.json({ accessToken, refreshToken });
+});
+```
+
+## Task 1.4: Rate Limiting
+
+```typescript
+// Rate limiting middleware
+import rateLimit from 'express-rate-limit';
+
+const authLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 10, // 10 requests per minute
+  message: { error: 'Too many attempts. Please try again later.' }
 });
 
-export default router;
+app.use('/api/auth/login', authLimiter);
+app.use('/api/auth/register', authLimiter);
 ```
 
-✅ **Task 1.2.1 Complete!**
+[AI continues with OAuth, Socket.io, testing...]
 
----
-
-[AI continues building remaining tasks...]
-
----
-
-## After Phase 1 Complete
-
-AI runs `/sp.learn`...
-
----
-
-## LEARNING LOG - ConnectHub Social Network
-
-### Technical Terms Learned:
-
-**JWT (JSON Web Tokens)** - A secure way to authenticate users. The server signs a token, and the client sends it with each request. Like a digital ID card that expires.
-
-**Socket.io** - A library for real-time communication. Instead of the client constantly asking "any new messages?", the server pushes updates instantly. Like a walkie-talkie instead of email.
-
-**Bcrypt** - A password hashing algorithm that includes built-in "salt" (random data). Even if two users have the same password, their hashes are different. Makes passwords much harder to crack.
-
-**PostgreSQL** - A powerful relational database. Great for complex queries and relationships. Social networks need it because of all the connections between users.
-
-**Redis** - An in-memory data store. Much faster than disk-based databases for frequently-accessed data. Perfect for caching feeds and session data.
-
-**Chronological vs Algorithmic Feed** - Chronological shows posts in time order. Algorithmic shows posts based on relevance (engagement, your interests, close friends). Hybrid gives you both options.
-
-**Optimistic UI** - Update the interface IMMEDIATELY when user takes action, even before the server confirms. Then sync in background. Makes the app feel instant and responsive.
-
----
-
-### Decisions Made:
-
-- Used Expo for faster React Native development
-- PostgreSQL for relational data (users, follows, posts)
-- Redis for caching feeds and session data
-- Socket.io for real-time notifications and DMs
-- JWT for stateless authentication
-
----
-
-### Concepts to Explore Later:
-
-- GraphQL for flexible data fetching
-- Elasticsearch for powerful search
-- AWS S3 + CloudFront for image delivery
-- Machine learning for feed algorithm
-- Push notifications with Firebase Cloud Messaging
-- Video uploads and streaming
-
----
-
-**Run `/sp.glossary` anytime to review all learned terms!**
-
----
-
-## /sp Command Flow Summary
-
-```
-FOR EACH PHASE/FEATURE:
-1. /sp.discover     → AI asks questions, user answers
-2. /sp.specify     → AI creates detailed spec
-3. /sp.plan        → AI creates implementation plan
-4. /sp.tasks       → AI creates detailed tasks
-5. /sp.implement   → AI builds in Mode 2
-6. /sp.learn       → AI records learning
-7. /sp.glossary    → Review all terms anytime
+✅ Feature 1 Complete!
 ```
 
-## Project Complete Structure
+---
+
+## COMMAND 9: /sp.learn
 
 ```
-ConnectHub/
-├── mobile/              (React Native / Expo)
-│   ├── src/
-│   │   ├── screens/     (App screens)
-│   │   ├── components/    (Reusable UI)
-│   │   ├── services/     (API calls)
-│   │   ├── context/      (State management)
-│   │   └── hooks/       (Custom hooks)
-│   └── app.json
-├── backend/             (Node.js + Express)
-│   ├── src/
-│   │   ├── routes/      (API endpoints)
-│   │   ├── controllers/  (Request handlers)
-│   │   ├── services/     (Business logic)
-│   │   ├── models/      (Data models)
-│   │   ├── middleware/   (Auth, validation)
-│   │   └── config/      (DB, Socket.io)
-│   └── prisma/
-├── .specify/
-│   ├── memory/constitution.md
-│   └── specs/
-│       ├── 01-foundation/
-│       ├── 02-media-messaging/
-│       ├── 03-groups-privacy/
-│       └── 04-polish-launch/
-└── history/
-    ├── prompts/
-    │   ├── 01-foundation/
-    │   ├── 02-media-messaging/
-    │   └── ...
-    └── adr/
+# LEARNING LOG - Feature 1: Authentication
+
+## Date: 2026-03-21
+## Feature: Authentication
+## Project: ConnectHub
+
+---
+
+### TECHNICAL TERMS LEARNED:
+
+**Handle (@username)**
+Social media style username that starts with @.
+- Unique identifier for users
+- Publicly visible
+- Used for @mentions
+
+**OAuth 2.0**
+Standard for authorization via third parties.
+- Google: OAuth 2.0 + OpenID Connect
+- Apple: OAuth 2.0 with Sign in with Apple
+- Returns access + refresh tokens
+
+**Socket.io Authentication**
+Real-time connections need auth too.
+- JWT sent in handshake
+- Verified on connection
+- User status updated
+
+**Rate Limiting**
+Prevent abuse by limiting requests.
+- 10 attempts per minute on auth
+- 100 per minute on API
+- 429 response when exceeded
+
+---
+
+### SOCIAL NETWORK SPECIFIC:
+
+**Account Types**
+Different user types need different features.
+- Regular: Standard user
+- Business: Brand/business account
+- Verified: Manual approval, blue check
+
+**Real-time Presence**
+Users can see who's online.
+- Socket.io connection = online
+- Disconnect = offline
+- Broadcast status changes
+
+---
+
+**Feature 1 Complete! Moving to Feature 2: User Profiles**
 ```
+
+---
+
+## COMMAND 10: /sp.glossary
+
+```
+# GLOSSARY - All Terms Learned
+
+| Term | Definition |
+|------|------------|
+| **JWT** | JSON Web Token - Stateless auth |
+| **OAuth** | Authorization via third parties |
+| **Handle** | @username for social identity |
+| **Rate Limiting** | Prevent abuse by limiting requests |
+| **Socket.io** | Real-time bidirectional communication |
+| **Bcrypt** | Password hashing with salt |
+| **Refresh Token** | Long-lived token for session |
+| **Account Lockout** | Block after X failed attempts |
+| **2FA** | Two-Factor Authentication |
+```
+
+---
+
+## COMMAND 11: /sp.phr
+
+```
+# PROMPT HISTORY - Feature 1: Authentication
+
+## User Request:
+/sp.constitution Create social network principles
+/sp.discover For auth - what login methods?
+
+## AI Questions: 6
+## User Answers: C, B, C, A, C, B
+
+## User Choice: Option A (Custom Auth)
+
+## Tech Stack:
+- Node.js + Express + TypeScript
+- PostgreSQL + Prisma + Redis
+- JWT + Socket.io
+
+## What Worked:
+- Custom auth gives full control
+- JWT + refresh pattern scalable
+- Rate limiting prevents brute force
+
+## NEXT: Feature 2 - User Profiles
+```
+
+---
+
+# FEATURE 2: USER PROFILES
+
+---
+
+## COMMAND 1: /sp.discover
+
+### USER SAYS:
+```
+/sp.discover For user profiles - what info to show?
+```
+
+### AI ASKS:
+
+```
+**Question 1: PROFILE DATA?**
+- A: Avatar, name, bio only
+- B: Avatar, name, bio, location, website
+- C: Full profile with all social fields
+
+**Question 2: AVATAR?**
+- A: Upload photo
+- B: Upload + crop tool
+- C: Upload + crop + multiple sizes generated
+
+**Question 3: PROFILE VISIBILITY?**
+- A: Public profiles only
+- B: Public + Private (follow approval)
+- C: Public + Private + Close Friends
+
+**Question 4: PROFILE STATS?**
+- A: Posts, Followers, Following
+- B: Posts, Followers, Following, Likes
+- C: Full stats (posts, followers, following, likes, views)
+
+**Question 5: PROFILE EDITING?**
+- A: Edit name, bio, avatar
+- B: Edit all fields
+- C: Edit all + theme customization
+
+**Question 6: VERIFICATION?**
+- A: No verification badges
+- B: Manual verification (admin approves)
+- C: Auto-verification based on followers
+
+Please answer A, B, or C for each!
+```
+
+### USER RESPONDS:
+```
+B
+B
+B
+A
+B
+B
+```
+
+### AI CONTINUES:
+
+```
+Based on your answers:
+- Profile: Avatar, name, bio, location, website
+- Avatar: Upload + crop tool
+- Visibility: Public + Private (follow approval)
+- Stats: Posts, Followers, Following
+- Editing: Edit all fields
+- Verification: Manual (admin approves)
+
+## 3 OPTIONS:
+
+### Option A: Simple Profile (MY RECOMMENDED)
+Clean profile with essential info
+Best for: Twitter-style microblogging
+
+### Option B: Rich Profile
+Full social profile with all features
+Best for: LinkedIn-style professional network
+
+### Option C: Minimal Profile
+Just avatar and name
+Best for: Anonymous/privacy-focused
+
+Which option? (A, B, or C)
+```
+
+### USER SAYS:
+```
+A
+```
+
+---
+
+## COMMAND 2-11: Continue the cycle...
+
+```
+FOR EACH NEW FEATURE:
+2. /sp.specify      → AI creates spec
+3. /sp.clarify      → User provides clarifications
+4. /sp.plan         → AI creates plan
+5. /sp.analyze      → AI checks consistency
+6. /sp.tasks       → AI creates tasks
+7. /sp.checklist   → AI generates checklist
+8. /sp.implement   → AI builds in Mode 2
+9. /sp.learn       → AI records learning
+10. /sp.glossary   → AI shows all terms
+11. /sp.phr        → AI creates prompt history
+
+REPEAT FOR FEATURES 3, 4, 5, ... until project complete!
+```
+
+---
+
+# CONNECTHUB FEATURES (Continued)
+
+| # | Feature | Next Steps |
+|---|---------|-----------|
+| 1 | Authentication | ✅ Complete |
+| 2 | User Profiles | ✅ Complete |
+| 3 | Posts & Feed | (Continue cycle) |
+| 4 | Follow System | (Continue cycle) |
+| 5 | Comments & Reactions | (Continue cycle) |
+| 6 | Direct Messages | (Continue cycle) |
+| 7 | Notifications | (Continue cycle) |
+| 8 | Groups | (Continue cycle) |
+| 9 | Search & Discovery | (Continue cycle) |
+| 10 | Content Moderation | (Continue cycle) |
+
+---
+
+# SUMMARY
+
+## For EACH feature, run the complete cycle:
+
+```
+1. /sp.discover     → AI asks questions (A/B/C)
+2. /sp.specify      → AI creates spec
+3. /sp.clarify      → User provides tech details
+4. /sp.plan         → AI creates plan
+5. /sp.analyze      → AI checks consistency
+6. /sp.tasks       → AI creates tasks
+7. /sp.checklist   → AI generates checklist
+8. /sp.implement   → AI builds in Mode 2
+9. /sp.learn       → AI records learning
+10. /sp.glossary   → AI shows all terms
+11. /sp.phr        → AI creates prompt history
+
+THEN MOVE TO NEXT FEATURE!
+```
+
+## Each feature takes 4-7 days
+## Total project: 22-24 weeks
+## 10 features, one at a time
+## Learn as you build!
