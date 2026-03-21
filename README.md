@@ -23,6 +23,10 @@
 13. [Spec Templates](#13-spec-templates)
 14. [Best Practices](#14-best-practices)
 15. [Quick Start Guide](#15-quick-start-guide)
+16. [Command Flow Timeline](#16-command-flow-timeline)
+17. [Example Projects](#17-example-projects)
+18. [Frequently Asked Questions](#18-frequently-asked-questions)
+19. [Quick Command Reference Card](#19-quick-command-reference-card)
 
 ---
 
@@ -1288,6 +1292,385 @@ spec-kit-colearn init .
 |  "spec approved" -> "plan approved" -> "tasks approved"            |
 |  -> Mode 2 activates -> validate -> close                           |
 +----------------------------------------------------------------------+
+```
+
+---
+
+## 16. Command Flow Timeline
+
+This section shows exactly **when** and **why** to use each command during development.
+
+### The Complete Development Cycle
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                     COMMAND FLOW TIMELINE                               │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 1: DISCOVERY                                                     │
+│  ══════════════════                                                     │
+│                                                                          │
+│  Command: /sp.discover (automatic after activation)                     │
+│                                                                          │
+│  User says: "I want a user login system"                                │
+│                                                                          │
+│  AI asks: "Who are the users? What's the stack? What's the scope?"     │
+│                                                                          │
+│  ┌──────────────────────────────────────────────────────────────┐       │
+│  │ TEACHING MODE ACTIVATES if you mention something unclear:     │       │
+│  │                                                               │       │
+│  │ > "You mentioned JWT - let me explain:                       │       │
+│  │   JWT is like a concert wristband...                         │       │
+│  └──────────────────────────────────────────────────────────────┘       │
+│                                                                          │
+│  YOU answer the questions → AI presents 3 options (A, B, C)            │
+│  YOU choose: "A" or "B (recommended)" or "C"                          │
+│                                                                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 2: SPECIFICATION                                                 │
+│  ════════════════════════                                               │
+│                                                                          │
+│  Command: /sp.specify (automatic after you choose option)                │
+│                                                                          │
+│  AI creates: SPEC.md                                                    │
+│                                                                          │
+│  You review SPEC.md                                                     │
+│  You ask questions: "Can we add X?"                                     │
+│  AI updates                                                             │
+│                                                                          │
+│  YOU say: "spec approved"                                               │
+│                                                                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 3: PLANNING                                                      │
+│  ═════════════════                                                      │
+│                                                                          │
+│  Command: /sp.plan (automatic after "spec approved")                    │
+│                                                                          │
+│  AI creates: PLAN.md with phases                                        │
+│                                                                          │
+│  You review phases                                                      │
+│  You ask: "Can we skip Phase 4?"                                        │
+│  AI adjusts                                                            │
+│                                                                          │
+│  YOU say: "plan approved"                                               │
+│                                                                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 4: TASK GENERATION                                                │
+│  ═══════════════════════                                                │
+│                                                                          │
+│  Command: /sp.tasks (automatic after "plan approved")                    │
+│                                                                          │
+│  AI creates: TASKS.md with detailed tasks                               │
+│                                                                          │
+│  Each task is checkbox-based                                            │
+│  Estimated complexity shown                                             │
+│                                                                          │
+│  YOU say: "tasks approved"                                              │
+│                                                                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 5: IMPLEMENTATION                                                │
+│  ═════════════════════                                                  │
+│                                                                          │
+│  Command: /sp.implement (automatic after "tasks approved")               │
+│                                                                          │
+│  ┌──────────────────────────────────────────────────────────────┐       │
+│  │ MODE 2 ACTIVATED!                                            │       │
+│  │                                                               │       │
+│  │ AI now writes CODE                                            │       │
+│  │ AI runs tests after each task                                │       │
+│  │ AI shows you what changed                                     │       │
+│  │ AI stops and asks if scope changes                            │       │
+│  └──────────────────────────────────────────────────────────────┘       │
+│                                                                          │
+│  Tasks checked off as completed                                          │
+│                                                                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 6: LEARNING                                                      │
+│  ═══════════════                                                        │
+│                                                                          │
+│  Command: /sp.learn (automatic after feature complete)                    │
+│                                                                          │
+│  AI creates: history/prompts/<feature>/learning-log.md                  │
+│                                                                          │
+│  Records:                                                               │
+│  - Technical terms learned                                              │
+│  - Decisions made                                                       │
+│  - Concepts to explore later                                            │
+│                                                                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  PHASE 7: GLOSSARY                                                      │
+│  ═════════════════                                                      │
+│                                                                          │
+│  Command: /sp.glossary (run anytime)                                    │
+│                                                                          │
+│  Shows ALL terms learned across ALL projects                            │
+│  Updates: history/glossary.md                                            │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### When To Use Each Command
+
+| Command | When To Use | Who Runs It | Output |
+|---------|-------------|-------------|--------|
+| `/sp.discover` | Start of every feature | AI (automatic) | Discovery questions |
+| `/sp.specify` | After choosing option | AI (automatic) | SPEC.md |
+| `/sp.plan` | After "spec approved" | AI (automatic) | PLAN.md |
+| `/sp.tasks` | After "plan approved" | AI (automatic) | TASKS.md |
+| `/sp.implement` | After "tasks approved" | AI (automatic) | Code files |
+| `/sp.learn` | After feature complete | AI (automatic) | learning-log.md |
+| `/sp.glossary` | Anytime you want | You ask AI | Glossary review |
+| `/sp.analyze` | Before going to Mode 2 | You ask AI | Consistency check |
+| `/sp.checklist` | Before implementation | You ask AI | Quality checklist |
+| `/sp.adr` | Major decision needed | You ask AI | Architecture Decision Record |
+
+### Your Role At Each Phase
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          YOUR ROLE                                      │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  1. ANSWER QUESTIONS                                                    │
+│     - Be honest about what you don't know                               │
+│     - AI will teach you if confused                                     │
+│                                                                          │
+│  2. CHOOSE OPTIONS                                                      │
+│     - Option B with "(Recommended)" is usually safe                     │
+│     - Don't be afraid to ask "Why A vs B?"                              │
+│                                                                          │
+│  3. REVIEW OUTPUTS                                                      │
+│     - Read SPEC.md carefully                                            │
+│     - Ask "What if we need X?" before approving                          │
+│     - Request changes if something's wrong                              │
+│                                                                          │
+│  4. APPROVE PHASES                                                      │
+│     - Say "spec approved" when SPEC.md is correct                        │
+│     - Say "plan approved" when phases make sense                        │
+│     - Say "tasks approved" when scope is clear                          │
+│                                                                          │
+│  5. VALIDATE CODE                                                       │
+│     - Run the app and test                                              │
+│     - Check against SPEC.md                                             │
+│     - Request fixes if needed                                           │
+│                                                                          │
+│  6. LEARN & GROW                                                        │
+│     - Review /sp.glossary regularly                                     │
+│     - Build vocabulary                                                  │
+│     - Ask questions about unfamiliar terms                              │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Common Mistakes To Avoid
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          DON'T DO THIS                                  │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  ❌ "Here's my idea, just build it"                                     │
+│     → You miss the discovery phase where AI catches problems            │
+│                                                                          │
+│  ❌ Skipping "spec approved"                                            │
+│     → Plan built on wrong assumptions                                   │
+│                                                                          │
+│  ❌ Not reviewing tasks before approving                                 │
+│     → Implementation may miss critical tasks                            │
+│                                                                          │
+│  ❌ Forgetting to run /sp.learn                                          │
+│     → You lose valuable learning                                        │
+│                                                                          │
+│  ❌ Saying "yes" to everything                                           │
+│     → Ask questions! AI is your teacher                                 │
+│                                                                          │
+│  ✅ DO THIS INSTEAD:                                                     │
+│                                                                          │
+│  ✓ Be vague at first - "I want something like Instagram"               │
+│  ✓ Answer all discovery questions                                       │
+│  ✓ Read and understand each phase before approving                      │
+│  ✓ Ask "What does X mean?" when confused                                │
+│  ✓ Run /sp.glossary weekly to reinforce learning                        │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Example Conversation Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    TYPICAL CONVERSATION                                  │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  USER:  "I want a login system"                                        │
+│                                                                          │
+│  AI:    "Great! Before I spec this out, let me ask some questions..."  │
+│         [Discovery Mode - 4-6 questions]                                 │
+│                                                                          │
+│  USER:  "A, B, A, C" (answers)                                         │
+│                                                                          │
+│  AI:    "Based on your answers, here are 3 options..."                  │
+│                                                                          │
+│  USER:  "B" (recommended option)                                        │
+│                                                                          │
+│  AI:    "Option B selected. Creating SPEC.md..."                        │
+│                                                                          │
+│  USER:  [reads SPEC.md]                                                 │
+│          "Looks good! spec approved"                                   │
+│                                                                          │
+│  AI:    "Creating PLAN.md..."                                          │
+│                                                                          │
+│  USER:  [reads PLAN.md]                                                │
+│          "Can we split Phase 2 into 2 parts?"                           │
+│                                                                          │
+│  AI:    "Updated. Phase 2a and 2b added."                              │
+│                                                                          │
+│  USER:  "plan approved"                                                │
+│                                                                          │
+│  AI:    "Generating TASKS.md..."                                       │
+│                                                                          │
+│  USER:  "tasks approved"                                               │
+│                                                                          │
+│  AI:    "🔨 MODE 2 ACTIVATED - Implementing..."                        │
+│                                                                          │
+│  ... (implementation happens) ...                                       │
+│                                                                          │
+│  AI:    "✅ Feature complete! Running /sp.learn..."                     │
+│                                                                          │
+│  USER:  "/sp.glossary"  (wants to review all terms)                    │
+│                                                                          │
+│  AI:    [shows all learned terms across projects]                      │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 17. Example Projects
+
+We have created **3 full example projects** showing the complete workflow:
+
+### Example 1: User Authentication System
+📁 `examples/user-authentication/README.md`
+
+**Features Built:** Email/password login, JWT tokens, password reset, session management
+
+**Shows:**
+- Discovery questions for auth systems
+- JWT vs Session debate
+- How to handle security edge cases
+
+---
+
+### Example 2: Blog Website
+📁 `examples/blog-website/README.md`
+
+**Features Built:** MDX posts, categories, tags, comments, dark mode
+
+**Shows:**
+- Discovery questions for content sites
+- MERN vs Next.js decision
+- Static vs dynamic deployment
+
+---
+
+### Example 3: AI Support Agent
+📁 `examples/ai-agent/README.md`
+
+**Features Built:** RAG chatbot, FAQ search, escalation, multi-language
+
+**Shows:**
+- Discovery questions for AI projects
+- RAG vs pure LLM decision
+- Integration with external APIs
+
+---
+
+### How To Use Examples
+
+```bash
+# 1. Read the example README
+cat examples/user-authentication/README.md
+
+# 2. See the full AI conversation
+#    Each example shows every message between user and AI
+
+# 3. Apply to your own project
+#    Follow the same pattern for your features
+
+# 4. Don't copy blindly
+#    Every project is different - adapt the questions and options
+```
+
+---
+
+## 18. Frequently Asked Questions
+
+### Q: Do I need to use all commands?
+**A:** The core flow is: `/sp.discover` → spec → plan → tasks → implement → `/sp.learn`. The others (`/sp.analyze`, `/sp.checklist`, `/sp.adr`) are optional helpers.
+
+### Q: What if I don't understand the discovery questions?
+**A:** Say "I don't know" or "Explain what this means." AI will teach you in Teaching Mode.
+
+### Q: Can I skip phases?
+**A:** You CAN but SHOULDN'T. Each phase catches problems early. Skipping leads to rewrites.
+
+### Q: What if AI gives bad options?
+**A:** Say "None of these work, give me different options" or "Modify Option A to include X."
+
+### Q: When do I run /sp.glossary?
+**A:** Run it whenever you want to review terms. Good times: end of each session, weekly review, before starting new project.
+
+### Q: Can I use this for small projects?
+**A:** Yes! The framework scales. For small projects, discovery might be 2 questions instead of 6.
+
+### Q: Does this work with any AI tool?
+**A:** Yes! Works with Claude Code, Gemini CLI, Qwen, Codex, opencode, and more. The commands are designed to be universal.
+
+---
+
+## 19. Quick Command Reference Card
+
+```
+╔═════════════════════════════════════════════════════════════════════════╗
+║                    SPEC-KIT-COLEARN COMMANDS                            ║
+╠═════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  CORE COMMANDS (automatic):                                              ║
+║  ───────────────────────────                                              ║
+║  /sp.discover    → Start of every feature (AI asks questions)           ║
+║  /sp.specify     → Create specification (after choosing option)         ║
+║  /sp.plan        → Create implementation plan (after "spec approved")    ║
+║  /sp.tasks       → Generate task list (after "plan approved")            ║
+║  /sp.implement   → Write code (after "tasks approved")                   ║
+║  /sp.learn       → Record learning (after feature complete)              ║
+║                                                                          ║
+║  HELPER COMMANDS (ask AI):                                              ║
+║  ────────────────────────                                                ║
+║  /sp.glossary    → Review all learned terms                             ║
+║  /sp.analyze     → Check consistency across docs                        ║
+║  /sp.checklist   → Generate quality checklist                           ║
+║  /sp.adr         → Architecture decision record                          ║
+║                                                                          ║
+║  APPROVALS (you say these):                                              ║
+║  ──────────────────────────                                              ║
+║  "spec approved"    → Move from spec to plan                             ║
+║  "plan approved"    → Move from plan to tasks                            ║
+║  "tasks approved"  → Move from tasks to code                            ║
+║                                                                          ║
+║  SPECIAL (you say these):                                               ║
+║  ────────────────────────                                                ║
+║  "teach me X"          → AI explains a concept                            ║
+║  "what did I learn?"   → AI shows learning log                           ║
+║  "options"             → AI re-presents options                          ║
+║                                                                          ║
+╚═════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
