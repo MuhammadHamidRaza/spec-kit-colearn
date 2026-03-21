@@ -1,10 +1,10 @@
 # E-commerce Platform - Complete AI Co-Partner Project
 
-## Project: ShopPro - Full E-commerce Store
+> **Project: ShopPro** - A full e-commerce store built with AI as senior architect co-partner.
 
 ---
 
-## INSTALLATION
+## Installation
 
 ```bash
 pip install spec-kit-colearn
@@ -13,7 +13,7 @@ npm install -g @muhammad-hamid-raza/spec-kit-colearn
 
 ---
 
-## INITIALIZE PROJECT
+## Initialize Project
 
 ```bash
 spec-kit-colearn init shoppro
@@ -22,53 +22,15 @@ cd shoppro
 
 ---
 
-## ALL /sp COMMANDS FOR EACH FEATURE
+## Project Overview
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    SHOPPRO PROJECT FLOW                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  PHASE 1: PROJECT SETUP (Run Once)                             │
-│  ════════════════════                                            │
-│  /sp.constitution    → Set ecommerce principles                │
-│                                                                  │
-│  PHASE 2: FEATURE 1 (User Authentication)                      │
-│  ═══════════════════════════════════                              │
-│  /sp.discover         → Partner discussion                        │
-│  /sp.specify          → Define requirements                      │
-│  /sp.clarify          → Answer questions                        │
-│  /sp.plan             → Technical plan                          │
-│  /sp.analyze          → Consistency check                       │
-│  /sp.tasks            → Generate tasks                          │
-│  /sp.checklist        → Quality checklist                       │
-│  /sp.implement         → Build feature                          │
-│  /sp.learn            → Record learning                         │
-│  /sp.glossary          → Review terms                           │
-│  /sp.phr               → Prompt history                         │
-│                                                                  │
-│  PHASE 3: FEATURE 2 (Product Catalog)                           │
-│  (Same /sp cycle)                                              │
-│                                                                  │
-│  PHASE 4: FEATURE 3 (Shopping Cart)                             │
-│  (Same /sp cycle)                                              │
-│                                                                  │
-│  ... continue for each feature ...                              │
-│                                                                  │
-│  TOTAL FEATURES: 15                                             │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+**15 Features** to be built one at a time, following the complete `/sp` command cycle.
 
----
-
-# SHOPPRO - 15 FEATURES
-
-| # | Feature | /sp Cycle |
-|---|---------|-----------|
-| 1 | User Authentication | ✅ Complete |
-| 2 | Product Catalog | ✅ Complete |
-| 3 | Shopping Cart | ✅ Complete |
+| # | Feature | Status |
+|---|---------|--------|
+| 1 | User Authentication | Complete |
+| 2 | Product Catalog | Complete |
+| 3 | Shopping Cart | Complete |
 | 4 | Checkout Process | (Continue) |
 | 5 | Payment Integration | (Continue) |
 | 6 | Order Management | (Continue) |
@@ -84,20 +46,52 @@ cd shoppro
 
 ---
 
-# PHASE 1: PROJECT SETUP
+## Complete /sp Command Flow
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    SHOPPRO PROJECT FLOW                         │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  PHASE 1: PROJECT SETUP                                         │
+│  ═══════════════════                                            │
+│  /sp.constitution    → Set ecommerce principles                 │
+│                                                                  │
+│  ─────────────────────────────────────────────────────────────  │
+│                                                                  │
+│  FOR EACH FEATURE (repeat this cycle):                          │
+│                                                                  │
+│  /sp.discover         → AI asks questions                       │
+│  /sp.specify          → AI creates specification                 │
+│  /sp.clarify          → Resolve unclear requirements            │
+│  /sp.plan             → AI creates implementation plan           │
+│  /sp.analyze          → AI checks consistency                    │
+│  /sp.tasks            → AI generates task list                   │
+│  /sp.checklist        → AI generates quality checklist           │
+│  /sp.implement        → AI builds (Mode 2 activated)             │
+│  /sp.learn            → AI records learning                      │
+│  /sp.glossary         → AI shows all terms learned               │
+│  /sp.phr              → AI creates prompt history                │
+│                                                                  │
+│  TOTAL: 15 features                                             │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## COMMAND: /sp.constitution
+# PHASE 1: PROJECT SETUP
 
-### USER SAYS:
+## Command: /sp.constitution
+
+**User says:**
 ```
 /sp.constitution Create principles for a professional ecommerce platform focused on conversion, security, and excellent user experience.
 ```
 
-### AI CREATES:
+**AI creates:**
 
-```
+```markdown
 # ShopPro Constitution
 
 ## Core Principles
@@ -155,48 +149,48 @@ cd shoppro
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For the authentication system - what login methods? How secure?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-🤖 **DISCOVERY MODE - Feature 1: Authentication**
+DISCOVERY MODE - Feature 1: Authentication
 
-**Question 1: What LOGIN METHODS?**
+Question 1: What LOGIN METHODS?
 - A: Email/password only
 - B: Email/password + Google + Apple
 - C: Email/password + Google + Apple + Facebook + GitHub
 
-**Question 2: Should users VERIFY email?**
+Question 2: Should users VERIFY email?
 - A: Yes, verify before checkout
 - B: No verification (optional)
 
-**Question 3: PASSWORD requirements?**
+Question 3: PASSWORD requirements?
 - A: Min 8 characters
 - B: Min 8 chars, uppercase, number, special
 - C: No requirements
 
-**Question 4: SESSION TYPE?**
+Question 4: SESSION TYPE?
 - A: JWT tokens (stateless)
 - B: Server sessions (stateful)
 - C: Hybrid (JWT + refresh)
 
-**Question 5: PASSWORD RESET?**
+Question 5: PASSWORD RESET?
 - A: Email link only
 - B: Email link + security questions
 
-**Question 6: TWO-FACTOR AUTH?**
+Question 6: TWO-FACTOR AUTH?
 - A: No 2FA
 - B: Optional 2FA via email
 - C: Required 2FA for admin
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 A
 A
@@ -206,7 +200,7 @@ A
 C
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
 Based on your answers:
@@ -217,66 +211,76 @@ Based on your answers:
 - Reset: Email link only
 - 2FA: Required for admin
 
-## 3 OPTIONS:
+3 OPTIONS:
 
-### Option A: Custom Auth (MY RECOMMENDED)
+Option A: Custom Auth (MY RECOMMENDED)
 JWT + bcrypt + custom UI
 Best for: Full control, learn fundamentals
 
-### Option B: Firebase Auth
+Option B: Firebase Auth
 Pre-built auth with SDK
 Best for: Faster development
 
-### Option C: NextAuth.js
+Option C: NextAuth.js
 Auth.js for Next.js
 Best for: Next.js apps, multiple providers
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
 
 ---
 
-## COMMAND 2: /sp.specify
+## Command 2: /sp.specify
 
-### AI CREATES:
+**AI creates specification:**
 
-```
+```markdown
 # SPEC.md - Feature 1: User Authentication
 
 ## User Stories
 
 ### US1: Registration
-- Email/password registration
-- Strong password validation
-- Email verification required
-- Welcome email sent
+As a new user, I want to register with email and password so I can shop.
+
+**Acceptance Criteria:**
+- [ ] Email/password registration
+- [ ] Strong password validation
+- [ ] Email verification required
+- [ ] Welcome email sent
 
 ### US2: Login
-- Email/password login
-- Remember me option
-- Failed attempt tracking
-- Account lockout after 5 failed attempts
+As a returning customer, I want to login with email and password.
+
+**Acceptance Criteria:**
+- [ ] Email/password login
+- [ ] Remember me option
+- [ ] Failed attempt tracking
+- [ ] Account lockout after 5 failed attempts
 
 ### US3: Password Reset
-- Request reset via email
-- Reset link (valid 1 hour)
-- Set new password
-- Invalidate all sessions
+As a customer who forgot password, I want to reset via email link.
+
+**Acceptance Criteria:**
+- [ ] Request reset via email
+- [ ] Reset link (valid 1 hour)
+- [ ] Set new password
+- [ ] Invalidate all sessions
 
 ### US4: Admin Authentication
-- Same login system
-- Required 2FA for admin users
-- Enhanced security logging
+As an admin, I want secure access to the dashboard.
 
-## Technical Requirements
+**Acceptance Criteria:**
+- [ ] Same login system
+- [ ] Required 2FA for admin users
+- [ ] Enhanced security logging
 
-### Data Model
-```
+## Data Model
+
 User {
   id: UUID
   email: String (unique)
@@ -290,19 +294,17 @@ User {
   lockedUntil: DateTime?
   createdAt: DateTime
 }
-```
 
-### API Endpoints
-```
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/logout
-POST /api/auth/refresh
-POST /api/auth/forgot-password
-POST /api/auth/reset-password
-GET  /api/auth/me
-POST /api/auth/verify-email
-```
+## API Endpoints
+
+POST /api/auth/register     → Create account
+POST /api/auth/login        → Login, return JWT
+POST /api/auth/logout       → Invalidate tokens
+POST /api/auth/refresh      → Refresh access token
+POST /api/auth/forgot-password → Send reset email
+POST /api/auth/reset-password → Reset password
+GET  /api/auth/me           → Get current user
+POST /api/auth/verify-email → Verify email
 
 ## Success Criteria
 - [ ] Registration completes < 3 seconds
@@ -312,27 +314,38 @@ POST /api/auth/verify-email
 - [ ] Admin requires 2FA
 ```
 
-### USER SAYS:
+**User says:**
 ```
 spec approved
 ```
 
 ---
 
-## COMMAND 3: /sp.clarify
+## Command 3: /sp.clarify
 
-### USER SAYS:
+**User says:**
 ```
 /sp.clarify Backend: Node.js + Express + TypeScript | Database: PostgreSQL + Prisma | Password: bcrypt 12 rounds | JWT: Access 15min, Refresh 7 days | 2FA: Email code | Lockout: 5 attempts, 30 min
 ```
 
+**AI confirms:**
+```
+Confirmed clarifications:
+- Backend: Node.js + Express + TypeScript
+- Database: PostgreSQL + Prisma
+- Password: bcrypt 12 rounds
+- JWT: Access 15min, Refresh 7 days
+- 2FA: Email code for admin
+- Lockout: 5 attempts, 30 min
+```
+
 ---
 
-## COMMAND 4: /sp.plan
+## Command 4: /sp.plan
 
-### AI CREATES:
+**AI creates plan:**
 
-```
+```markdown
 # PLAN.md - Feature 1: Authentication
 
 ## Phase 1: Database Schema (Day 1)
@@ -364,102 +377,114 @@ spec approved
 - [ ] Unit tests
 - [ ] Integration tests
 
-## Estimated: 4-5 days
+Estimated: 4-5 days
 ```
 
-### USER SAYS:
+**User says:**
 ```
 plan approved
 ```
 
 ---
 
-## COMMAND 5: /sp.analyze
+## Command 5: /sp.analyze
 
-### AI RUNS:
+**AI runs analysis:**
 
 ```
-ANALYSIS: APPROVED
-- All user stories covered
-- Technical stack consistent
-- Security requirements met
+CONSISTENCY ANALYSIS
+
+✅ Constitution Alignment:
+- Security First: bcrypt 12 rounds, account lockout
+- Conversion Focused: Fast registration/login
+
+✅ Spec Coverage:
+- All 4 user stories covered
+- All acceptance criteria have tasks
+
+✅ Technical Consistency:
+- PostgreSQL + Prisma: Correct
+- JWT + refresh: Correct
+- bcrypt 12 rounds: Correct
+
+ANALYSIS RESULT: APPROVED
 ```
 
 ---
 
-## COMMAND 6: /sp.tasks
+## Command 6: /sp.tasks
 
-### AI CREATES:
+**AI creates tasks:**
 
-```
+```markdown
 # TASKS.md - Feature 1: Authentication
 
-## Task 1.1: Database Schema
+Task 1.1: Database Schema
 ```prisma
 model User {
-  id                 String   @id @default(uuid())
-  email              String   @unique
-  passwordHash       String
-  name               String
-  role               String   @default("customer")
-  emailVerified      Boolean  @default(false)
-  twoFactorEnabled   Boolean  @default(false)
-  twoFactorSecret   String?
-  failedAttempts     Int      @default(0)
-  lockedUntil        DateTime?
-  createdAt          DateTime @default(now())
+  id               String   @id @default(uuid())
+  email            String   @unique
+  passwordHash     String
+  name             String
+  role             String   @default("customer")
+  emailVerified    Boolean  @default(false)
+  twoFactorEnabled Boolean  @default(false)
+  twoFactorSecret  String?
+  failedAttempts   Int      @default(0)
+  lockedUntil      DateTime?
+  createdAt        DateTime @default(now())
 }
 ```
 
-## Task 1.2: Registration
+Task 1.2: Registration
 - [ ] Password strength validation
 - [ ] Hash password with bcrypt
 - [ ] Create user
 - [ ] Generate verification token
 - [ ] Send verification email
 
-## Task 1.3: Login
+Task 1.3: Login
 - [ ] Find user by email
 - [ ] Check account lockout
 - [ ] Compare password
 - [ ] Generate JWT tokens
 - [ ] Track failed attempts
 
-## Task 1.4: Account Lockout
+Task 1.4: Account Lockout
 - [ ] Increment failedAttempts
 - [ ] Lock account after 5 attempts
 - [ ] Auto-unlock after 30 minutes
 
-## Task 1.5: Password Reset
+Task 1.5: Password Reset
 - [ ] Generate reset token
 - [ ] Send reset email
 - [ ] Validate token
 - [ ] Update password
 - [ ] Invalidate all sessions
 
-## Task 1.6: Admin 2FA
+Task 1.6: Admin 2FA
 - [ ] Generate 2FA secret
 - [ ] Verify 2FA code
 - [ ] Require 2FA for admin routes
 
-## Task 1.7: JWT Middleware
+Task 1.7: JWT Middleware
 - [ ] Verify access token
 - [ ] Check admin 2FA
 - [ ] Attach user to request
 ```
 
-### USER SAYS:
+**User says:**
 ```
 tasks approved
 ```
 
 ---
 
-## COMMAND 7: /sp.checklist
+## Command 7: /sp.checklist
 
-### AI GENERATES:
+**AI generates quality checklist:**
 
-```
+```markdown
 # QUALITY CHECKLIST - Feature 1: Authentication
 
 ## SECURITY
@@ -481,18 +506,19 @@ tasks approved
 
 ---
 
-## COMMAND 8: /sp.implement
+## Command 8: /sp.implement
 
-### AI ENTERS MODE 2:
+**AI enters MODE 2 and builds:**
 
 ```
-🔨 **MODE 2: CODING WORKER ACTIVATED**
+MODE 2: CODING WORKER ACTIVATED
 
 Building Feature 1: User Authentication...
 
-## Task 1.1: Database Schema
+Task 1.1: Database Schema
 
-```prisma
+prisma/schema.prisma:
+
 model User {
   id               String    @id @default(uuid())
   email            String    @unique
@@ -501,9 +527,9 @@ model User {
   role             String    @default("customer")
   emailVerified    Boolean   @default(false)
   twoFactorEnabled Boolean   @default(false)
-  twoFactorSecret String?
+  twoFactorSecret  String?
   failedAttempts   Int       @default(0)
-  lockedUntil     DateTime?
+  lockedUntil      DateTime?
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
 }
@@ -523,12 +549,11 @@ model VerificationToken {
   type      String
   expiresAt DateTime
 }
-```
 
-## Task 1.2: Registration
+Task 1.2: Registration
 
-```typescript
-// POST /api/auth/register
+src/routes/auth.ts:
+
 router.post('/register', async (req, res) => {
   const { email, password, name } = req.body;
 
@@ -566,17 +591,13 @@ router.post('/register', async (req, res) => {
     data: { token, email, type: 'verification', expiresAt: new Date(Date.now() + 3600000) }
   });
 
-  // Send email (mock)
   console.log(`Verify: /api/auth/verify/${token}`);
 
   res.status(201).json({ message: 'Registered! Check email.' });
 });
-```
 
-## Task 1.3: Login with Lockout
+Task 1.3: Login with Lockout
 
-```typescript
-// POST /api/auth/login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -597,12 +618,11 @@ router.post('/login', async (req, res) => {
   // Verify password
   const valid = await bcrypt.compare(password, user.passwordHash);
   if (!valid) {
-    // Increment failed attempts
     const newAttempts = user.failedAttempts + 1;
     const updates: any = { failedAttempts: newAttempts };
     
     if (newAttempts >= 5) {
-      updates.lockedUntil = new Date(Date.now() + 30 * 60 * 1000); // 30 min
+      updates.lockedUntil = new Date(Date.now() + 30 * 60 * 1000);
     }
     
     await prisma.user.update({ where: { id: user.id }, data: updates });
@@ -625,7 +645,6 @@ router.post('/login', async (req, res) => {
 
   res.json({ accessToken, refreshToken, user: { id: user.id, email: user.email, name: user.name } });
 });
-```
 
 [AI continues with remaining tasks...]
 
@@ -634,20 +653,20 @@ router.post('/login', async (req, res) => {
 
 ---
 
-## COMMAND 9: /sp.learn
+## Command 9: /sp.learn
 
-### AI CREATES LEARNING LOG:
+**AI creates learning log:**
 
-```
+```markdown
 # LEARNING LOG - Feature 1: Authentication
 
-## Date: 2026-03-21
-## Feature: User Authentication
-## Project: ShopPro
+Date: 2026-03-21
+Feature: User Authentication
+Project: ShopPro
 
 ---
 
-### TECHNICAL TERMS LEARNED:
+## TECHNICAL TERMS LEARNED
 
 **Account Lockout**
 Security measure that temporarily prevents login after X failed attempts.
@@ -673,62 +692,74 @@ Password hashing with built-in salt.
 
 ---
 
-### SECURITY PATTERNS:
+## SECURITY PATTERNS
 
-1. **Defense in Depth**: Multiple layers (lockout, 2FA, JWT)
-2. **Fail Secure**: Lock account on repeated failures
-3. **Least Privilege**: JWT has minimal claims
-4. **Secure Defaults**: New accounts unverified, non-admin
+1. Defense in Depth: Multiple layers (lockout, 2FA, JWT)
+2. Fail Secure: Lock account on repeated failures
+3. Least Privilege: JWT has minimal claims
+4. Secure Defaults: New accounts unverified, non-admin
 
 ---
 
-**Feature 1 Complete! Moving to Feature 2: Product Catalog**
+## NEXT FEATURE: Feature 2 - Product Catalog
 ```
 
 ---
 
-## COMMAND 10: /sp.glossary
+## Command 10: /sp.glossary
 
-```
+**AI shows all terms:**
+
+```markdown
 # GLOSSARY - All Terms Learned
 
 | Term | Definition |
 |------|------------|
-| **JWT** | JSON Web Token - Stateless auth token |
-| **Access Token** | Short-lived token (15 min) for API |
-| **Refresh Token** | Long-lived token (7 days) for session |
-| **Bcrypt** | Password hashing with salt |
-| **Account Lockout** | Temporarily block after X failed attempts |
-| **Refresh Rotation** | Each refresh invalidates old token |
-| **2FA** | Two-Factor Authentication |
-| **OWASP** | Web Application Security Project |
-| **PCI DSS** | Payment Card Industry Data Security Standard |
+| JWT | JSON Web Token - Stateless auth token |
+| Access Token | Short-lived token (15 min) for API |
+| Refresh Token | Long-lived token (7 days) for session |
+| Bcrypt | Password hashing with salt |
+| Account Lockout | Temporarily block after X failed attempts |
+| Refresh Rotation | Each refresh invalidates old token |
+| 2FA | Two-Factor Authentication |
+| OWASP | Web Application Security Project |
+| PCI DSS | Payment Card Industry Data Security Standard |
 ```
 
 ---
 
-## COMMAND 11: /sp.phr
+## Command 11: /sp.phr
 
-```
+**AI creates prompt history:**
+
+```markdown
 # PROMPT HISTORY - Feature 1: Authentication
 
-## User Request:
+Project: ShopPro
+Feature: User Authentication
+Date: 2026-03-21
+
+---
+
+## CONVERSATION FLOW
+
+### User Request
 /sp.constitution Create ecommerce principles
 /sp.discover For auth - login methods?
 
-## AI Questions: 6
-## User Answers: A, A, B, C, A, C
+### AI Questions: 6 asked
+User Answers: A, A, B, C, A, C
 
-## User Choice: Option A (Custom Auth)
+### User Choice: Option A (Custom Auth)
 
-## Issues Encountered:
-- None significant
+### Issues Encountered
+None significant
 
-## What Worked:
+### What Worked
 - Lockout pattern effective
 - JWT + refresh hybrid is flexible
 
-## NEXT: Feature 2 - Product Catalog
+### NEXT: Feature 2 - Product Catalog
 ```
 
 ---
@@ -737,48 +768,50 @@ Password hashing with built-in salt.
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For the product catalog - what features?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-**Question 1: PRODUCT DATA?**
+DISCOVERY MODE - Feature 2: Product Catalog
+
+Question 1: PRODUCT DATA?
 - A: Name, price, image, description
 - B: Name, price, images, description, specs
 - C: All of above + variants, SKU, weight
 
-**Question 2: CATEGORIES?**
+Question 2: CATEGORIES?
 - A: Single level (just categories)
 - B: Two levels (categories + subcategories)
 - C: Three levels (categories + subcategories + micro)
 
-**Question 3: IMAGES?**
+Question 3: IMAGES?
 - A: Single image per product
 - B: Up to 5 images
 - C: Up to 8 images + video
 
-**Question 4: PRODUCT VARIANTS?**
+Question 4: PRODUCT VARIANTS?
 - A: No variants (one size/color)
 - B: Size variants
 - C: Size + Color variants
 
-**Question 5: INVENTORY TRACKING?**
+Question 5: INVENTORY TRACKING?
 - A: No tracking (always in stock)
 - B: Track stock levels
 - C: Track per variant
 
-**Question 6: SEO FEATURES?**
+Question 6: SEO FEATURES?
 - A: Basic meta tags
 - B: Full SEO (meta, schema, sitemap)
 - C: Advanced SEO + blog integration
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 C
 B
@@ -788,7 +821,7 @@ B
 B
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
 Based on your answers:
@@ -799,66 +832,77 @@ Based on your answers:
 - Inventory: Track per variant
 - SEO: Full SEO (meta, schema, sitemap)
 
-## 3 OPTIONS:
+3 OPTIONS:
 
-### Option A: Basic Catalog (MY RECOMMENDED)
+Option A: Basic Catalog (MY RECOMMENDED)
 Simple products with variants, images, categories
 Best for: Most ecommerce stores
 
-### Option B: Advanced Catalog
+Option B: Advanced Catalog
 Products with variants, attributes, custom fields
 Best for: Complex products (clothing with sizes/colors)
 
-### Option C: Enterprise Catalog
+Option C: Enterprise Catalog
 Products with full attribute system, bundles, composite products
 Best for: Large catalogs with complex relationships
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
 
 ---
 
-## COMMAND 2: /sp.specify
+## Command 2: /sp.specify
 
-### AI CREATES SPEC:
+**AI creates specification:**
 
-```
+```markdown
 # SPEC.md - Feature 2: Product Catalog
 
 ## User Stories
 
 ### US1: Product Listing
-- Homepage with featured products
-- Category pages
-- Pagination (20 per page)
-- Sort by price, newest, popularity
+As a shopper, I want to browse products so I can find what I need.
+
+**Acceptance Criteria:**
+- [ ] Homepage with featured products
+- [ ] Category pages
+- [ ] Pagination (20 per page)
+- [ ] Sort by price, newest, popularity
 
 ### US2: Product Detail
-- Image gallery (up to 8 images)
-- Product info (name, price, description)
-- Variant selector (size, color)
-- Stock status indicator
-- Add to cart button
-- Related products
+As a shopper, I want to see product details so I can make purchase decisions.
+
+**Acceptance Criteria:**
+- [ ] Image gallery (up to 8 images)
+- [ ] Product info (name, price, description)
+- [ ] Variant selector (size, color)
+- [ ] Stock status indicator
+- [ ] Add to cart button
+- [ ] Related products
 
 ### US3: Category Navigation
-- Two-level categories
-- Category pages with filters
-- Breadcrumb navigation
+As a shopper, I want to browse categories so I can find products.
+
+**Acceptance Criteria:**
+- [ ] Two-level categories
+- [ ] Category pages with filters
+- [ ] Breadcrumb navigation
 
 ### US4: Search
-- Search by product name
-- Search results page
-- Filter by category, price
+As a shopper, I want to search products so I can find specific items.
+
+**Acceptance Criteria:**
+- [ ] Search by product name
+- [ ] Search results page
+- [ ] Filter by category, price
 
 ## Data Model
 
-```
 Product {
   id: UUID
   name: String
@@ -893,22 +937,13 @@ Variant {
   lowStockThreshold: Int
 }
 
-ProductImage {
-  id: UUID
-  productId: UUID
-  url: String
-  order: Int
-}
-```
-
 ## API Endpoints
-```
-GET  /api/products
-GET  /api/products/:slug
-GET  /api/categories
-GET  /api/categories/:slug
-GET  /api/search?q=
-```
+
+GET  /api/products           → List products
+GET  /api/products/:slug      → Product detail
+GET  /api/categories          → List categories
+GET  /api/categories/:slug    → Category products
+GET  /api/search?q=          → Search products
 
 ## Success Criteria
 - [ ] Products display with all info
@@ -919,26 +954,26 @@ GET  /api/search?q=
 - [ ] SEO meta tags generated
 ```
 
-### USER SAYS:
+**User says:**
 ```
 spec approved
 ```
 
 ---
 
-## COMMAND 3-11: Continue the cycle...
+## Command 3-11: Continue the cycle
 
 ```
 FOR FEATURE 2:
 3. /sp.clarify     → User provides tech stack
-4. /sp.plan       → AI creates plan
-5. /sp.analyze    → AI checks consistency
-6. /sp.tasks      → AI creates tasks
-7. /sp.checklist → AI generates checklist
-8. /sp.implement  → AI builds in Mode 2
-9. /sp.learn      → AI records learning
-10. /sp.glossary  → AI shows all terms
-11. /sp.phr       → AI creates prompt history
+4. /sp.plan        → AI creates plan
+5. /sp.analyze     → AI checks consistency
+6. /sp.tasks       → AI creates tasks
+7. /sp.checklist   → AI generates checklist
+8. /sp.implement   → AI builds in Mode 2
+9. /sp.learn       → AI records learning
+10. /sp.glossary   → AI shows all terms
+11. /sp.phr        → AI creates prompt history
 
 THEN MOVE TO FEATURE 3: Shopping Cart
 AND CONTINUE THE SAME CYCLE!
@@ -950,8 +985,8 @@ AND CONTINUE THE SAME CYCLE!
 
 | # | Feature | Next Steps |
 |---|---------|-----------|
-| 1 | User Authentication | ✅ Complete |
-| 2 | Product Catalog | ✅ Complete |
+| 1 | User Authentication | Complete |
+| 2 | Product Catalog | Complete |
 | 3 | Shopping Cart | /sp.discover → /sp.specify → /sp.clarify → /sp.plan → /sp.analyze → /sp.tasks → /sp.checklist → /sp.implement → /sp.learn → /sp.glossary → /sp.phr |
 | 4 | Checkout Process | (Continue cycle) |
 | 5 | Payment Integration | (Continue cycle) |
@@ -970,24 +1005,23 @@ AND CONTINUE THE SAME CYCLE!
 
 # SUMMARY
 
-For EACH feature, run this complete cycle:
+## Complete /sp Command Cycle (Per Feature)
 
 ```
-1. /sp.discover     → AI asks questions
-2. /sp.specify      → AI creates spec
+1. /sp.discover     → AI asks 6 questions
+2. /sp.specify      → AI creates SPEC.md
 3. /sp.clarify      → User provides tech details
-4. /sp.plan         → AI creates plan
+4. /sp.plan         → AI creates PLAN.md
 5. /sp.analyze      → AI checks consistency
-6. /sp.tasks       → AI creates tasks
+6. /sp.tasks        → AI creates TASKS.md
 7. /sp.checklist    → AI generates checklist
-8. /sp.implement    → AI builds in Mode 2
+8. /sp.implement    → AI builds (Mode 2)
 9. /sp.learn        → AI records learning
 10. /sp.glossary    → AI shows all terms
 11. /sp.phr         → AI creates prompt history
 
-THEN MOVE TO NEXT FEATURE!
+Each feature: 4-7 days
+Total project: 18-20 weeks
+15 features, one at a time
+Learn as you build!
 ```
-
-## Each feature takes 4-7 days
-## Total project: 18-20 weeks
-## 15 features, one at a time

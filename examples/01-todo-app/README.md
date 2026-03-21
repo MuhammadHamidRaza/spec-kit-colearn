@@ -1,10 +1,10 @@
 # Todo App - Complete AI Co-Partner Project
 
-## Project: TaskMaster - Personal Todo App
+> **Project: TaskMaster** - A personal todo app built with AI as senior architect co-partner.
 
 ---
 
-## INSTALLATION
+## Installation
 
 ```bash
 pip install spec-kit-colearn
@@ -13,7 +13,7 @@ npm install -g @muhammad-hamid-raza/spec-kit-colearn
 
 ---
 
-## INITIALIZE PROJECT
+## Initialize Project
 
 ```bash
 spec-kit-colearn init taskmaster
@@ -22,38 +22,49 @@ cd taskmaster
 
 ---
 
-## ALL /sp COMMANDS IN ORDER
+## Project Overview
+
+**8 Features** to be built one at a time, following the complete `/sp` command cycle.
+
+| # | Feature | Status |
+|---|---------|--------|
+| 1 | User Authentication | Complete |
+| 2 | Projects Management | Complete |
+| 3 | Tasks CRUD | (Continue cycle) |
+| 4 | Due Dates & Priorities | (Continue cycle) |
+| 5 | Recurring Tasks | (Continue cycle) |
+| 6 | Search & Filter | (Continue cycle) |
+| 7 | Cloud Sync | (Continue cycle) |
+| 8 | Mobile App | (Continue cycle) |
+
+---
+
+## Complete /sp Command Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    TASKMASTER PROJECT FLOW                        │
+│                    TASKMASTER PROJECT FLOW                      │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  PHASE 1: PROJECT SETUP (Run Once)                            │
-│  ════════════════════                                            │
-│  /sp.constitution    → Set project principles                  │
+│  PHASE 1: PROJECT SETUP                                         │
+│  ═══════════════════                                            │
+│  /sp.constitution    → Set project principles                   │
 │                                                                  │
-│  PHASE 2: FEATURE 1 (User Authentication)                      │
-│  ═══════════════════════════════                                │
-│  /sp.discover         → Partner discussion                       │
-│  /sp.specify          → Define requirements                    │
-│  /sp.clarify          → Answer questions                       │
-│  /sp.plan             → Technical plan                          │
-│  /sp.analyze          → Consistency check                       │
-│  /sp.tasks            → Generate tasks                          │
-│  /sp.checklist        → Quality checklist                       │
-│  /sp.implement         → Build feature                          │
-│  /sp.learn            → Record learning                        │
-│  /sp.glossary          → Review terms                          │
-│  /sp.phr               → Prompt history                        │
+│  ─────────────────────────────────────────────────────────────  │
 │                                                                  │
-│  PHASE 3: FEATURE 2 (Projects Management)                      │
-│  (Same /sp cycle)                                              │
+│  FOR EACH FEATURE (repeat this cycle):                          │
 │                                                                  │
-│  PHASE 4: FEATURE 3 (Tasks CRUD)                               │
-│  (Same /sp cycle)                                              │
-│                                                                  │
-│  ... continue for each feature ...                              │
+│  /sp.discover         → AI asks questions                       │
+│  /sp.specify          → AI creates specification                 │
+│  /sp.clarify          → Resolve unclear requirements             │
+│  /sp.plan             → AI creates implementation plan           │
+│  /sp.analyze          → AI checks consistency                    │
+│  /sp.tasks            → AI generates task list                   │
+│  /sp.checklist        → AI generates quality checklist           │
+│  /sp.implement        → AI builds (Mode 2 activated)             │
+│  /sp.learn            → AI records learning                      │
+│  /sp.glossary         → AI shows all terms learned               │
+│  /sp.phr              → AI creates prompt history                 │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -62,18 +73,16 @@ cd taskmaster
 
 # PHASE 1: PROJECT SETUP
 
----
+## Command: /sp.constitution
 
-## COMMAND: /sp.constitution
-
-### USER SAYS:
+**User says:**
 ```
 /sp.constitution Create principles for a personal todo app focused on simplicity, productivity, and ease of use.
 ```
 
-### AI CREATES:
+**AI creates:**
 
-```
+```markdown
 # TaskMaster Constitution
 
 ## Core Principles
@@ -116,69 +125,62 @@ cd taskmaster
 - Responsive design (mobile-first)
 - Accessible (WCAG 2.1 AA)
 
-## Design Principles
-
-### Colors
+### Design Colors
 - Primary: Blue (#3B82F6)
 - High Priority: Red (#EF4444)
 - Medium Priority: Yellow (#F59E0B)
 - Low Priority: Green (#22C55E)
-
-### Typography
-- Sans-serif font (Inter)
-- Clear hierarchy (titles, body, captions)
-- Readable on all screen sizes
 ```
 
 ---
 
-# PHASE 2: FEATURE 1 - USER AUTHENTICATION
+# FEATURE 1: USER AUTHENTICATION
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For the authentication system - what login methods should we support?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-🤖 **DISCOVERY MODE - Feature 1: Authentication**
+DISCOVERY MODE - Feature 1: Authentication
 
-**Question 1: What LOGIN METHODS?**
+Question 1: What LOGIN METHODS?
 - A: Email/password only (simplest)
 - B: Email/password + Google login
 - C: Email/password + Google + Apple + GitHub
 
-**Question 2: Should users VERIFY email?**
+Question 2: Should users VERIFY email?
 - A: Yes, verify before first use
 - B: No verification (faster onboarding)
 
-**Question 3: How SECURE should sessions be?**
+Question 3: How SECURE should sessions be?
 - A: Basic (stay logged in indefinitely)
 - B: Medium (logout after 30 days inactive)
 - C: High (logout after 7 days)
 
-**Question 4: What USER DATA to store?**
+Question 4: What USER DATA to store?
 - A: Email and name only
 - B: Email, name, and avatar
 - C: Email, name, avatar, and preferences
 
-**Question 5: PASSWORD reset method?**
+Question 5: PASSWORD reset method?
 - A: Email link only
 - B: Email link + security questions
 - C: No password reset (demo mode)
 
-**Question 6: Any TWO-FACTOR AUTH?**
+Question 6: Any TWO-FACTOR AUTH?
 - A: No 2FA (keep it simple)
 - B: Optional 2FA via email code
 - C: Required 2FA for all users
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 A
 A
@@ -188,50 +190,49 @@ A
 A
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
-Perfect! Based on your answers:
+Based on your answers:
+- Login: Email/password only
+- Email verification: Required
+- Session: Medium security (30 days inactive)
+- Profile: Email and name
+- Password reset: Email link
+- 2FA: Not needed
 
-**Login:** Email/password only
-**Email verification:** Required
-**Session:** Medium security (30 days inactive)
-**Profile:** Email and name
-**Password reset:** Email link
-**2FA:** Not needed
+3 IMPLEMENTATION OPTIONS:
 
-## 3 IMPLEMENTATION OPTIONS:
+Option A: Simple Auth (MY RECOMMENDED)
+What: Email/password with JWT tokens
+Pros: Quick to implement, industry standard
+Best for: Personal apps, MVPs
 
-### Option A: Simple Auth (MY RECOMMENDED)
-**What:** Email/password with JWT tokens
-**Pros:** Quick to implement, industry standard
-**Best for:** Personal apps, MVPs
+Option B: Firebase Auth
+What: Use Firebase Authentication
+Pros: Pre-built UI, handles everything
+Best for: Faster development
 
-### Option B: Firebase Auth
-**What:** Use Firebase Authentication
-**Pros:** Pre-built UI, handles everything
-**Best for:** Faster development
-
-### Option C: Custom Full Stack
-**What:** Build everything from scratch
-**Pros:** Complete control, learn fundamentals
-**Best for:** Learning, enterprise apps
+Option C: Custom Full Stack
+What: Build everything from scratch
+Pros: Complete control, learn fundamentals
+Best for: Learning, enterprise apps
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
 
 ---
 
-## COMMAND 2: /sp.specify
+## Command 2: /sp.specify
 
-### AI CREATES SPEC:
+**AI creates specification:**
 
-```
+```markdown
 # SPEC.md - Feature 1: User Authentication
 
 ## User Stories
@@ -289,7 +290,6 @@ As a logged-in user, I want to stay logged in.
 - Refresh token expires in 30 days
 
 ### API Endpoints
-```
 POST /api/auth/register     → Create account, send verification
 GET  /api/auth/verify/:token → Verify email
 POST /api/auth/login        → Login, return JWT
@@ -297,7 +297,6 @@ POST /api/auth/logout       → Invalidate tokens
 POST /api/auth/forgot-password → Send reset email
 POST /api/auth/reset-password → Reset password with token
 GET  /api/auth/me           → Get current user
-```
 
 ## Success Criteria
 - [ ] Registration completes in under 3 seconds
@@ -306,23 +305,23 @@ GET  /api/auth/me           → Get current user
 - [ ] JWT tokens are secure and validated
 ```
 
-### USER SAYS:
+**User says:**
 ```
 spec approved
 ```
 
 ---
 
-## COMMAND 3: /sp.clarify
+## Command 3: /sp.clarify
 
-### USER SAYS:
+**User says:**
 ```
 /sp.clarify Backend: Node.js + Express + TypeScript | Database: PostgreSQL + Prisma | Email: SendGrid (mock for now) | JWT: Access 15min, Refresh 30 days | Password: bcrypt 12 rounds
 ```
 
-### AI CONFIRMS:
+**AI confirms:**
 ```
-Perfect! Clarifications confirmed:
+Confirmed clarifications:
 - Backend: Node.js + Express + TypeScript
 - Database: PostgreSQL + Prisma ORM
 - Email: SendGrid (mock console.log for now)
@@ -332,11 +331,11 @@ Perfect! Clarifications confirmed:
 
 ---
 
-## COMMAND 4: /sp.plan
+## Command 4: /sp.plan
 
-### AI CREATES PLAN:
+**AI creates plan:**
 
-```
+```markdown
 # PLAN.md - Feature 1: User Authentication
 
 ## Phase 1: Project Setup (Day 1)
@@ -378,22 +377,22 @@ Perfect! Clarifications confirmed:
 - [ ] Create /me endpoint
 - [ ] Test logout flow
 
-## Estimated Time: 4 days
+Estimated Time: 4 days
 ```
 
-### USER SAYS:
+**User says:**
 ```
 plan approved
 ```
 
 ---
 
-## COMMAND 5: /sp.analyze
+## Command 5: /sp.analyze
 
-### AI RUNS ANALYSIS:
+**AI runs analysis:**
 
 ```
-📋 **CONSISTENCY ANALYSIS**
+CONSISTENCY ANALYSIS
 
 ✅ Constitution Alignment:
 - Simplicity: Plan follows simple auth approach (Option A)
@@ -408,20 +407,19 @@ plan approved
 - JWT (15min/30days): Correct
 - bcrypt 12 rounds: Correct
 
-**ANALYSIS RESULT: APPROVED**
+ANALYSIS RESULT: APPROVED
 ```
 
 ---
 
-## COMMAND 6: /sp.tasks
+## Command 6: /sp.tasks
 
-### AI CREATES TASKS:
+**AI creates tasks:**
 
-```
+```markdown
 # TASKS.md - Feature 1: User Authentication
 
-## Task 1.1: Project Setup
-```
+Task 1.1: Project Setup
 Files to create:
 - [ ] package.json
 - [ ] tsconfig.json
@@ -430,19 +428,15 @@ Files to create:
 - [ ] src/config/database.ts
 - [ ] .env.example
 - [ ] .gitignore
-```
 
-## Task 1.2: Database Schema
-```
+Task 1.2: Database Schema
 File: prisma/schema.prisma
 - [ ] Create User model
 - [ ] Create RefreshToken model
 - [ ] Create VerificationToken model
 - [ ] Run prisma migrate dev
-```
 
-## Task 1.3: Registration Endpoint
-```
+Task 1.3: Registration Endpoint
 - [ ] POST /auth/register handler
 - [ ] Validate email format
 - [ ] Check email not already registered
@@ -450,19 +444,15 @@ File: prisma/schema.prisma
 - [ ] Create user in database
 - [ ] Generate verification token
 - [ ] Send verification email (mock)
-```
 
-## Task 1.4: Email Verification Endpoint
-```
+Task 1.4: Email Verification Endpoint
 - [ ] GET /auth/verify/:token handler
 - [ ] Find token in database
 - [ ] Check token not expired
 - [ ] Update user.emailVerified = true
 - [ ] Delete used token
-```
 
-## Task 1.5: Login Endpoint
-```
+Task 1.5: Login Endpoint
 - [ ] POST /auth/login handler
 - [ ] Find user by email
 - [ ] Compare password with hash
@@ -470,57 +460,46 @@ File: prisma/schema.prisma
 - [ ] Generate refresh token
 - [ ] Store refresh token in DB
 - [ ] Return tokens
-```
 
-## Task 1.6: JWT Middleware
-```
+Task 1.6: JWT Middleware
 - [ ] Create authMiddleware function
 - [ ] Extract token from header
 - [ ] Verify JWT signature
 - [ ] Attach user to request
-```
 
-## Task 1.7: Forgot Password Endpoint
-```
+Task 1.7: Forgot Password Endpoint
 - [ ] POST /auth/forgot-password handler
 - [ ] Generate reset token
 - [ ] Send reset email (console.log mock)
-```
 
-## Task 1.8: Reset Password Endpoint
-```
+Task 1.8: Reset Password Endpoint
 - [ ] POST /auth/reset-password handler
 - [ ] Validate reset token
 - [ ] Hash new password
 - [ ] Update user passwordHash
 - [ ] Invalidate old tokens
-```
 
-## Task 1.9: Logout Endpoint
-```
+Task 1.9: Logout Endpoint
 - [ ] POST /auth/logout handler
 - [ ] Delete refresh token from database
-```
 
-## Task 1.10: Get Current User
-```
+Task 1.10: Get Current User
 - [ ] GET /auth/me handler
 - [ ] Return user data (exclude passwordHash)
 ```
-```
 
-### USER SAYS:
+**User says:**
 ```
 tasks approved
 ```
 
 ---
 
-## COMMAND 7: /sp.checklist
+## Command 7: /sp.checklist
 
-### AI GENERATES:
+**AI generates quality checklist:**
 
-```
+```markdown
 # QUALITY CHECKLIST - Feature 1: User Authentication
 
 ## SECURITY CHECKLIST
@@ -546,20 +525,18 @@ tasks approved
 
 ---
 
-## COMMAND 8: /sp.implement
+## Command 8: /sp.implement
 
-### AI ENTERS MODE 2 AND BUILDS:
+**AI enters MODE 2 and builds:**
 
 ```
-🔨 **MODE 2: CODING WORKER ACTIVATED**
+MODE 2: CODING WORKER ACTIVATED
 
 Building Feature 1...
 
-## Task 1.1: Project Setup
+Task 1.1: Project Setup
 
-Creating package.json...
-
-```json
+package.json:
 {
   "name": "taskmaster-api",
   "scripts": {
@@ -573,13 +550,11 @@ Creating package.json...
     "jsonwebtoken": "^9.0.2"
   }
 }
-```
 
-## Task 1.2: Database Schema
+Task 1.2: Database Schema
 
-Creating prisma/schema.prisma...
+prisma/schema.prisma:
 
-```prisma
 model User {
   id           String   @id @default(uuid())
   email        String   @unique
@@ -605,28 +580,15 @@ model VerificationToken {
   type      String
   expiresAt DateTime
 }
-```
 
-Running migration...
-
-```bash
+Running migration:
 npx prisma migrate dev --name init_auth
-```
 
-## Task 1.3: Registration Endpoint
+Task 1.3: Registration Endpoint
 
-Creating src/routes/auth.ts...
+src/routes/auth.ts:
 
-```typescript
-import { Router, Request, Response } from 'express';
-import bcrypt from 'bcryptjs';
-import { v4 as uuidv4 } from 'uuid';
-import { PrismaClient } from '@prisma/client';
-
-const router = Router();
-const prisma = new PrismaClient();
-
-router.post('/register', async (req: Request, res: Response) => {
+router.post('/register', async (req, res) => {
   const { email, password, name } = req.body;
 
   // Validate email
@@ -659,9 +621,6 @@ router.post('/register', async (req: Request, res: Response) => {
   res.status(201).json({ message: 'Registered! Check email to verify.' });
 });
 
-export default router;
-```
-
 [AI continues with remaining tasks...]
 
 ✅ All tasks completed!
@@ -669,20 +628,20 @@ export default router;
 
 ---
 
-## COMMAND 9: /sp.learn
+## Command 9: /sp.learn
 
-### AI CREATES LEARNING LOG:
+**AI creates learning log:**
 
-```
+```markdown
 # LEARNING LOG - Feature 1: User Authentication
 
-## Date: 2026-03-21
-## Feature: User Authentication
-## Project: TaskMaster
+Date: 2026-03-21
+Feature: User Authentication
+Project: TaskMaster
 
 ---
 
-### TECHNICAL TERMS LEARNED:
+## TECHNICAL TERMS LEARNED
 
 **JWT (JSON Web Token)**
 A secure way to transmit information between parties.
@@ -709,81 +668,77 @@ Security pattern where each refresh invalidates the old one.
 
 ---
 
-### DECISIONS MADE:
+## DECISIONS MADE
 
-1. **Chose bcrypt over SHA-256** - bcrypt is designed for passwords, includes salt
-2. **Separate access and refresh tokens** - Access tokens are short-lived
-3. **Token stored in database** - Enables revocation and logout everywhere
-4. **Mock email for now** - Console.log instead of real email service
-
----
-
-### CONCEPTS TO EXPLORE LATER:
-
-1. **OAuth 2.0** - For social login (Google, GitHub)
-2. **Two-Factor Authentication (2FA)** - TOTP apps like Google Authenticator
-3. **Rate Limiting** - Prevent brute force attacks
-4. **Account Lockout** - Temporarily lock after X failed attempts
+1. Chose bcrypt over SHA-256 - bcrypt is designed for passwords, includes salt
+2. Separate access and refresh tokens - Access tokens are short-lived
+3. Token stored in database - Enables revocation and logout everywhere
+4. Mock email for now - Console.log instead of real email service
 
 ---
 
-**Feature 1 Complete! Moving to Feature 2: Projects Management**
+## CONCEPTS TO EXPLORE LATER
+
+1. OAuth 2.0 - For social login (Google, GitHub)
+2. Two-Factor Authentication (2FA) - TOTP apps like Google Authenticator
+3. Rate Limiting - Prevent brute force attacks
+4. Account Lockout - Temporarily lock after X failed attempts
 ```
 
 ---
 
-## COMMAND 10: /sp.glossary
+## Command 10: /sp.glossary
 
-### AI SHOWS ALL TERMS:
+**AI shows all terms:**
 
-```
+```markdown
 # GLOSSARY - All Terms Learned
 
 | Term | Definition |
 |------|------------|
-| **JWT** | JSON Web Token - A secure token format for authentication |
-| **Access Token** | Short-lived JWT (15 min) for API authentication |
-| **Refresh Token** | Long-lived token (30 days) to get new access tokens |
-| **Bcrypt** | Password hashing algorithm with built-in salt |
-| **Prisma** | Type-safe ORM for database operations |
-| **Verification Token** | Temporary token sent to email for verification |
-| **Refresh Token Rotation** | Security pattern - each refresh invalidates the old one |
-| **Middleware** | Code that runs between request and response |
-| **Salt** | Random data added to passwords before hashing |
+| JWT | JSON Web Token - A secure token format for authentication |
+| Access Token | Short-lived JWT (15 min) for API authentication |
+| Refresh Token | Long-lived token (30 days) to get new access tokens |
+| Bcrypt | Password hashing algorithm with built-in salt |
+| Prisma | Type-safe ORM for database operations |
+| Verification Token | Temporary token sent to email for verification |
+| Refresh Token Rotation | Security pattern - each refresh invalidates the old one |
+| Middleware | Code that runs between request and response |
+| Salt | Random data added to passwords before hashing |
 ```
 
 ---
 
-## COMMAND 11: /sp.phr
+## Command 11: /sp.phr
 
-### AI CREATES PROMPT HISTORY:
+**AI creates prompt history:**
 
-```
+```markdown
 # PROMPT HISTORY RECORD - Feature 1: User Authentication
 
-## Project: TaskMaster
-## Feature: User Authentication
-## Date: 2026-03-21
-## Duration: 4 days
+Project: TaskMaster
+Feature: User Authentication
+Date: 2026-03-21
+Duration: 4 days
 
 ---
 
-## CONVERSATION FLOW:
+## CONVERSATION FLOW
 
-### User Request:
-```
+### User Request
 /sp.constitution Create principles for a personal todo app
 /sp.discover For the authentication system - what login methods?
-```
 
 ### AI Questions: 6 asked
 User Answers: A, A, B, A, A, A
+
+### User Choice: Option A (Simple Auth)
 
 ### Spec Created: 4 user stories
 ### Plan Created: 6 phases, 10 tasks
 ### Implementation: All tasks completed
 
-### What Worked Well:
+### What Worked Well
 - Simple auth approach (Option A) was right choice
 - bcrypt 12 rounds good balance
 - Mock email logging helped development
@@ -793,54 +748,54 @@ User Answers: A, A, B, A, A, A
 
 ---
 
-# PHASE 3: FEATURE 2 - PROJECTS MANAGEMENT
+# FEATURE 2: PROJECTS MANAGEMENT
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For the projects feature - how should projects work?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-🤖 **DISCOVERY MODE - Feature 2: Projects Management**
+DISCOVERY MODE - Feature 2: Projects Management
 
-**Question 1: How many PROJECTS per user?**
+Question 1: How many PROJECTS per user?
 - A: Unlimited projects
 - B: Max 10 projects
 - C: Max 50 projects
 
-**Question 2: What PROJECT DATA to store?**
+Question 2: What PROJECT DATA to store?
 - A: Name and color only
 - B: Name, color, and icon
 - C: Name, color, icon, description
 
-**Question 3: Can projects be ARCHIVED?**
+Question 3: Can projects be ARCHIVED?
 - A: No archiving (delete only)
 - B: Archive (hide but keep data)
 - C: Archive + delete after 30 days
 
-**Question 4: Should projects have COLORS?**
+Question 4: Should projects have COLORS?
 - A: Yes, preset colors only (10 colors)
 - B: Yes + custom color picker
 - C: No colors, use icons only
 
-**Question 5: Any PROJECT SHARING?**
+Question 5: Any PROJECT SHARING?
 - A: No sharing (personal only)
 - B: Share via link (read-only)
 - C: Collaborate with other users
 
-**Question 6: DEFAULT projects on signup?**
+Question 6: DEFAULT projects on signup?
 - A: Yes, create 3 default projects
 - B: No, user creates their own
 - C: Offer templates but let user choose
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 A
 B
@@ -850,50 +805,49 @@ A
 A
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
-Perfect! Based on your answers:
+Based on your answers:
+- Projects: Unlimited
+- Data: Name, color, and icon
+- Archive: Yes, hide but keep data
+- Colors: Preset colors only (10 options)
+- Sharing: No sharing (personal only)
+- Defaults: Yes, create 3 default projects
 
-**Projects:** Unlimited
-**Data:** Name, color, and icon
-**Archive:** Yes, hide but keep data
-**Colors:** Preset colors only (10 options)
-**Sharing:** No sharing (personal only)
-**Defaults:** Yes, create 3 default projects
+3 OPTIONS:
 
-## 3 OPTIONS:
+Option A: Simple Projects (MY RECOMMENDED)
+What: Name, color, icon, archive
+Pros: Quick to build, simple UI
+Best for: Personal use
 
-### Option A: Simple Projects (MY RECOMMENDED)
-**What:** Name, color, icon, archive
-**Pros:** Quick to build, simple UI
-**Best for:** Personal use
+Option B: Projects with Templates
+What: Pre-made project templates
+Pros: Users get started faster
+Best for: Teams or businesses
 
-### Option B: Projects with Templates
-**What:** Pre-made project templates
-**Pros:** Users get started faster
-**Best for:** Teams or businesses
-
-### Option C: Projects with Tags
-**What:** Projects with tagging system
-**Pros:** Flexible organization
-**Best for:** Complex projects
+Option C: Projects with Tags
+What: Projects with tagging system
+Pros: Flexible organization
+Best for: Complex projects
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
 
 ---
 
-## COMMAND 2: /sp.specify
+## Command 2: /sp.specify
 
-### AI CREATES SPEC:
+**AI creates specification:**
 
-```
+```markdown
 # SPEC.md - Feature 2: Projects Management
 
 ## User Stories
@@ -947,7 +901,6 @@ As a new user, I want starter projects to get started quickly.
 ## Technical Requirements
 
 ### Data Model
-```
 Project {
   id: UUID
   userId: UUID (foreign key)
@@ -958,27 +911,22 @@ Project {
   createdAt: DateTime
   updatedAt: DateTime
 }
-```
 
 ### API Endpoints
-```
 GET    /api/projects           → List all projects
 POST   /api/projects           → Create project
 GET    /api/projects/:id       → Get single project
 PUT    /api/projects/:id       → Update project
-DELETE /api/projects/:id        → Delete project
+DELETE /api/projects/:id       → Delete project
 POST   /api/projects/:id/archive → Archive project
 POST   /api/projects/:id/restore → Restore project
 GET    /api/projects/archived  → List archived projects
-```
 
 ### Preset Colors
-```
 #EF4444 (Red)    #F59E0B (Amber)   #22C55E (Green)
 #3B82F6 (Blue)   #8B5CF6 (Purple)  #EC4899 (Pink)
 #6366F1 (Indigo) #14B8A6 (Teal)   #F97316 (Orange)
 #64748B (Slate)
-```
 
 ## Success Criteria
 - [ ] User can create unlimited projects
@@ -988,23 +936,23 @@ GET    /api/projects/archived  → List archived projects
 - [ ] Tasks linked to projects
 ```
 
-### USER SAYS:
+**User says:**
 ```
 spec approved
 ```
 
 ---
 
-## COMMAND 3: /sp.clarify
+## Command 3: /sp.clarify
 
-### USER SAYS:
+**User says:**
 ```
 /sp.clarify Frontend: React | Backend: Extend existing Express API | Database: Add Project model to Prisma | Default colors: #EF4444, #F59E0B, #22C55E, #3B82F6, #8B5CF6
 ```
 
-### AI CONFIRMS:
+**AI confirms:**
 ```
-Confirmed:
+Confirmed clarifications:
 - Frontend: React
 - Backend: Extend existing Express API
 - Database: Add Project model to Prisma
@@ -1013,11 +961,11 @@ Confirmed:
 
 ---
 
-## COMMAND 4: /sp.plan
+## Command 4: /sp.plan
 
-### AI CREATES PLAN:
+**AI creates plan:**
 
-```
+```markdown
 # PLAN.md - Feature 2: Projects Management
 
 ## Phase 1: Database (Day 1)
@@ -1050,22 +998,22 @@ Confirmed:
 - [ ] Color picker
 - [ ] Icon picker
 
-## Estimated Time: 4 days
+Estimated Time: 4 days
 ```
 
-### USER SAYS:
+**User says:**
 ```
 plan approved
 ```
 
 ---
 
-## COMMAND 5: /sp.analyze
+## Command 5: /sp.analyze
 
-### AI RUNS ANALYSIS:
+**AI runs analysis:**
 
 ```
-📋 **CONSISTENCY ANALYSIS**
+CONSISTENCY ANALYSIS
 
 ✅ Constitution Alignment:
 - Simplicity: Simple project structure, preset colors
@@ -1080,26 +1028,25 @@ plan approved
 - Add Project model: Correct
 - Preset colors: 5 specified
 
-**ANALYSIS RESULT: APPROVED**
+ANALYSIS RESULT: APPROVED
 ```
 
 ---
 
-## COMMAND 6: /sp.tasks
+## Command 6: /sp.tasks
 
-### AI CREATES TASKS:
+**AI creates tasks:**
 
-```
+```markdown
 # TASKS.md - Feature 2: Projects Management
 
-## Task 2.1: Database Schema
-```
+Task 2.1: Database Schema
 File: prisma/schema.prisma
 - [ ] Add Project model
 - [ ] Add relation to User
 - [ ] Run prisma migrate dev
-```
-```prisma
+
+prisma/schema.prisma:
 model Project {
   id        String   @id @default(uuid())
   userId    String
@@ -1111,64 +1058,48 @@ model Project {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
-```
 
-## Task 2.2: List Projects API
-```
+Task 2.2: List Projects API
 - [ ] GET /api/projects handler
 - [ ] Fetch all non-archived projects for user
 - [ ] Include task count
 - [ ] Return sorted by createdAt
-```
 
-## Task 2.3: Create Project API
-```
+Task 2.3: Create Project API
 - [ ] POST /api/projects handler
 - [ ] Validate name (required)
 - [ ] Validate color (from presets)
 - [ ] Create project for user
-```
 
-## Task 2.4: Update Project API
-```
+Task 2.4: Update Project API
 - [ ] PUT /api/projects/:id handler
 - [ ] Verify ownership
 - [ ] Update name/color/icon
-```
 
-## Task 2.5: Delete Project API
-```
+Task 2.5: Delete Project API
 - [ ] DELETE /api/projects/:id handler
 - [ ] Verify ownership
 - [ ] Delete project and all tasks
-```
 
-## Task 2.6: Archive/Restore APIs
-```
+Task 2.6: Archive/Restore APIs
 - [ ] POST /api/projects/:id/archive
 - [ ] POST /api/projects/:id/restore
 - [ ] GET /api/projects/archived
-```
 
-## Task 2.7: Default Projects
-```
+Task 2.7: Default Projects
 - [ ] Create createDefaultProjects function
 - [ ] Call in registration flow
 - [ ] Create: Inbox (#3B82F6), Work (#EF4444), Personal (#22C55E)
-```
 
-## Task 2.8: Frontend Components
-```
+Task 2.8: Frontend Components
 - [ ] ProjectList component
 - [ ] ProjectCard component
 - [ ] CreateProjectForm
 - [ ] EditProjectModal
 - [ ] ColorPicker (10 preset colors)
 - [ ] IconPicker (20 emojis)
-```
 
-## Task 2.9: Testing
-```
+Task 2.9: Testing
 - [ ] Test create project
 - [ ] Test edit project
 - [ ] Test archive project
@@ -1176,20 +1107,19 @@ model Project {
 - [ ] Test delete project
 - [ ] Test default projects on signup
 ```
-```
 
-### USER SAYS:
+**User says:**
 ```
 tasks approved
 ```
 
 ---
 
-## COMMAND 7: /sp.checklist
+## Command 7: /sp.checklist
 
-### AI GENERATES:
+**AI generates quality checklist:**
 
-```
+```markdown
 # QUALITY CHECKLIST - Feature 2: Projects Management
 
 ## FUNCTIONAL CHECKLIST
@@ -1212,20 +1142,19 @@ tasks approved
 
 ---
 
-## COMMAND 8: /sp.implement
+## Command 8: /sp.implement
 
-### AI ENTERS MODE 2 AND BUILDS:
+**AI enters MODE 2 and builds:**
 
 ```
-🔨 **MODE 2: CODING WORKER ACTIVATED**
+MODE 2: CODING WORKER ACTIVATED
 
 Building Feature 2: Projects Management...
 
-## Task 2.1: Database Schema
+Task 2.1: Database Schema
 
 Updating prisma/schema.prisma...
 
-```prisma
 model Project {
   id        String   @id @default(uuid())
   userId    String
@@ -1240,19 +1169,14 @@ model Project {
 
   @@index([userId])
 }
-```
 
-Running migration...
-
-```bash
+Running migration:
 npx prisma migrate dev --name add_projects
-```
 
-## Task 2.2: List Projects API
+Task 2.2: List Projects API
 
-Creating src/routes/projects.ts...
+src/routes/projects.ts:
 
-```typescript
 router.get('/', authMiddleware, async (req, res) => {
   const projects = await prisma.project.findMany({
     where: { 
@@ -1270,11 +1194,9 @@ router.get('/', authMiddleware, async (req, res) => {
     taskCount: p._count.tasks
   })));
 });
-```
 
-## Task 2.3: Create Project API
+Task 2.3: Create Project API
 
-```typescript
 const PRESET_COLORS = [
   '#EF4444', '#F59E0B', '#22C55E', '#3B82F6', '#8B5CF6',
   '#EC4899', '#6366F1', '#14B8A6', '#F97316', '#64748B'
@@ -1302,7 +1224,6 @@ router.post('/', authMiddleware, async (req, res) => {
 
   res.status(201).json(project);
 });
-```
 
 [AI continues with remaining tasks...]
 
@@ -1311,20 +1232,20 @@ router.post('/', authMiddleware, async (req, res) => {
 
 ---
 
-## COMMAND 9: /sp.learn
+## Command 9: /sp.learn
 
-### AI CREATES LEARNING LOG:
+**AI creates learning log:**
 
-```
+```markdown
 # LEARNING LOG - Feature 2: Projects Management
 
-## Date: 2026-03-22
-## Feature: Projects Management
-## Project: TaskMaster
+Date: 2026-03-22
+Feature: Projects Management
+Project: TaskMaster
 
 ---
 
-### TECHNICAL TERMS LEARNED:
+## TECHNICAL TERMS LEARNED
 
 **Prisma Relations**
 Connecting models together with foreign keys.
@@ -1350,79 +1271,75 @@ When parent is deleted, children are also deleted.
 
 ---
 
-### CONCEPTS TO EXPLORE LATER:
+## CONCEPTS TO EXPLORE LATER
 
-1. **Project Templates** - Pre-made project structures
-2. **Project Categories** - Groups of projects
-3. **Drag & Drop** - Reorder projects
-4. **Project Colors** - Allow custom colors
-
----
-
-**Feature 2 Complete! Moving to Feature 3: Tasks CRUD**
+1. Project Templates - Pre-made project structures
+2. Project Categories - Groups of projects
+3. Drag & Drop - Reorder projects
+4. Project Colors - Allow custom colors
 ```
 
 ---
 
-## COMMAND 10: /sp.glossary
+## Command 10: /sp.glossary
 
-### AI SHOWS UPDATED GLOSSARY:
+**AI shows updated glossary:**
 
-```
+```markdown
 # GLOSSARY - All Terms Learned
 
 ## Authentication (Feature 1)
 | Term | Definition |
 |------|------------|
-| **JWT** | JSON Web Token - A secure token format |
-| **Access Token** | Short-lived JWT (15 min) for API auth |
-| **Refresh Token** | Long-lived token (30 days) for session |
-| **Bcrypt** | Password hashing algorithm with salt |
-| **Prisma** | Type-safe ORM for database |
-| **Verification Token** | Temporary token for email verification |
-| **Refresh Token Rotation** | Each refresh invalidates the old one |
+| JWT | JSON Web Token - A secure token format |
+| Access Token | Short-lived JWT (15 min) for API auth |
+| Refresh Token | Long-lived token (30 days) for session |
+| Bcrypt | Password hashing with salt |
+| Prisma | Type-safe ORM for database |
+| Verification Token | Temporary token for email verification |
+| Refresh Token Rotation | Each refresh invalidates old token |
 
 ## Projects (Feature 2)
 | Term | Definition |
 |------|------------|
-| **Prisma Relations** | Connecting models with foreign keys |
-| **Preset Options** | Limited user choices to predefined options |
-| **Soft Delete** | Mark as archived, keep data |
-| **Hard Delete** | Actually remove from database |
-| **Cascade Delete** | Parent deleted → children deleted too |
+| Prisma Relations | Connecting models with foreign keys |
+| Preset Options | Limited user choices to predefined options |
+| Soft Delete | Mark as archived, keep data |
+| Hard Delete | Actually remove from database |
+| Cascade Delete | Parent deleted → children deleted too |
 ```
 
 ---
 
-## COMMAND 11: /sp.phr
+## Command 11: /sp.phr
 
-### AI CREATES PROMPT HISTORY:
+**AI creates prompt history:**
 
-```
+```markdown
 # PROMPT HISTORY RECORD - Feature 2: Projects Management
 
-## Project: TaskMaster
-## Feature: Projects Management
-## Date: 2026-03-22
-## Duration: 4 days
+Project: TaskMaster
+Feature: Projects Management
+Date: 2026-03-22
+Duration: 4 days
 
 ---
 
-## CONVERSATION FLOW:
+## CONVERSATION FLOW
 
-### User Request:
-```
+### User Request
 /sp.discover For the projects feature - how should projects work?
-```
 
 ### AI Questions: 6 asked
 User Answers: A, B, B, A, A, A
+
+### User Choice: Option A (Simple Projects)
 
 ### Spec Created: 5 user stories
 ### Plan Created: 5 phases, 9 tasks
 ### Implementation: All tasks completed
 
-### What Worked Well:
+### What Worked Well
 - Preset colors simplified UI
 - Soft delete (archive) pattern was right choice
 - Default projects helped onboarding
@@ -1432,54 +1349,54 @@ User Answers: A, B, B, A, A, A
 
 ---
 
-# PHASE 4: FEATURE 3 - TASKS CRUD
+# FEATURE 3: TASKS CRUD
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For the tasks feature - how should tasks work?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-🤖 **DISCOVERY MODE - Feature 3: Tasks CRUD**
+DISCOVERY MODE - Feature 3: Tasks CRUD
 
-**Question 1: What TASK DATA to store?**
+Question 1: What TASK DATA to store?
 - A: Title only
 - B: Title and description
 - C: Title, description, and notes
 
-**Question 2: TASK COMPLETION?**
+Question 2: TASK COMPLETION?
 - A: Mark complete/incomplete only
 - B: Mark complete + completedAt timestamp
 - C: Mark complete + completedAt + who completed
 
-**Question 3: TASK ORDERING?**
+Question 3: TASK ORDERING?
 - A: Manual drag & drop
 - B: Auto sort by created date
 - C: Auto sort by priority
 
-**Question 4: TASK DELETION?**
+Question 4: TASK DELETION?
 - A: Permanent delete
 - B: Move to trash (recoverable)
 - C: Archive like projects
 
-**Question 5: BULK ACTIONS?**
+Question 5: BULK ACTIONS?
 - A: No bulk actions
 - B: Select multiple, delete
 - C: Select multiple, complete/archive/move
 
-**Question 6: TASK SEARCH?**
+Question 6: TASK SEARCH?
 - A: No search
 - B: Search by title only
 - C: Search by title and description
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 B
 B
@@ -1489,39 +1406,38 @@ B
 B
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
-Perfect! Based on your answers:
+Based on your answers:
+- Task Data: Title and description
+- Completion: Mark complete + completedAt timestamp
+- Ordering: Manual drag & drop
+- Deletion: Permanent delete
+- Bulk Actions: Select multiple, delete/complete
+- Search: Search by title only
 
-**Task Data:** Title and description
-**Completion:** Mark complete + completedAt timestamp
-**Ordering:** Manual drag & drop
-**Deletion:** Permanent delete
-**Bulk Actions:** Select multiple, delete/complete
-**Search:** Search by title only
+3 OPTIONS:
 
-## 3 OPTIONS:
+Option A: Simple Tasks (MY RECOMMENDED)
+What: Title, description, complete toggle, drag reorder
+Pros: Quick to build, intuitive
+Best for: Personal use
 
-### Option A: Simple Tasks (MY RECOMMENDED)
-**What:** Title, description, complete toggle, drag reorder
-**Pros:** Quick to build, intuitive
-**Best for:** Personal use
+Option B: Tasks with Subtasks
+What: Tasks can have subtasks
+Pros: Break down complex tasks
+Best for: Complex workflows
 
-### Option B: Tasks with Subtasks
-**What:** Tasks can have subtasks
-**Pros:** Break down complex tasks
-**Best for:** Complex workflows
-
-### Option C: Tasks with Labels
-**What:** Tasks can have labels/tags
-**Pros:** Flexible categorization
-**Best for:** Multiple projects
+Option C: Tasks with Labels
+What: Tasks can have labels/tags
+Pros: Flexible categorization
+Best for: Multiple projects
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
@@ -1533,7 +1449,7 @@ A
 ```
 FOR EACH NEW FEATURE:
 1. /sp.discover     → AI asks questions
-2. /sp.specify      → AI creates spec
+2. /sp.specify     → AI creates spec
 3. /sp.clarify     → User provides clarifications
 4. /sp.plan        → AI creates plan
 5. /sp.analyze     → AI checks consistency
@@ -1549,34 +1465,37 @@ REPEAT FOR FEATURE 4, 5, 6, ... until project complete!
 
 ---
 
-## TASKMASTER PROJECT FEATURES
+## TASKMASTER PROJECT SUMMARY
 
-| Feature | Status |
-|---------|--------|
-| 1. User Authentication | ✅ Complete |
-| 2. Projects Management | ✅ Complete |
-| 3. Tasks CRUD | (Continue cycle) |
-| 4. Due Dates & Priorities | (Continue cycle) |
-| 5. Recurring Tasks | (Continue cycle) |
-| 6. Search & Filter | (Continue cycle) |
-| 7. Cloud Sync | (Continue cycle) |
-| 8. Mobile App | (Continue cycle) |
+| # | Feature | Status |
+|---|---------|--------|
+| 1 | User Authentication | Complete |
+| 2 | Projects Management | Complete |
+| 3 | Tasks CRUD | (Continue cycle) |
+| 4 | Due Dates & Priorities | (Continue cycle) |
+| 5 | Recurring Tasks | (Continue cycle) |
+| 6 | Search & Filter | (Continue cycle) |
+| 7 | Cloud Sync | (Continue cycle) |
+| 8 | Mobile App | (Continue cycle) |
 
 ---
 
-## SUMMARY
+## Complete /sp Command Cycle (Per Feature)
 
-Each feature follows the same cycle:
-1. **Discover** - AI asks questions, user answers A/B/C
-2. **Specify** - AI creates detailed specification
-3. **Clarify** - User provides tech stack details
-4. **Plan** - AI creates implementation phases
-5. **Analyze** - AI checks consistency
-6. **Tasks** - AI creates detailed tasks
-7. **Checklist** - AI generates quality checklist
-8. **Implement** - AI builds in Mode 2
-9. **Learn** - AI records technical terms
-10. **Glossary** - AI shows all learned terms
-11. **PHR** - AI creates prompt history
+```
+1. /sp.discover     → AI asks 6 questions
+2. /sp.specify      → AI creates SPEC.md
+3. /sp.clarify      → User provides tech details
+4. /sp.plan         → AI creates PLAN.md
+5. /sp.analyze      → AI checks consistency
+6. /sp.tasks        → AI creates TASKS.md
+7. /sp.checklist    → AI generates checklist
+8. /sp.implement    → AI builds (Mode 2)
+9. /sp.learn        → AI records learning
+10. /sp.glossary    → AI shows all terms
+11. /sp.phr         → AI creates prompt history
 
-Then MOVE TO NEXT FEATURE and repeat!
+Each feature: 4-7 days
+Total project: 18-24 weeks
+Learn as you build!
+```

@@ -1,10 +1,10 @@
 # Social Network Platform - Complete AI Co-Partner Project
 
-## Project: ConnectHub - Social Network
+> **Project: ConnectHub** - A social network built with AI as senior architect co-partner.
 
 ---
 
-## INSTALLATION
+## Installation
 
 ```bash
 pip install spec-kit-colearn
@@ -13,7 +13,7 @@ npm install -g @muhammad-hamid-raza/spec-kit-colearn
 
 ---
 
-## INITIALIZE PROJECT
+## Initialize Project
 
 ```bash
 spec-kit-colearn init connecthub
@@ -22,80 +22,71 @@ cd connecthub
 
 ---
 
-## ALL /sp COMMANDS FOR EACH FEATURE
+## Project Overview
+
+**10 Features** to be built one at a time, following the complete `/sp` command cycle.
+
+| # | Feature | Status |
+|---|---------|--------|
+| 1 | Authentication | Complete |
+| 2 | User Profiles | Complete |
+| 3 | Posts & Feed | Complete |
+| 4 | Follow System | Complete |
+| 5 | Comments & Reactions | Complete |
+| 6 | Direct Messages | Complete |
+| 7 | Notifications | Complete |
+| 8 | Groups | Complete |
+| 9 | Search & Discovery | Complete |
+| 10 | Content Moderation | Complete |
+
+---
+
+## Complete /sp Command Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    CONNECTHUB PROJECT FLOW                        │
+│                    CONNECTHUB PROJECT FLOW                      │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  PHASE 1: PROJECT SETUP (Run Once)                              │
-│  ════════════════════                                            │
+│  PHASE 1: PROJECT SETUP                                         │
+│  ═══════════════════                                            │
 │  /sp.constitution    → Set social network principles             │
 │                                                                  │
-│  PHASE 2: FEATURE 1 (Authentication)                            │
-│  ═══════════════════════════                                      │
-│  /sp.discover         → Partner discussion                       │
-│  /sp.specify          → Define requirements                     │
-│  /sp.clarify          → Answer questions                        │
-│  /sp.plan             → Technical plan                          │
-│  /sp.analyze          → Consistency check                        │
-│  /sp.tasks            → Generate tasks                           │
-│  /sp.checklist        → Quality checklist                        │
-│  /sp.implement         → Build feature                          │
-│  /sp.learn            → Record learning                         │
-│  /sp.glossary          → Review terms                           │
-│  /sp.phr               → Prompt history                         │
+│  ─────────────────────────────────────────────────────────────  │
 │                                                                  │
-│  PHASE 3: FEATURE 2 (User Profiles)                            │
-│  (Same /sp cycle)                                              │
+│  FOR EACH FEATURE (repeat this cycle):                          │
 │                                                                  │
-│  PHASE 4: FEATURE 3 (Posts & Feed)                            │
-│  (Same /sp cycle)                                              │
+│  /sp.discover         → AI asks questions                       │
+│  /sp.specify          → AI creates specification                 │
+│  /sp.clarify          → Resolve unclear requirements            │
+│  /sp.plan             → AI creates implementation plan           │
+│  /sp.analyze          → AI checks consistency                    │
+│  /sp.tasks            → AI generates task list                   │
+│  /sp.checklist        → AI generates quality checklist           │
+│  /sp.implement        → AI builds (Mode 2 activated)             │
+│  /sp.learn            → AI records learning                      │
+│  /sp.glossary         → AI shows all terms learned               │
+│  /sp.phr              → AI creates prompt history                │
 │                                                                  │
-│  PHASE 5: FEATURE 4 (Follow System)                            │
-│  (Same /sp cycle)                                              │
-│                                                                  │
-│  ... continue for each feature ...                              │
-│                                                                  │
-│  TOTAL FEATURES: 10                                           │
+│  TOTAL: 10 features                                            │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-# CONNECTHUB - 10 FEATURES
-
-| # | Feature | Status |
-|---|---------|--------|
-| 1 | Authentication | ✅ Complete |
-| 2 | User Profiles | ✅ Complete |
-| 3 | Posts & Feed | ✅ Complete |
-| 4 | Follow System | ✅ Complete |
-| 5 | Comments & Reactions | ✅ Complete |
-| 6 | Direct Messages | ✅ Complete |
-| 7 | Notifications | ✅ Complete |
-| 8 | Groups | ✅ Complete |
-| 9 | Search & Discovery | ✅ Complete |
-| 10 | Content Moderation | ✅ Complete |
-
----
-
 # PHASE 1: PROJECT SETUP
 
----
+## Command: /sp.constitution
 
-## COMMAND: /sp.constitution
-
-### USER SAYS:
+**User says:**
 ```
 /sp.constitution Create principles for a social network focused on user privacy, content moderation, real-time performance, and community building.
 ```
 
-### AI CREATES:
+**AI creates:**
 
-```
+```markdown
 # ConnectHub Constitution
 
 ## Core Principles
@@ -153,48 +144,50 @@ cd connecthub
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For authentication - what login methods? What security?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-**Question 1: LOGIN METHODS?**
+DISCOVERY MODE - Feature 1: Authentication
+
+Question 1: LOGIN METHODS?
 - A: Email/password only
 - B: Email/password + Google
 - C: Email/password + Google + Apple
 
-**Question 2: SESSION MANAGEMENT?**
+Question 2: SESSION MANAGEMENT?
 - A: JWT tokens only
 - B: JWT + refresh tokens
 - C: Socket.io authentication
 
-**Question 3: SECURITY FEATURES?**
+Question 3: SECURITY FEATURES?
 - A: Basic (password hashing)
 - B: Standard (hash + rate limiting)
 - C: Enhanced (hash + rate limiting + 2FA admin)
 
-**Question 4: USER VERIFICATION?**
+Question 4: USER VERIFICATION?
 - A: No verification
 - B: Email verification
 - C: Phone verification
 
-**Question 5: ACCOUNT TYPES?**
+Question 5: ACCOUNT TYPES?
 - A: Regular users only
 - B: Regular + Business accounts
 - C: Regular + Business + Verified/Celebrity
 
-**Question 6: SOCIAL LOGIN?**
+Question 6: SOCIAL LOGIN?
 - A: None
 - B: Google only
 - C: Google + Apple + Facebook
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 C
 B
@@ -204,7 +197,7 @@ C
 B
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
 Based on your answers:
@@ -215,65 +208,76 @@ Based on your answers:
 - Account Types: Regular + Business + Verified
 - Social Login: Google + Apple
 
-## 3 OPTIONS:
+3 OPTIONS:
 
-### Option A: Custom Auth (MY RECOMMENDED)
+Option A: Custom Auth (MY RECOMMENDED)
 Full control, JWT + Socket.io auth
 Best for: Learning, full customization
 
-### Option B: Firebase Auth
+Option B: Firebase Auth
 Firebase SDK handles everything
 Best for: Faster development
 
-### Option C: Auth0
+Option C: Auth0
 Managed auth service
 Best for: Enterprise features, SSO
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
 
 ---
 
-## COMMAND 2: /sp.specify
+## Command 2: /sp.specify
 
-### AI CREATES:
+**AI creates specification:**
 
-```
+```markdown
 # SPEC.md - Feature 1: Authentication
 
 ## User Stories
 
 ### US1: Registration
-- Email/password registration
-- OAuth (Google + Apple)
-- Email verification
-- Profile creation (handle, display name)
+As a new user, I want to register so I can join ConnectHub.
+
+**Acceptance Criteria:**
+- [ ] Email/password registration
+- [ ] OAuth (Google + Apple)
+- [ ] Email verification
+- [ ] Profile creation (handle, display name)
 
 ### US2: Login
-- Email/password login
-- OAuth login (Google + Apple)
-- Remember me option
-- Session persistence
+As a returning user, I want to login so I can access my account.
+
+**Acceptance Criteria:**
+- [ ] Email/password login
+- [ ] OAuth login (Google + Apple)
+- [ ] Remember me option
+- [ ] Session persistence
 
 ### US3: Account Types
-- Regular user (default)
-- Business account (for brands/businesses)
-- Verified account (manual approval)
+As a user, I want different account types for different needs.
+
+**Acceptance Criteria:**
+- [ ] Regular user (default)
+- [ ] Business account (for brands/businesses)
+- [ ] Verified account (manual approval)
 
 ### US4: Security
-- Password hashing (bcrypt 12 rounds)
-- Rate limiting (10 attempts per minute)
-- Admin 2FA required
-- Session management
+As an admin, I want enhanced security to protect users.
+
+**Acceptance Criteria:**
+- [ ] Password hashing (bcrypt 12 rounds)
+- [ ] Rate limiting (10 attempts per minute)
+- [ ] Admin 2FA required
+- [ ] Session management
 
 ## Data Model
 
-```
 User {
   id: UUID
   email: String (unique)
@@ -297,19 +301,17 @@ OAuthAccount {
   accessToken: String
   refreshToken: String
 }
-```
 
 ## API Endpoints
-```
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/oauth/:provider
-POST /api/auth/verify-email
-POST /api/auth/forgot-password
-POST /api/auth/reset-password
-GET  /api/auth/me
-WebSocket: /socket.io/auth
-```
+
+POST /api/auth/register         → Create account
+POST /api/auth/login            → Login
+POST /api/auth/oauth/:provider  → OAuth flow
+POST /api/auth/verify-email     → Verify email
+POST /api/auth/forgot-password  → Request reset
+POST /api/auth/reset-password   → Reset password
+GET  /api/auth/me               → Get current user
+WebSocket: /socket.io/auth      → Real-time auth
 
 ## Success Criteria
 - [ ] Email + OAuth registration works
@@ -319,27 +321,39 @@ WebSocket: /socket.io/auth
 - [ ] Rate limiting prevents brute force
 ```
 
-### USER SAYS:
+**User says:**
 ```
 spec approved
 ```
 
 ---
 
-## COMMAND 3: /sp.clarify
+## Command 3: /sp.clarify
 
-### USER SAYS:
+**User says:**
 ```
 /sp.clarify Backend: Node.js + Express + TypeScript | Database: PostgreSQL + Prisma + Redis | OAuth: Google + Apple | JWT: Access 15min, Refresh 30 days | Password: bcrypt 12 rounds | Rate limit: 10/min | 2FA: Email code for admin
 ```
 
+**AI confirms:**
+```
+Confirmed clarifications:
+- Backend: Node.js + Express + TypeScript
+- Database: PostgreSQL + Prisma + Redis
+- OAuth: Google + Apple
+- JWT: Access 15min, Refresh 30 days
+- Password: bcrypt 12 rounds
+- Rate limit: 10 attempts per minute
+- 2FA: Email code for admin
+```
+
 ---
 
-## COMMAND 4: /sp.plan
+## Command 4: /sp.plan
 
-### AI CREATES:
+**AI creates plan:**
 
-```
+```markdown
 # PLAN.md - Feature 1: Authentication
 
 ## Phase 1: Database Schema (Day 1)
@@ -376,56 +390,76 @@ spec approved
 - [ ] Integration tests
 - [ ] OAuth flow tests
 
-## Estimated: 4-5 days
+Estimated: 4-5 days
 ```
 
-### USER SAYS:
+**User says:**
 ```
 plan approved
 ```
 
 ---
 
-## COMMAND 5: /sp.analyze
+## Command 5: /sp.analyze
+
+**AI runs analysis:**
 
 ```
-ANALYSIS: APPROVED
-- All user stories covered
-- Technical stack consistent
-- Security requirements met
+CONSISTENCY ANALYSIS
+
+✅ Constitution Alignment:
+- User Privacy: Secure auth with tokens
+- Real-time Performance: Socket.io auth ready
+
+✅ Spec Coverage:
+- All 4 user stories covered
+- All acceptance criteria have tasks
+
+✅ Technical Consistency:
+- PostgreSQL + Prisma + Redis: Correct
+- JWT + refresh: Correct
+- bcrypt 12 rounds: Correct
+
+ANALYSIS RESULT: APPROVED
 ```
 
 ---
 
-## COMMAND 6: /sp.tasks
+## Command 6: /sp.tasks
 
-### AI CREATES:
+**AI creates tasks:**
 
-```
+```markdown
 # TASKS.md - Feature 1: Authentication
 
-## Task 1.1: Database Schema
-```prisma
+Task 1.1: Database Schema
+
+prisma/schema.prisma:
+
 model User {
-  id           String   @id @default(uuid())
-  email        String   @unique
-  passwordHash String?
-  handle       String   @unique
-  displayName String
-  avatarUrl   String?
-  bio         String?
-  accountType String   @default("regular")
-  emailVerified Boolean @default(false)
-  twoFactorEnabled Boolean @default(false)
-  twoFactorSecret String?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  id               String   @id @default(uuid())
+  email            String   @unique
+  passwordHash     String?
+  handle           String   @unique
+  displayName      String
+  avatarUrl        String?
+  bio              String?
+  accountType      String   @default("regular")
+  emailVerified    Boolean  @default(false)
+  twoFactorEnabled Boolean  @default(false)
+  twoFactorSecret  String?
+  failedAttempts   Int      @default(0)
+  lockedUntil      DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  
   oauthAccounts OAuthAccount[]
   posts       Post[]
   comments    Comment[]
-  messages    Message[]
   followers   Follow[] @relation("following")
   following   Follow[] @relation("follower")
+  sentMessages     Message[] @relation("sender")
+  receivedMessages Message[] @relation("recipient")
 }
 
 model OAuthAccount {
@@ -437,6 +471,8 @@ model OAuthAccount {
   accessToken  String
   refreshToken String
   expiresAt    DateTime
+  
+  @@unique([provider, providerId])
 }
 
 model RefreshToken {
@@ -444,46 +480,48 @@ model RefreshToken {
   token     String   @unique
   userId    String
   expiresAt DateTime
+  createdAt DateTime @default(now())
 }
-```
 
-## Task 1.2: Registration
+Task 1.2: Registration
 - [ ] Email registration
 - [ ] Password validation
 - [ ] Handle validation (@username format)
 - [ ] Duplicate check
 
-## Task 1.3: OAuth
+Task 1.3: OAuth
 - [ ] Google OAuth flow
 - [ ] Apple OAuth flow
 - [ ] Link OAuth to existing account
 
-## Task 1.4: Login
+Task 1.4: Login
 - [ ] Email login
 - [ ] JWT generation
 - [ ] Refresh token rotation
 
-## Task 1.5: Security
+Task 1.5: Security
 - [ ] Rate limiting
 - [ ] Password hashing
 - [ ] Admin 2FA
 
-## Task 1.6: Socket.io Auth
+Task 1.6: Socket.io Auth
 - [ ] Connection handler
 - [ ] JWT verification
 - [ ] User online status
 ```
 
-### USER SAYS:
+**User says:**
 ```
 tasks approved
 ```
 
 ---
 
-## COMMAND 7: /sp.checklist
+## Command 7: /sp.checklist
 
-```
+**AI generates quality checklist:**
+
+```markdown
 # QUALITY CHECKLIST - Feature 1: Authentication
 
 ## SECURITY
@@ -511,16 +549,19 @@ tasks approved
 
 ---
 
-## COMMAND 8: /sp.implement
+## Command 8: /sp.implement
+
+**AI enters MODE 2 and builds:**
 
 ```
-🔨 **MODE 2: CODING WORKER ACTIVATED**
+MODE 2: CODING WORKER ACTIVATED
 
 Building Feature 1: Authentication...
 
-## Task 1.1: Database Schema
+Task 1.1: Database Schema
 
-```prisma
+prisma/schema.prisma:
+
 model User {
   id               String   @id @default(uuid())
   email            String   @unique
@@ -529,9 +570,9 @@ model User {
   displayName      String
   avatarUrl        String?
   bio              String?
-  accountType       String   @default("regular")
+  accountType      String   @default("regular")
   emailVerified    Boolean  @default(false)
-  twoFactorEnabled Boolean @default(false)
+  twoFactorEnabled Boolean  @default(false)
   twoFactorSecret  String?
   failedAttempts   Int      @default(0)
   lockedUntil      DateTime?
@@ -540,11 +581,9 @@ model User {
   
   oauthAccounts OAuthAccount[]
   posts       Post[]
-  comments   Comment[]
-  followers  Follow[] @relation("following")
-  following  Follow[] @relation("follower")
-  sentMessages     Message[] @relation("sender")
-  receivedMessages Message[] @relation("recipient")
+  comments    Comment[]
+  followers   Follow[] @relation("following")
+  following   Follow[] @relation("follower")
 }
 
 model OAuthAccount {
@@ -567,12 +606,11 @@ model RefreshToken {
   expiresAt DateTime
   createdAt DateTime @default(now())
 }
-```
 
-## Task 1.2: Registration
+Task 1.2: Registration
 
-```typescript
-// POST /api/auth/register
+src/routes/auth.ts:
+
 router.post('/register', async (req, res) => {
   const { email, password, handle, displayName } = req.body;
 
@@ -622,11 +660,10 @@ router.post('/register', async (req, res) => {
       token,
       email,
       type: 'verification',
-      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000)
     }
   });
 
-  // Send verification email
   console.log(`Verify: /api/auth/verify/${token}`);
 
   // Generate JWT
@@ -643,12 +680,9 @@ router.post('/register', async (req, res) => {
     user: { id: user.id, email, handle, displayName, accountType: 'regular' }
   });
 });
-```
 
-## Task 1.3: Login
+Task 1.3: Login
 
-```typescript
-// POST /api/auth/login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -694,23 +728,21 @@ router.post('/login', async (req, res) => {
 
   res.json({ accessToken, refreshToken });
 });
-```
 
-## Task 1.4: Rate Limiting
+Task 1.4: Rate Limiting
 
-```typescript
-// Rate limiting middleware
+Rate limiting middleware:
+
 import rateLimit from 'express-rate-limit';
 
 const authLimiter = rateLimit({
-  windowMs: 60 * 1000, // 1 minute
-  max: 10, // 10 requests per minute
+  windowMs: 60 * 1000,
+  max: 10,
   message: { error: 'Too many attempts. Please try again later.' }
 });
 
 app.use('/api/auth/login', authLimiter);
 app.use('/api/auth/register', authLimiter);
-```
 
 [AI continues with OAuth, Socket.io, testing...]
 
@@ -719,18 +751,20 @@ app.use('/api/auth/register', authLimiter);
 
 ---
 
-## COMMAND 9: /sp.learn
+## Command 9: /sp.learn
 
-```
+**AI creates learning log:**
+
+```markdown
 # LEARNING LOG - Feature 1: Authentication
 
-## Date: 2026-03-21
-## Feature: Authentication
-## Project: ConnectHub
+Date: 2026-03-21
+Feature: Authentication
+Project: ConnectHub
 
 ---
 
-### TECHNICAL TERMS LEARNED:
+## TECHNICAL TERMS LEARNED
 
 **Handle (@username)**
 Social media style username that starts with @.
@@ -758,7 +792,7 @@ Prevent abuse by limiting requests.
 
 ---
 
-### SOCIAL NETWORK SPECIFIC:
+## SOCIAL NETWORK SPECIFIC
 
 **Account Types**
 Different user types need different features.
@@ -774,56 +808,68 @@ Users can see who's online.
 
 ---
 
-**Feature 1 Complete! Moving to Feature 2: User Profiles**
+## NEXT FEATURE: Feature 2 - User Profiles
 ```
 
 ---
 
-## COMMAND 10: /sp.glossary
+## Command 10: /sp.glossary
 
-```
+**AI shows all terms:**
+
+```markdown
 # GLOSSARY - All Terms Learned
 
 | Term | Definition |
 |------|------------|
-| **JWT** | JSON Web Token - Stateless auth |
-| **OAuth** | Authorization via third parties |
-| **Handle** | @username for social identity |
-| **Rate Limiting** | Prevent abuse by limiting requests |
-| **Socket.io** | Real-time bidirectional communication |
-| **Bcrypt** | Password hashing with salt |
-| **Refresh Token** | Long-lived token for session |
-| **Account Lockout** | Block after X failed attempts |
-| **2FA** | Two-Factor Authentication |
+| JWT | JSON Web Token - Stateless auth |
+| OAuth | Authorization via third parties |
+| Handle | @username for social identity |
+| Rate Limiting | Prevent abuse by limiting requests |
+| Socket.io | Real-time bidirectional communication |
+| Bcrypt | Password hashing with salt |
+| Refresh Token | Long-lived token for session |
+| Account Lockout | Block after X failed attempts |
+| 2FA | Two-Factor Authentication |
 ```
 
 ---
 
-## COMMAND 11: /sp.phr
+## Command 11: /sp.phr
 
-```
+**AI creates prompt history:**
+
+```markdown
 # PROMPT HISTORY - Feature 1: Authentication
 
-## User Request:
+Project: ConnectHub
+Feature: Authentication
+Date: 2026-03-21
+
+---
+
+## CONVERSATION FLOW
+
+### User Request
 /sp.constitution Create social network principles
 /sp.discover For auth - what login methods?
 
-## AI Questions: 6
-## User Answers: C, B, C, A, C, B
+### AI Questions: 6 asked
+User Answers: C, B, C, A, C, B
 
-## User Choice: Option A (Custom Auth)
+### User Choice: Option A (Custom Auth)
 
-## Tech Stack:
+### Tech Stack
 - Node.js + Express + TypeScript
 - PostgreSQL + Prisma + Redis
 - JWT + Socket.io
 
-## What Worked:
+### What Worked
 - Custom auth gives full control
 - JWT + refresh pattern scalable
 - Rate limiting prevents brute force
 
-## NEXT: Feature 2 - User Profiles
+### NEXT: Feature 2 - User Profiles
 ```
 
 ---
@@ -832,42 +878,44 @@ Users can see who's online.
 
 ---
 
-## COMMAND 1: /sp.discover
+## Command 1: /sp.discover
 
-### USER SAYS:
+**User says:**
 ```
 /sp.discover For user profiles - what info to show?
 ```
 
-### AI ASKS:
+**AI asks questions:**
 
 ```
-**Question 1: PROFILE DATA?**
+DISCOVERY MODE - Feature 2: User Profiles
+
+Question 1: PROFILE DATA?
 - A: Avatar, name, bio only
 - B: Avatar, name, bio, location, website
 - C: Full profile with all social fields
 
-**Question 2: AVATAR?**
+Question 2: AVATAR?
 - A: Upload photo
 - B: Upload + crop tool
 - C: Upload + crop + multiple sizes generated
 
-**Question 3: PROFILE VISIBILITY?**
+Question 3: PROFILE VISIBILITY?
 - A: Public profiles only
 - B: Public + Private (follow approval)
 - C: Public + Private + Close Friends
 
-**Question 4: PROFILE STATS?**
+Question 4: PROFILE STATS?
 - A: Posts, Followers, Following
 - B: Posts, Followers, Following, Likes
 - C: Full stats (posts, followers, following, likes, views)
 
-**Question 5: PROFILE EDITING?**
+Question 5: PROFILE EDITING?
 - A: Edit name, bio, avatar
 - B: Edit all fields
 - C: Edit all + theme customization
 
-**Question 6: VERIFICATION?**
+Question 6: VERIFICATION?
 - A: No verification badges
 - B: Manual verification (admin approves)
 - C: Auto-verification based on followers
@@ -875,7 +923,7 @@ Users can see who's online.
 Please answer A, B, or C for each!
 ```
 
-### USER RESPONDS:
+**User responds:**
 ```
 B
 B
@@ -885,7 +933,7 @@ B
 B
 ```
 
-### AI CONTINUES:
+**AI continues:**
 
 ```
 Based on your answers:
@@ -896,31 +944,31 @@ Based on your answers:
 - Editing: Edit all fields
 - Verification: Manual (admin approves)
 
-## 3 OPTIONS:
+3 OPTIONS:
 
-### Option A: Simple Profile (MY RECOMMENDED)
+Option A: Simple Profile (MY RECOMMENDED)
 Clean profile with essential info
 Best for: Twitter-style microblogging
 
-### Option B: Rich Profile
+Option B: Rich Profile
 Full social profile with all features
 Best for: LinkedIn-style professional network
 
-### Option C: Minimal Profile
+Option C: Minimal Profile
 Just avatar and name
 Best for: Anonymous/privacy-focused
 
 Which option? (A, B, or C)
 ```
 
-### USER SAYS:
+**User says:**
 ```
 A
 ```
 
 ---
 
-## COMMAND 2-11: Continue the cycle...
+## Command 2-11: Continue the cycle
 
 ```
 FOR EACH NEW FEATURE:
@@ -928,12 +976,12 @@ FOR EACH NEW FEATURE:
 3. /sp.clarify      → User provides clarifications
 4. /sp.plan         → AI creates plan
 5. /sp.analyze      → AI checks consistency
-6. /sp.tasks       → AI creates tasks
-7. /sp.checklist   → AI generates checklist
-8. /sp.implement   → AI builds in Mode 2
-9. /sp.learn       → AI records learning
-10. /sp.glossary   → AI shows all terms
-11. /sp.phr        → AI creates prompt history
+6. /sp.tasks        → AI creates tasks
+7. /sp.checklist    → AI generates checklist
+8. /sp.implement    → AI builds in Mode 2
+9. /sp.learn        → AI records learning
+10. /sp.glossary    → AI shows all terms
+11. /sp.phr         → AI creates prompt history
 
 REPEAT FOR FEATURES 3, 4, 5, ... until project complete!
 ```
@@ -942,10 +990,10 @@ REPEAT FOR FEATURES 3, 4, 5, ... until project complete!
 
 # CONNECTHUB FEATURES (Continued)
 
-| # | Feature | Next Steps |
-|---|---------|-----------|
-| 1 | Authentication | ✅ Complete |
-| 2 | User Profiles | ✅ Complete |
+| # | Feature | Status |
+|---|---------|--------|
+| 1 | Authentication | Complete |
+| 2 | User Profiles | Complete |
 | 3 | Posts & Feed | (Continue cycle) |
 | 4 | Follow System | (Continue cycle) |
 | 5 | Comments & Reactions | (Continue cycle) |
@@ -959,25 +1007,23 @@ REPEAT FOR FEATURES 3, 4, 5, ... until project complete!
 
 # SUMMARY
 
-## For EACH feature, run the complete cycle:
+## Complete /sp Command Cycle (Per Feature)
 
 ```
-1. /sp.discover     → AI asks questions (A/B/C)
-2. /sp.specify      → AI creates spec
+1. /sp.discover     → AI asks 6 questions
+2. /sp.specify      → AI creates SPEC.md
 3. /sp.clarify      → User provides tech details
-4. /sp.plan         → AI creates plan
+4. /sp.plan         → AI creates PLAN.md
 5. /sp.analyze      → AI checks consistency
-6. /sp.tasks       → AI creates tasks
-7. /sp.checklist   → AI generates checklist
-8. /sp.implement   → AI builds in Mode 2
-9. /sp.learn       → AI records learning
-10. /sp.glossary   → AI shows all terms
-11. /sp.phr        → AI creates prompt history
+6. /sp.tasks        → AI creates TASKS.md
+7. /sp.checklist    → AI generates checklist
+8. /sp.implement    → AI builds (Mode 2)
+9. /sp.learn        → AI records learning
+10. /sp.glossary    → AI shows all terms
+11. /sp.phr         → AI creates prompt history
 
-THEN MOVE TO NEXT FEATURE!
+Each feature: 4-7 days
+Total project: 22-24 weeks
+10 features, one at a time
+Learn as you build!
 ```
-
-## Each feature takes 4-7 days
-## Total project: 22-24 weeks
-## 10 features, one at a time
-## Learn as you build!
