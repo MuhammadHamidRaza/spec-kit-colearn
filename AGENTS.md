@@ -8,91 +8,318 @@ The framework emphasizes **learning while building** - AI asks questions first, 
 
 ---
 
-## General practices
+## The Core Philosophy
 
-- Any changes to `__init__.py` for the Specify CLI require a version rev in `pyproject.toml` and addition of entries to `CHANGELOG.md`.
+### Why Spec-Kit-CoLearn?
 
-### Prompt Evaluation Flywheel (Analyze → Measure → Improve)
+The problem with AI coding today: You ask AI to build something → It writes code → You ship it → You have no idea how it works.
 
-Apply this loop whenever writing or refining prompts, specs, or command templates:
-
-1) Analyze: list likely failure modes and translate them into binary pass/fail oracles.
-2) Measure: create a few strict binary graders (formatting, requirements, safety) with few‑shot PASS/FAIL examples; keep examples in PHRs or `eval/`.
-3) Improve: when a grader FAILs, adjust the smallest part of the prompt to address that failure; re‑run graders until PASS.
-
-This complements TDD and ADRs—tests verify behavior; graders verify prompt structure and clarity; ADRs preserve consequential reasoning.
-
-### System Instructions (Prompt Structure)
-
-Adopt this 10‑part structure (inspired by Anthropic’s guidance) when writing prompts/specs:
-
-1. Task context – one‑sentence goal, surface (spec/plan/tasks/code), success criteria
-2. Tone context – professional, concise, constructive
-3. Background data – files/PRDs/screens; cite with code references
-4. Detailed task description & rules – constraints, non‑goals, invariants; never invent APIs; no secrets; prefer minimal diffs
-5. Examples – minimal happy‑path + edge example
-6. Conversation history – 1–3 bullets of prior decisions; link PHR
-7. Immediate request – what to produce now with acceptance criteria
-8. Think step by step – reasoning is private; output decisions and results only
-9. Output formatting – diffs, lists, checkboxes; cite existing code with code references (start:end:path)
-10. Prefilled response (if any) – skeletons to fill
-
-Tie‑ins:
-- After output, create a PHR (implicit). Feature branches add `specs/<feature>/prompts/`.
-- If decision significance test passes, show ADR suggestion text and wait for consent.
-
-Minimum acceptance criteria for any prompt output
-- Clear, testable acceptance criteria included
-- Explicit error paths and constraints stated
-- Smallest viable change; no unrelated edits
-- Code references to modified/inspected files where relevant
-
-### Default policies (must follow)
-- Do not invent APIs, data, or contracts; ask targeted clarifiers if missing.
-- Never hardcode secrets or tokens; use `.env` and docs.
-- Prefer the smallest viable diff; do not refactor unrelated code.
-- Cite existing code with code references; propose new code in fenced blocks.
-- Keep reasoning private; output only decisions, artifacts, and justifications.
-
-### Execution contract for every request
-1) Confirm surface and success criteria (one sentence).
-2) List constraints, invariants, non‑goals.
-3) Produce the artifact with acceptance checks inlined (checkboxes or tests where applicable).
-4) Add follow‑ups and risks (max 3 bullets).
-5) Trigger implicit PHR; if plan/tasks identified decisions that meet significance, surface ADR suggestion text.
-
-### Compact grader template (copy/paste)
-Use this to create binary evaluators for outputs.
+**Spec-Kit-CoLearn solves this** by making AI your teacher first, coder second.
 
 ```
-You are a strict PASS/FAIL grader.
-Task: Judge whether the candidate output satisfies the criteria.
-If ALL criteria are satisfied → PASS, else → FAIL and list violated items.
+OLD WAY:
+You: "Build me a login system"
+AI: [writes 50 files]
+You: "Thanks!"
+3 months later: "I don't know what I built."
 
-Criteria:
-- {criterion 1}
-- {criterion 2}
-- {criterion 3}
+NEW WAY:
+You: "Build me a login system"
+AI: "Let me ask questions first. What auth approach?"
 
-Few‑shot examples:
-PASS:
-- Input: {short}
-- Output: {short}
-- Rationale: All criteria satisfied.
+AI teaches you JWT vs Sessions
+AI presents 3 options with trade-offs
+You choose, AI explains why
+AI creates spec → plan → tasks
+You approve each phase
+AI builds, teaches, records learning
 
-FAIL:
-- Input: {short}
-- Output: {short}
-- Rationale: Violates {criterion}.
+Now you understand exactly what you built.
 ```
+
+### The Learning Compound Effect
+
+```
+Week 1:   You learn 5 terms
+Week 4:   You learn 20 terms
+Week 12:  You understand architecture
+Week 24:  You can design systems
+Week 52:  You ARE the senior architect
+```
+
+---
+
+## The Two-Mode System
+
+This is the core of Spec-Kit-CoLearn. AI operates in two modes:
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                    TWO MODES — ONE TOOL                       │
+├──────────────────────────────────────────────────────────────┤
+│                                                               │
+│  MODE 1: SENIOR ARCHITECT (activate first)                   │
+│  ══════════════════════════════════════                       │
+│  ✅ Ask discovery questions first                             │
+│  ✅ Teach concepts you don't know                            │
+│  ✅ Present 2-3 options with trade-offs                       │
+│  ✅ Surface edge cases you missed                            │
+│  ✅ Define measurable success criteria                       │
+│  ✅ Create spec → plan → tasks                                │
+│  ❌ NO CODE in this mode                                     │
+│                                                               │
+│  Your approval required at each phase                        │
+│                          │                                    │
+│                          ▼                                    │
+│  MODE 2: CODING WORKER (after "tasks approved")              │
+│  ═══════════════════════════════════════                     │
+│  ✅ Execute tasks one by one                                  │
+│  ✅ Write code that matches spec exactly                      │
+│  ✅ Run tests after each task                                │
+│  ✅ Stop and ask if scope changes                            │
+│                                                               │
+│  Feature closes → /sp.learn → Learning recorded              │
+│                                                               │
+└──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Complete /sp Command Cycle
+
+For **EACH feature**, run this complete cycle:
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│              COMPLETE /sp COMMAND CYCLE (Per Feature)         │
+├──────────────────────────────────────────────────────────────┤
+│                                                               │
+│  1. /sp.constitution  → Set project principles (ONCE)      │
+│                                                               │
+│  FOR EACH FEATURE:                                           │
+│  ────────────────────                                         │
+│  2. /sp.discover       → AI asks 6 questions (A/B/C)        │
+│  3. /sp.specify        → AI creates SPEC.md                 │
+│  4. /sp.clarify        → Resolve unclear requirements         │
+│  5. /sp.plan           → AI creates PLAN.md                 │
+│  6. /sp.analyze        → AI checks consistency              │
+│  7. /sp.tasks          → AI creates TASKS.md                 │
+│  8. /sp.checklist      → AI generates quality checklist      │
+│  9. /sp.implement      → AI builds (Mode 2 activated)        │
+│  10. /sp.learn         → AI records learning                 │
+│  11. /sp.glossary      → AI shows all terms learned         │
+│  12. /sp.phr           → AI creates prompt history           │
+│                                                               │
+│  THEN MOVE TO NEXT FEATURE AND REPEAT!                       │
+│                                                               │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### Command Descriptions
+
+| Command | Mode | When | Creates |
+|---------|------|------|---------|
+| `/sp.constitution` | 1 | Project start | `memory/constitution.md` |
+| `/sp.discover` | 1 | Each feature | Questions, options, teaching |
+| `/sp.specify` | 1 | After "approved" | `specs/<feature>/spec.md` |
+| `/sp.clarify` | 1 | After spec | Updates spec |
+| `/sp.plan` | 1 | After "spec approved" | `specs/<feature>/plan.md` |
+| `/sp.analyze` | 1 | After plan | Consistency report |
+| `/sp.tasks` | 1 | After "plan approved" | `specs/<feature>/tasks.md` |
+| `/sp.checklist` | 1 | Before implement | Quality checklist |
+| `/sp.implement` | 2 | After "tasks approved" | Code files |
+| `/sp.learn` | 1 | After feature | `learning-log.md` |
+| `/sp.glossary` | 1 | Anytime | All terms review |
+| `/sp.phr` | 1 | After learn | `phr.md` |
+
+---
+
+## The Discovery Flow
+
+When user says "I want to build X", AI follows this flow:
+
+### Step 1: Ask Questions
+
+```
+AI: "Before I spec this, let me ask some questions..."
+
+Question 1: [Scope question]
+- A: [option]
+- B: [option]
+- C: [option]
+
+Question 2: [Users question]
+...
+
+(total 6 questions)
+```
+
+### Step 2: Teach Concepts
+
+If user mentions something they don't understand:
+
+```
+AI: "You mentioned JWT. Let me explain:
+
+JWT is like a concert wristband. You show your ID once at entry,
+they give you a wristband. You show the wristband everywhere inside.
+
+How JWT works:
+1. User logs in → Server creates signed token
+2. Token sent to browser
+3. Every request includes token
+4. Server validates signature, not contents
+
+Pros: Scalable, stateless
+Cons: Can't 'logout' instantly
+When to use: APIs, mobile apps"
+```
+
+### Step 3: Present Options
+
+```
+3 OPTIONS:
+
+Option A: [Name]
+What: [description]
+Pros: [2-3 pros]
+Cons: [2-3 cons]
+Best for: [when to use]
+
+Option B: [Name] ← MY RECOMMENDED
+What: [description]
+Pros: [2-3 pros]
+Cons: [2-3 cons]
+Best for: [when to use]
+Why I recommend: [1 clear reason]
+
+Option C: [Name]
+...
+
+Which option? (A, B, or C)
+```
+
+### Step 4: Clarity Gate
+
+Before creating spec, AI confirms:
+
+```
+Clarity Gate check:
+- WHO clear: [user type] ✓
+- WHAT clear: [feature] ✓
+- SCOPE clear: [MVP defined] ✓
+- EDGES covered: [3+ edge cases] ✓
+- SUCCESS measurable: [2+ criteria] ✓
+- APPROVED: Waiting for go-ahead
+
+Say "approved" and I will create the spec.
+```
+
+---
+
+## Clarity Gate
+
+Before any spec is created, AI must confirm:
+
+```
+CLARITY GATE — All 6 must pass
+
+1. WHO is clear        → We know who uses this feature
+2. WHAT is clear       → We know what the feature does
+3. SCOPE is clear      → We know in vs out
+4. EDGE CASES covered  → At least 3 discussed
+5. SUCCESS defined     → At least 2 measurable criteria
+6. USER APPROVED       → Developer said "yes"
+
+If any missing → Ask more questions, do not spec yet
+```
+
+---
+
+## Phase Approvals
+
+User must approve each phase explicitly:
+
+```
+Spec created → User says "spec approved" → AI creates Plan
+Plan created → User says "plan approved" → AI creates Tasks
+Tasks created → User says "tasks approved" → Mode 2 activates
+```
+
+---
+
+## Learning System
+
+### After Each Feature
+
+AI runs `/sp.learn` which creates:
+
+```markdown
+# LEARNING LOG - Feature X
+
+## Terms Learned
+
+| Term | Definition | When to Use |
+|------|------------|-------------|
+| JWT | JSON Web Token | APIs, mobile apps |
+| ... | ... | ... |
+
+## Decisions Made
+
+1. Chose X over Y because...
+2. ...
+
+## Next: Feature Y+1
+```
+
+### Glossary
+
+Run `/sp.glossary` anytime to see ALL terms across ALL projects:
+
+```markdown
+# GLOSSARY - All Terms Learned
+
+## Authentication
+| Term | Definition |
+|------|------------|
+| JWT | ... |
+| OAuth | ... |
+
+## Database
+| Term | Definition |
+|------|------------|
+| ORM | ... |
+```
+
+---
+
+## Example Projects
+
+See the complete workflow in action:
+
+| Project | Features | Timeline |
+|---------|----------|----------|
+| [Todo App](../examples/01-todo-app/) | 8 features | 8 weeks |
+| [E-commerce](../examples/02-ecommerce/) | 15 features | 18-20 weeks |
+| [Social Network](../examples/03-social-network/) | 10 features | 22-24 weeks |
+
+Each example shows:
+- Every question AI asks
+- Every answer user gives
+- Full AI explanations and teaching
+- Complete spec, plan, tasks
+- Implementation phase
+- Learning logs and glossaries
+
+---
 
 ## Adding New Agent Support
 
-This section explains how to add support for new AI agents/assistants to the Specify CLI. Use this guide as a reference when integrating new AI tools into the Spec-Driven Development workflow.
+This section explains how to add support for new AI agents/assistants to the Specify CLI.
 
 ### Overview
 
-Specify supports multiple AI agents by generating agent-specific command files and directory structures when initializing projects. Each agent has its own conventions for:
+Specify supports multiple AI agents by generating agent-specific command files and directory structures when initializing projects. Each agent has its own conventions:
 
 - **Command file formats** (Markdown, TOML, etc.)
 - **Directory structures** (`.claude/commands/`, `.windsurf/workflows/`, etc.)
@@ -101,309 +328,77 @@ Specify supports multiple AI agents by generating agent-specific command files a
 
 ### Current Supported Agents
 
-| Agent                      | Directory              | Format   | CLI Tool        | Description                 |
-| -------------------------- | ---------------------- | -------- | --------------- | --------------------------- |
-| **Claude Code**            | `.claude/commands/`    | Markdown | `claude`        | Anthropic's Claude Code CLI |
-| **Gemini CLI**             | `.gemini/commands/`    | TOML     | `gemini`        | Google's Gemini CLI         |
-| **GitHub Copilot**         | `.github/agents/`      | Markdown | N/A (IDE-based) | GitHub Copilot in VS Code   |
-| **Cursor**                 | `.cursor/commands/`    | Markdown | `cursor-agent`  | Cursor CLI                  |
-| **Qwen Code**              | `.qwen/commands/`      | TOML     | `qwen`          | Alibaba's Qwen Code CLI     |
-| **opencode**               | `.opencode/command/`   | Markdown | `opencode`      | opencode CLI                |
-| **Codex CLI**              | `.codex/commands/`     | Markdown | `codex`         | Codex CLI                   |
-| **Windsurf**               | `.windsurf/workflows/` | Markdown | N/A (IDE-based) | Windsurf IDE workflows      |
-| **Kilo Code**              | `.kilocode/rules/`     | Markdown | N/A (IDE-based) | Kilo Code IDE               |
-| **Auggie CLI**             | `.augment/rules/`      | Markdown | `auggie`        | Auggie CLI                  |
-| **Roo Code**               | `.roo/rules/`          | Markdown | N/A (IDE-based) | Roo Code IDE                |
-| **CodeBuddy CLI**          | `.codebuddy/commands/` | Markdown | `codebuddy`     | CodeBuddy CLI               |
-| **Qoder CLI**              | `.qoder/commands/`     | Markdown | `qoder`         | Qoder CLI                   |
-| **Amazon Q Developer CLI** | `.amazonq/prompts/`    | Markdown | `q`             | Amazon Q Developer CLI      |
-| **Amp**                    | `.agents/commands/`    | Markdown | `amp`           | Amp CLI                     |
-| **SHAI**                   | `.shai/commands/`      | Markdown | `shai`          | SHAI CLI                    |
-| **IBM Bob**                | `.bob/commands/`       | Markdown | N/A (IDE-based) | IBM Bob IDE                 |
+| Agent | Directory | Format | CLI Tool | Type |
+|-------|-----------|--------|----------|------|
+| Claude Code | `.claude/commands/` | Markdown | `claude` | CLI |
+| Gemini CLI | `.gemini/commands/` | TOML | `gemini` | CLI |
+| GitHub Copilot | `.github/agents/` | Markdown | N/A | IDE |
+| Cursor | `.cursor/commands/` | Markdown | `cursor-agent` | CLI |
+| Qwen Code | `.qwen/commands/` | TOML | `qwen` | CLI |
+| opencode | `.opencode/command/` | Markdown | `opencode` | CLI |
+| Codex CLI | `.codex/commands/` | Markdown | `codex` | CLI |
+| Windsurf | `.windsurf/workflows/` | Markdown | N/A | IDE |
+| Kilo Code | `.kilocode/rules/` | Markdown | N/A | IDE |
+| Auggie CLI | `.augment/rules/` | Markdown | `auggie` | CLI |
+| Roo Code | `.roo/rules/` | Markdown | N/A | IDE |
+| CodeBuddy CLI | `.codebuddy/commands/` | Markdown | `codebuddy` | CLI |
+| Qoder CLI | `.qoder/commands/` | Markdown | `qoder` | CLI |
+| Amazon Q | `.amazonq/prompts/` | Markdown | `q` | CLI |
+| Amp | `.agents/commands/` | Markdown | `amp` | CLI |
+| SHAI | `.shai/commands/` | Markdown | `shai` | CLI |
+| IBM Bob | `.bob/commands/` | Markdown | N/A | IDE |
 
-### Step-by-Step Integration Guide
-
-Follow these steps to add a new agent (using a hypothetical new agent as an example):
+### Step-by-Step Integration
 
 #### 1. Add to AGENT_CONFIG
 
-**IMPORTANT**: Use the actual CLI tool name as the key, not a shortened version.
-
-Add the new agent to the `AGENT_CONFIG` dictionary in `src/specifyplus_cli/__init__.py`. This is the **single source of truth** for all agent metadata:
+Add the new agent to `AGENT_CONFIG` in `src/specifyplus_cli/__init__.py`:
 
 ```python
 AGENT_CONFIG = {
     # ... existing agents ...
-    "new-agent-cli": {  # Use the ACTUAL CLI tool name (what users type in terminal)
+    "new-agent-cli": {
         "name": "New Agent Display Name",
-        "folder": ".newagent/",  # Directory for agent files
-        "install_url": "https://example.com/install",  # URL for installation docs (or None if IDE-based)
-        "requires_cli": True,  # True if CLI tool required, False for IDE-based agents
+        "folder": ".newagent/",
+        "install_url": "https://example.com/install",
+        "requires_cli": True,
     },
 }
 ```
 
-**Key Design Principle**: The dictionary key should match the actual executable name that users install. For example:
-
-- ✅ Use `"cursor-agent"` because the CLI tool is literally called `cursor-agent`
-- ❌ Don't use `"cursor"` as a shortcut if the tool is `cursor-agent`
-
-This eliminates the need for special-case mappings throughout the codebase.
-
-**Field Explanations**:
-
-- `name`: Human-readable display name shown to users
-- `folder`: Directory where agent-specific files are stored (relative to project root)
-- `install_url`: Installation documentation URL (set to `None` for IDE-based agents)
-- `requires_cli`: Whether the agent requires a CLI tool check during initialization
+**Key**: Use the actual CLI tool name as the key (e.g., `"cursor-agent"` not `"cursor"`).
 
 #### 2. Update CLI Help Text
 
-Update the `--ai` parameter help text in the `init()` command to include the new agent:
+Update `--ai` parameter help:
 
 ```python
-ai_assistant: str = typer.Option(None, "--ai", help="AI assistant to use: claude, gemini, copilot, cursor-agent, qwen, opencode, codex, windsurf, kilocode, auggie, codebuddy, new-agent-cli, or q"),
+ai_assistant: str = typer.Option(None, "--ai", help="AI assistant to use: claude, gemini, copilot, cursor-agent, qwen, ...")
 ```
 
-Also update any function docstrings, examples, and error messages that list available agents.
+#### 3. Update Documentation
 
-#### 3. Update README Documentation
+Update `README.md` Supported AI Agents table.
 
-Update the **Supported AI Agents** section in `README.md` to include the new agent:
+#### 4. Update Release Scripts
 
-- Add the new agent to the table with appropriate support level (Full/Partial)
-- Include the agent's official website link
-- Add any relevant notes about the agent's implementation
-- Ensure the table formatting remains aligned and consistent
+Modify `.github/workflows/scripts/create-release-packages.sh` and `create-github-release.sh`.
 
-#### 4. Update Release Package Script
+#### 5. Update Context Scripts
 
-Modify `.github/workflows/scripts/create-release-packages.sh`:
+Update both `scripts/bash/update-agent-context.sh` and `scripts/powershell/update-agent-context.ps1`.
 
-##### Add to ALL_AGENTS array
+### Agent Categories
 
-```bash
-ALL_AGENTS=(claude gemini copilot cursor-agent qwen opencode windsurf q)
-```
+**CLI-Based** (require command-line tool):
+Claude Code, Gemini CLI, Cursor, Qwen, opencode, Codex, Amazon Q, CodeBuddy, Qoder, Amp, SHAI, Auggie
 
-##### Add case statement for directory structure
+**IDE-Based** (built into IDE):
+GitHub Copilot, Windsurf, Kilo Code, Roo Code, IBM Bob
 
-```bash
-case $agent in
-  # ... existing cases ...
-  windsurf)
-    mkdir -p "$base_dir/.windsurf/workflows"
-    generate_commands windsurf md "\$ARGUMENTS" "$base_dir/.windsurf/workflows" "$script" ;;
-esac
-```
+### Command File Formats
 
-#### 4. Update GitHub Release Script
-
-Modify `.github/workflows/scripts/create-github-release.sh` to include the new agent's packages:
-
-```bash
-gh release create "$VERSION" \
-  # ... existing packages ...
-  .genreleases/spec-kit-template-windsurf-sh-"$VERSION".zip \
-  .genreleases/spec-kit-template-windsurf-ps-"$VERSION".zip \
-  # Add new agent packages here
-```
-
-#### 5. Update Agent Context Scripts
-
-##### Bash script (`scripts/bash/update-agent-context.sh`)
-
-Add file variable:
-
-```bash
-WINDSURF_FILE="$REPO_ROOT/.windsurf/rules/specify-rules.md"
-```
-
-Add to case statement:
-
-```bash
-case "$AGENT_TYPE" in
-  # ... existing cases ...
-  windsurf) update_agent_file "$WINDSURF_FILE" "Windsurf" ;;
-  "")
-    # ... existing checks ...
-    [ -f "$WINDSURF_FILE" ] && update_agent_file "$WINDSURF_FILE" "Windsurf";
-    # Update default creation condition
-    ;;
-esac
-```
-
-##### PowerShell script (`scripts/powershell/update-agent-context.ps1`)
-
-Add file variable:
-
-```powershell
-$windsurfFile = Join-Path $repoRoot '.windsurf/rules/specify-rules.md'
-```
-
-Add to switch statement:
-
-```powershell
-switch ($AgentType) {
-    # ... existing cases ...
-    'windsurf' { Update-AgentFile $windsurfFile 'Windsurf' }
-    '' {
-        foreach ($pair in @(
-            # ... existing pairs ...
-            @{file=$windsurfFile; name='Windsurf'}
-        )) {
-            if (Test-Path $pair.file) { Update-AgentFile $pair.file $pair.name }
-        }
-        # Update default creation condition
-    }
-}
-```
-
-#### 6. Update CLI Tool Checks (Optional)
-
-For agents that require CLI tools, add checks in the `check()` command and agent validation:
-
-```python
-# In check() command
-tracker.add("windsurf", "Windsurf IDE (optional)")
-windsurf_ok = check_tool_for_tracker("windsurf", "https://windsurf.com/", tracker)
-
-# In init validation (only if CLI tool required)
-elif selected_ai == "windsurf":
-    if not check_tool("windsurf", "Install from: https://windsurf.com/"):
-        console.print("[red]Error:[/red] Windsurf CLI is required for Windsurf projects")
-        agent_tool_missing = True
-```
-
-**Note**: CLI tool checks are now handled automatically based on the `requires_cli` field in AGENT_CONFIG. No additional code changes needed in the `check()` or `init()` commands - they automatically loop through AGENT_CONFIG and check tools as needed.
-
-## Important Design Decisions
-
-### Using Actual CLI Tool Names as Keys
-
-**CRITICAL**: When adding a new agent to AGENT_CONFIG, always use the **actual executable name** as the dictionary key, not a shortened or convenient version.
-
-**Why this matters:**
-
-- The `check_tool()` function uses `shutil.which(tool)` to find executables in the system PATH
-- If the key doesn't match the actual CLI tool name, you'll need special-case mappings throughout the codebase
-- This creates unnecessary complexity and maintenance burden
-
-**Example - The Cursor Lesson:**
-
-❌ **Wrong approach** (requires special-case mapping):
-
-```python
-AGENT_CONFIG = {
-    "cursor": {  # Shorthand that doesn't match the actual tool
-        "name": "Cursor",
-        # ...
-    }
-}
-
-# Then you need special cases everywhere:
-cli_tool = agent_key
-if agent_key == "cursor":
-    cli_tool = "cursor-agent"  # Map to the real tool name
-```
-
-✅ **Correct approach** (no mapping needed):
-
-```python
-AGENT_CONFIG = {
-    "cursor-agent": {  # Matches the actual executable name
-        "name": "Cursor",
-        # ...
-    }
-}
-
-# No special cases needed - just use agent_key directly!
-```
-
-**Benefits of this approach:**
-
-- Eliminates special-case logic scattered throughout the codebase
-- Makes the code more maintainable and easier to understand
-- Reduces the chance of bugs when adding new agents
-- Tool checking "just works" without additional mappings
-
-#### 7. Update Devcontainer files (Optional)
-
-For agents that have VS Code extensions or require CLI installation, update the devcontainer configuration files:
-
-##### VS Code Extension-based Agents
-
-For agents available as VS Code extensions, add them to `.devcontainer/devcontainer.json`:
-
-```json
-{
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        // ... existing extensions ...
-        // [New Agent Name]
-        "[New Agent Extension ID]"
-      ]
-    }
-  }
-}
-```
-
-##### CLI-based Agents
-
-For agents that require CLI tools, add installation commands to `.devcontainer/post-create.sh`:
-
-```bash
-#!/bin/bash
-
-# Existing installations...
-
-echo -e "\n🤖 Installing [New Agent Name] CLI..."
-# run_command "npm install -g [agent-cli-package]@latest" # Example for node-based CLI
-# or other installation instructions (must be non-interactive and compatible with Linux Debian "Trixie" or later)...
-echo "✅ Done"
-
-```
-
-**Quick Tips:**
-
-- **Extension-based agents**: Add to the `extensions` array in `devcontainer.json`
-- **CLI-based agents**: Add installation scripts to `post-create.sh`
-- **Hybrid agents**: May require both extension and CLI installation
-- **Test thoroughly**: Ensure installations work in the devcontainer environment
-
-## Agent Categories
-
-### CLI-Based Agents
-
-Require a command-line tool to be installed:
-
-- **Claude Code**: `claude` CLI
-- **Gemini CLI**: `gemini` CLI
-- **Cursor**: `cursor-agent` CLI
-- **Qwen Code**: `qwen` CLI
-- **opencode**: `opencode` CLI
-- **Amazon Q Developer CLI**: `q` CLI
-- **CodeBuddy CLI**: `codebuddy` CLI
-- **Qoder CLI**: `qoder` CLI
-- **Amp**: `amp` CLI
-- **SHAI**: `shai` CLI
-
-### IDE-Based Agents
-
-Work within integrated development environments:
-
-- **GitHub Copilot**: Built into VS Code/compatible editors
-- **Windsurf**: Built into Windsurf IDE
-- **IBM Bob**: Built into IBM Bob IDE
-
-## Command File Formats
-
-### Markdown Format
-
-Used by: Claude, Cursor, opencode, Windsurf, Amazon Q Developer, Amp, SHAI, IBM Bob
-
-**Standard format:**
+**Markdown** (Claude, Cursor, opencode, Windsurf, Amazon Q, Amp, SHAI, IBM Bob):
 
 ```markdown
 ---
@@ -413,20 +408,7 @@ description: "Command description"
 Command content with {SCRIPT} and $ARGUMENTS placeholders.
 ```
 
-**GitHub Copilot Chat Mode format:**
-
-```markdown
----
-description: "Command description"
-mode: speckit.command-name
----
-
-Command content with {SCRIPT} and $ARGUMENTS placeholders.
-```
-
-### TOML Format
-
-Used by: Gemini, Qwen
+**TOML** (Gemini, Qwen):
 
 ```toml
 description = "Command description"
@@ -436,50 +418,41 @@ Command content with {SCRIPT} and {{args}} placeholders.
 """
 ```
 
-## Directory Conventions
+---
 
-- **CLI agents**: Usually `.<agent-name>/commands/`
-- **IDE agents**: Follow IDE-specific patterns:
-  - Copilot: `.github/agents/`
-  - Cursor: `.cursor/commands/`
-  - Windsurf: `.windsurf/workflows/`
+## General Practices
 
-## Argument Patterns
+- Any changes to `__init__.py` require version rev in `pyproject.toml` and entries to `CHANGELOG.md`.
 
-Different agents use different argument placeholders:
+### Prompt Evaluation Flywheel
 
-- **Markdown/prompt-based**: `$ARGUMENTS`
-- **TOML-based**: `{{args}}`
-- **Script placeholders**: `{SCRIPT}` (replaced with actual script path)
-- **Agent placeholders**: `__AGENT__` (replaced with agent name)
+1. **Analyze**: List failure modes, translate to pass/fail oracles
+2. **Measure**: Create binary graders with few-shot examples
+3. **Improve**: Adjust prompt when grader fails
 
-## Testing New Agent Integration
+### System Instructions (Prompt Structure)
 
-1. **Build test**: Run package creation script locally
-2. **CLI test**: Test `specify init --ai <agent>` command
-3. **File generation**: Verify correct directory structure and files
-4. **Command validation**: Ensure generated commands work with the agent
-5. **Context update**: Test agent context update scripts
+Adopt this 10-part structure when writing prompts/specs:
 
-## Common Pitfalls
+1. Task context – goal, surface, success criteria
+2. Tone context – professional, concise
+3. Background – files, PRDs, code references
+4. Task description – constraints, non-goals, invariants
+5. Examples – happy-path + edge case
+6. Conversation history – prior decisions, link PHR
+7. Immediate request – what to produce, acceptance criteria
+8. Think step by step – reasoning private
+9. Output formatting – diffs, lists, checkboxes
+10. Prefilled response – skeletons to fill
 
-1. **Using shorthand keys instead of actual CLI tool names**: Always use the actual executable name as the AGENT_CONFIG key (e.g., `"cursor-agent"` not `"cursor"`). This prevents the need for special-case mappings throughout the codebase.
-2. **Forgetting update scripts**: Both bash and PowerShell scripts must be updated when adding new agents.
-3. **Incorrect `requires_cli` value**: Set to `True` only for agents that actually have CLI tools to check; set to `False` for IDE-based agents.
-4. **Wrong argument format**: Use correct placeholder format for each agent type (`$ARGUMENTS` for Markdown, `{{args}}` for TOML).
-5. **Directory naming**: Follow agent-specific conventions exactly (check existing agents for patterns).
-6. **Help text inconsistency**: Update all user-facing text consistently (help strings, docstrings, README, error messages).
+### Default Policies
 
-## Future Considerations
-
-When adding new agents:
-
-- Consider the agent's native command/workflow patterns
-- Ensure compatibility with the Spec-Driven Development process
-- Document any special requirements or limitations
-- Update this guide with lessons learned
-- Verify the actual CLI tool name before adding to AGENT_CONFIG
+- Never invent APIs; ask clarifiers if missing
+- Never hardcode secrets; use `.env`
+- Prefer smallest viable diff
+- Cite code with references; propose code in fenced blocks
+- Keep reasoning private; output decisions only
 
 ---
 
-*This documentation should be updated whenever new agents are added to maintain accuracy and completeness.*
+*This documentation should be updated whenever new agents are added or framework changes occur.*
