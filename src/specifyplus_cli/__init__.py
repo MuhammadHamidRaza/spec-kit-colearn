@@ -6,7 +6,8 @@
 #     "rich",
 #     "platformdirs",
 #     "readchar",
-#     "httpx",
+#     "httpx[socks]",
+#     "truststore>=0.10.4",
 # ]
 # ///
 """
@@ -1150,7 +1151,7 @@ def init(
     ai_assistant: str = typer.Option(
         None,
         "--ai",
-        help="AI assistant to use: claude, gemini, copilot, cursor-agent, qwen, opencode, codex, windsurf, kilocode, auggie, codebuddy, amp, or q",
+        help="AI assistant to use: claude, gemini, copilot, cursor-agent, qwen, opencode, codex, windsurf, kilocode, auggie, codebuddy, roo, q, amp, qoder, shai, or bob",
     ),
     script_type: str = typer.Option(
         None, "--script", help="Script type to use: sh or ps"
