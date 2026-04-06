@@ -27,7 +27,7 @@ spec-kit-colearn init my-project
 spec-kit-colearn init .
 ```
 
-**Works with:** Claude Code, Codex, Gemini CLI, Qwen CLI, Cursor, Windsurf, GitHub Copilot, Amazon Q, Roo Code, Amp, CodeBuddy, Qoder, OVHcloud SHAI, Bob, Auggie, Kilo Code, opencode, and any AI coding tool.
+**Works with:** Claude Code, Codex, Gemini CLI, Qwen CLI, Cursor, Windsurf, GitHub Copilot, Amazon Q, and any AI coding tool.
 
 ---
 
@@ -1636,16 +1636,7 @@ cat examples/01-todo-app/README.md
 | Cursor | IDE | Full |
 | Windsurf | IDE | Full |
 | Amazon Q | CLI | Full |
-| Roo Code | IDE | Full |
-| Amp | CLI | Full |
-| CodeBuddy | CLI | Full |
-| Qoder CLI | CLI | Full |
-| OVHcloud SHAI | CLI | Full |
-| IBM Bob IDE | IDE | Full |
-| Auggie CLI | CLI | Full |
-| Kilo Code | IDE | Full |
-| opencode | CLI | Full |
-
+| And more... | | |
 
 ---
 
