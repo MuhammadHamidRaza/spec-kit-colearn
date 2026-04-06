@@ -12,7 +12,17 @@
     "MD024": {
       "siblings_only": true
     },
+    "MD025": {
+      "level": 1,
+      "front_matter_title": ""
+    },
+    "MD031": {
+      "blanks": ["lists", "headings"]
+    },
     "MD033": false,
+    "MD040": {
+      "language": "text"
+    },
     "MD041": false,
     "MD049": {
       "style": "asterisk"
@@ -22,6 +32,7 @@
     }
   },
   "ignores": [
-    ".genreleases/"
+    ".genreleases/",
+    "examples/"
   ]
 }
