@@ -33,6 +33,8 @@
   },
   "ignores": [
     ".genreleases/",
-    "examples/"
+    "examples/",
+    ".claude/",
+    ".specify/"
   ]
 }
