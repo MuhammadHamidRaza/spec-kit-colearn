@@ -267,24 +267,29 @@ Demonstrate that you understand and have validated your proposed changes. If a m
 - [Using Pull Requests](https://help.github.com/articles/about-pull-requests/)
 - [GitHub Help](https://help.github.com)
 
+---
+
 ## 🤝 Community Guidelines
 
 ### Code of Conduct
+
 We are committed to providing a welcoming and inclusive environment. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Communication Channels
+
 - **GitHub Issues**: Bug reports and feature requests
 - **Pull Requests**: Contributions and discussions
 - **GitHub Discussions**: General questions and ideas
 
 ### Getting Help
+
 - **Documentation**: [Spec-Driven Development](spec-driven.md), [Agent guides](README.md)
 - **Community**: [GitHub Discussions](https://github.com/muhammadhamidraza/spec-kit-colearn/discussions)
 - **Issues**: [Create an issue](https://github.com/muhammadhamidraza/spec-kit-colearn/issues/new) for bugs or questions
 
 ---
 
-## 🎉 Thank You for Contributing!
+## 🎉 Thank You for Contributing
 
 Your contributions help make Spec-Driven Development accessible to developers worldwide. Whether you're adding new commands, improving templates, fixing bugs, or enhancing documentation - every contribution makes Spec-Kit-CoLearn better for the entire community.
 
