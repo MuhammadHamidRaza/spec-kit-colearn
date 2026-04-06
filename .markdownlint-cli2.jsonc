@@ -2,34 +2,20 @@
   // https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
   "config": {
     "default": true,
-    "MD003": {
-      "style": "atx"
-    },
-    "MD007": {
-      "indent": 2
-    },
+    "MD003": { "style": "atx" },
+    "MD007": { "indent": 2 },
+    "MD012": false,
     "MD013": false,
-    "MD024": {
-      "siblings_only": true
-    },
-    "MD025": {
-      "level": 1,
-      "front_matter_title": ""
-    },
-    "MD031": {
-      "blanks": ["lists", "headings"]
-    },
+    "MD022": false,
+    "MD024": { "siblings_only": true },
+    "MD025": { "level": 1, "front_matter_title": "" },
+    "MD031": { "blanks": ["lists", "headings"] },
+    "MD032": false,
     "MD033": false,
-    "MD040": {
-      "language": "text"
-    },
+    "MD040": { "language": "text" },
     "MD041": false,
-    "MD049": {
-      "style": "asterisk"
-    },
-    "MD050": {
-      "style": "asterisk"
-    }
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" }
   },
   "ignores": [
     ".genreleases/",

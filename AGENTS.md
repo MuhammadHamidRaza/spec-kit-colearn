@@ -177,7 +177,7 @@ When to use: APIs, mobile apps"
 
 ### Step 3: Present Options
 
-```
+```text
 3 OPTIONS:
 
 Option A: [Name]
