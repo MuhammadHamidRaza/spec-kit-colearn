@@ -16,7 +16,7 @@ The problem with AI coding today: You ask AI to build something → It writes co
 
 **Spec-Kit-CoLearn solves this** by making AI your teacher first, coder second.
 
-```
+```text
 OLD WAY:
 You: "Build me a login system"
 AI: [writes 50 files]
@@ -39,7 +39,7 @@ Now you understand exactly what you built.
 
 ### The Learning Compound Effect
 
-```
+```text
 Week 1:   You learn 5 terms
 Week 4:   You learn 20 terms
 Week 12:  You understand architecture
@@ -53,7 +53,7 @@ Week 52:  You ARE the senior architect
 
 This is the core of Spec-Kit-CoLearn. AI operates in two modes:
 
-```
+```text
 ┌──────────────────────────────────────────────────────────────┐
 │                    TWO MODES — ONE TOOL                       │
 ├──────────────────────────────────────────────────────────────┤
@@ -89,7 +89,7 @@ This is the core of Spec-Kit-CoLearn. AI operates in two modes:
 
 For **EACH feature**, run this complete cycle:
 
-```
+```text
 ┌──────────────────────────────────────────────────────────────┐
 │              COMPLETE /sp COMMAND CYCLE (Per Feature)         │
 ├──────────────────────────────────────────────────────────────┤
@@ -140,7 +140,7 @@ When user says "I want to build X", AI follows this flow:
 
 ### Step 1: Ask Questions
 
-```
+```text
 AI: "Before I spec this, let me ask some questions..."
 
 Question 1: [Scope question]
@@ -158,7 +158,7 @@ Question 2: [Users question]
 
 If user mentions something they don't understand:
 
-```
+```text
 AI: "You mentioned JWT. Let me explain:
 
 JWT is like a concert wristband. You show your ID once at entry,
@@ -203,7 +203,7 @@ Which option? (A, B, or C)
 
 Before creating spec, AI confirms:
 
-```
+```text
 Clarity Gate check:
 - WHO clear: [user type] ✓
 - WHAT clear: [feature] ✓
@@ -221,7 +221,7 @@ Say "approved" and I will create the spec.
 
 Before any spec is created, AI must confirm:
 
-```
+```text
 CLARITY GATE — All 6 must pass
 
 1. WHO is clear        → We know who uses this feature
@@ -240,7 +240,7 @@ If any missing → Ask more questions, do not spec yet
 
 User must approve each phase explicitly:
 
-```
+```text
 Spec created → User says "spec approved" → AI creates Plan
 Plan created → User says "plan approved" → AI creates Tasks
 Tasks created → User says "tasks approved" → Mode 2 activates
