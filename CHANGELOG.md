@@ -7,6 +7,23 @@ All notable changes to the Specify CLI and templates are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.14] - 2026-04-12
+
+### Added
+- Achieved full PowerShell script parity for Windows users
+- Created `scripts/powershell/create-adr.ps1` - ADR creation for Windows
+- Created `scripts/powershell/create-phr.ps1` - PHR creation for Windows
+- Created `scripts/powershell/update-agent-context.ps1` - Agent context updates for Windows
+- Added `Find-FeatureDirByPrefix` function in `common.ps1` for prefix-based feature lookup (matching Bash behavior)
+- Updated all 16 command templates to reference both Bash and PowerShell scripts
+- Updated `memory/command-rules.md` with PowerShell command examples
+- Updated CONTRIBUTING.md with PowerShell testing instructions
+
+### Fixed
+- Fixed ID generation bug in `create-adr.ps1` (filter `????-*.md` instead of `????.md`)
+- Fixed ID generation bug in `create-phr.ps1` (filter `????-*.prompt.md` instead of `????.*.prompt.md`)
+- Fixed template path inconsistency in `update-agent-context.ps1` (now checks both `.specify/templates/` and `templates/`)
+
 ## [1.0.13] - 2026-03-20
 
 - Removed "This file is generated during init" line from agent rules

@@ -143,8 +143,12 @@ git push origin feature/your-command
 ### Local Testing Workflow
 
 ```bash
-# 1. Test script directly
+# 1. Test script directly (Bash)
 bash scripts/bash/your-script.sh --json
+# Expected: JSON output with path/status
+
+# 1. Test script directly (PowerShell)
+pwsh scripts/powershell/your-script.ps1 -Json
 # Expected: JSON output with path/status
 
 # 2. Test template creation

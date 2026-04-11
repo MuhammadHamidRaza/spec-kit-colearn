@@ -11,7 +11,8 @@ As the main request completes, you MUST create and complete a PHR (Prompt Histor
      - `general` → `history/prompts/general/`
 
 3) Create and Fill PHR (Shell first; fallback agent‑native)
-   - Run: `.specify/scripts/bash/create-phr.sh --title "<title>" --stage <stage> [--feature <name>] --json`
+   - Run: For Bash: `scripts/bash/create-phr.sh --title "<title>" --stage <stage> [--feature <name>] --json`
+   - Run: For PowerShell: `scripts/powershell/create-phr.ps1 -Title "<title>" -Stage <stage> [-Feature <name>] -Json`
    - Open the file and fill remaining placeholders (YAML + body), embedding full PROMPT_TEXT (verbatim) and concise RESPONSE_TEXT.
    - If the script fails:
      - Read `.specify/templates/phr-template.prompt.md` (or `templates/…`)
