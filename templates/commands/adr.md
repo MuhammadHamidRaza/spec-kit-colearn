@@ -3,6 +3,9 @@ description: Review planning artifacts for architecturally significant decisions
 scripts:
   sh: scripts/bash/check-prerequisites.sh --json
   ps: scripts/powershell/check-prerequisites.ps1 -Json
+agent_scripts:
+  sh: scripts/bash/create-adr.sh --title "{{TITLE}}" --json
+  ps: scripts/powershell/create-adr.ps1 -Title "{{TITLE}}" -Json
 ---
 
 # COMMAND: Analyze planning artifacts and document architecturally significant decisions as ADRs
@@ -105,8 +108,19 @@ Only proceed with ADRs that pass ALL three tests.
 For each qualifying decision cluster:
 
 1. Generate concise title reflecting the cluster (e.g., "Frontend Technology Stack" not "Use Next.js")
-2. Run `create-adr.sh "<title>"` from repo root
-3. Parse JSON response for `adr_path` and `adr_id`
+2. Run the ADR creation script:
+
+   **Bash:**
+   ```bash
+   scripts/bash/create-adr.sh --title "<title>" --json
+   ```
+
+   **PowerShell:**
+   ```powershell
+   scripts/powershell/create-adr.ps1 -Title "<title>" -Json
+   ```
+
+3. Parse JSON response for `id`, `path`, and `template`
 4. Read created file (contains template with {{PLACEHOLDERS}})
 5. Fill ALL placeholders:
    - `{{TITLE}}` = decision cluster title
@@ -135,7 +149,7 @@ If conflicts detected:
 ⚠️ Conflicts with existing ADRs [IDs]. Review and update outdated decisions or revise plan.
 ```
 
-If create-adr.sh fails: Report script error and skip that ADR.
+If the ADR creation script fails: Report script error and skip that ADR.
 
 ## FORMATTING REQUIREMENTS
 
@@ -173,7 +187,7 @@ If plan.md missing:
 - Display: "❌ Error: plan.md not found. Run /sp.plan first to generate planning artifacts."
 - Exit gracefully without creating any ADRs
 
-If create-adr.sh fails:
+If the ADR creation script fails:
 
 - Display exact error message
 - Skip that ADR and continue with others

@@ -3,6 +3,9 @@ description: Record an AI exchange as a Prompt History Record (PHR) for learning
 scripts:
   sh: scripts/bash/check-prerequisites.sh --json
   ps: scripts/powershell/check-prerequisites.ps1 -Json
+agent_scripts:
+  sh: scripts/bash/create-phr.sh --title "{{TITLE}}" --stage "{{STAGE}}" --json
+  ps: scripts/powershell/create-phr.ps1 -Title "{{TITLE}}" -Stage "{{STAGE}}" -Json
 ---
 
 # COMMAND: Record this AI exchange as a structured PHR artifact
@@ -85,13 +88,25 @@ Generate a concise title (3-7 words) summarizing what was accomplished.
 
 Call the PHR creation script with title and stage:
 
+**Bash:**
 ```bash
 scripts/bash/create-phr.sh \
   --title "<your-generated-title>" \
-  --stage <selected-stage> \
-  [--feature <feature-slug>] \
+  --stage "spec" \
+  [--feature "001-auth"] \
   --json
 ```
+
+**PowerShell:**
+```powershell
+scripts/powershell/create-phr.ps1 `
+  -Title "<your-generated-title>" `
+  -Stage "spec" `
+  [-Feature "001-auth"] `
+  -Json
+```
+
+Or use `{AGENT_SCRIPT}` if available in your environment.
 
 Parse the JSON output to get: `id`, `path`, `context`, `stage`, `feature`
 
@@ -160,7 +175,7 @@ Acceptance Criteria (PASS only if all true)
 
 ## ERROR HANDLING
 
-If create-phr.sh fails:
+If the PHR creation script fails:
 
 1. Display the exact error message from script
 2. Explain what went wrong in plain language
